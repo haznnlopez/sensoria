@@ -1,504 +1,479 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spinal Alignment & The Slouch-Limit — sensoria</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="../../../media/logo.png" />
-    <link href="../../../css/article_template.css" rel="stylesheet" />
-    <link href="../../../css/shared.css" rel="stylesheet" />
-
-    <style id="shared-nav-override">
-      /* Custom overrides for this specific technical deep-dive */
-      .category-tag {
-        background: var(--vodka, #dbdcf2);
-        color: #4a4a8a;
-        font-weight: 600;
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../../../index.html">
-          <div class="logo-mark">
-            <img class="logo-img" src="../../../media/logo.png">
-          </div>
-          <span class="logo-text">sensoria</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav mx-auto gap-lg-1">
-            <li class="nav-item">
-              <a class="nav-link" href="../../articles.html">Articles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="../cluster.html">The Cluster</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../casestudies.html">Case Studies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../about/about.html">About</a>
-            </li>
-          </ul>
-          <div class="nav-search-wrap mt-3 mt-lg-0">
-            <i class="bi bi-search srch-icon"></i>
-            <input
-              class="nav-search"
-              type="text"
-              placeholder="Search topics…"
-            />
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <div class="breadcrumb-bar">
-      <div class="container">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="../../../index.html">Home</a>
-          </li>
-          <li class="breadcrumb-item">
-            <a href="cluster.html">The Cluster</a>
-          </li>
-          <li class="breadcrumb-item active">Spinal Alignment and the "Slouch-Limit" Algorithm</li>
-        </ol>
-      </div>
-    </div>
-
-    <header class="article-hero">
-      <div class="container">
-        <div class="category-tag">Torso &amp; Smart Fabrics</div>
-
-        <h1>Spinal Alignment and the "Slouch-Limit" Algorithm</h1>
-
-        <p class="subtitle">
-          How sensors embedded along the length of a smart-fabric shirt track
-          the curvature of the thoracic spine to prevent permanent structural
-          shifts.
-        </p>
-
-        <div class="article-meta">
-          <div class="meta-author">
-            <div class="ava">
-              <img class="ava-img" src="../../../media/mark.jpg" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Spinal Alignment & The Slouch-Limit — sensoria</title>
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+         rel="stylesheet"
+         />
+      <link rel="icon" href="../../../media/logo.png" />
+      <link href="../../../css/article_template.css" rel="stylesheet" />
+      <link href="../../../css/shared.css" rel="stylesheet" />
+      <style id="shared-nav-override">
+         /* Custom overrides for this specific technical deep-dive */
+         .category-tag {
+         background: var(--vodka, #dbdcf2);
+         color: #4a4a8a;
+         font-weight: 600;
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg">
+         <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+               <div class="logo-mark">
+                  <img class="logo-img" src="../../../media/logo.png">
+               </div>
+               <span class="logo-text">sensoria</span>
+            </a>
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navMenu"
+               >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+               <ul class="navbar-nav mx-auto gap-lg-1">
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../articles.html">Articles</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="../cluster.html">The Cluster</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../casestudies.html">Case Studies</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../about/about.html">About</a>
+                  </li>
+               </ul>
+               <div class="nav-search-wrap mt-3 mt-lg-0">
+                  <i class="bi bi-search srch-icon"></i>
+                  <input
+                     class="nav-search"
+                     type="text"
+                     placeholder="Search topics…"
+                     />
+               </div>
             </div>
-            <div>
-              <div class="ava-name">Mark España</div>
-              <div class="ava-role">Navigation</div>
-            </div>
-          </div>
-          <div class="meta-divider d-none d-md-block"></div>
-          <div class="meta-stat">
-            <i class="bi bi-calendar3"></i> April 11, 2026
-          </div>
-          <div class="meta-stat"><i class="bi bi-clock"></i> 8 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 3,412 views</div>
-        </div>
-
-        <div class="hero-img-wrap">
-          <div class="hero-img-ph">
-            <img
-              src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1000"
-              alt="Conceptual spine visualization and biometric data"
-            />
-          </div>
-        </div>
+         </div>
+      </nav>
+      <div class="breadcrumb-bar">
+         <div class="container">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item">
+                  <a href="../../../index.html">Home</a>
+               </li>
+               <li class="breadcrumb-item">
+                  <a href="cluster.html">The Cluster</a>
+               </li>
+               <li class="breadcrumb-item active">Spinal Alignment and the "Slouch-Limit" Algorithm</li>
+            </ol>
+         </div>
       </div>
-    </header>
-
-    <section id="article-body">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-8">
-            <article class="article-content">
-              <p>
-                Postural integrity is the bedrock of the
-                <strong>Kinetic Chain</strong>. When the thoracic spine—the
-                upper and middle back—deviates from its natural alignment, it
-                creates a ripple effect of mechanical inefficiency that travels
-                from the neck down to the lumbar region.
-              </p>
-
-              <h2 class="section" id="section-1">
-                Continuous Spinal Profiling
-              </h2>
-              <p>
-                Sensoria moves beyond static posture checks through
-                <strong>Continuous Spinal Profiling</strong>. The torso cluster
-                features a vertical ribbon of flex-sensitive conductive yarns
-                integrated directly into the weave of the fabric.
-              </p>
-              <p>
-                As the wearer moves, these yarns stretch and contract, altering
-                their electrical resistance. The onboard processor maps these
-                fluctuations to build a high-fidelity digital profile of the
-                spine's curvature in real-time.
-              </p>
-
-              <div class="pull-quote">
-                <p>
-                  "The spine isn't a static rod; it's a dynamic bridge. By
-                  profiling it continuously, we can distinguish between a
-                  natural reach and a high-risk structural slump."
-                </p>
-              </div>
-
-              <h2 class="section" id="section-2">
-                The "Slouch-Limit" and Kyphosis
-              </h2>
-              <p>
-                The danger of poor posture isn't just immediate discomfort; it
-                is structural adaptation. Chronic slouching can lead to
-                <strong>Kyphosis</strong>, where the vertebrae and ligaments
-                physically adapt to a rounded shape, making a "hunchback"
-                permanent.
-              </p>
-              <p>
-                Our <strong>"Slouch-Limit" Algorithm</strong> calculates a
-                threshold based on two variables:
-                <strong>Magnitude of Curve</strong> and
-                <strong>Duration of Sustention</strong>. If the fabric detects a
-                curve exceeding 45 degrees for more than 12 minutes, the system
-                flags it as a "Kyphosis Risk State."
-              </p>
-
-              <div class="callout">
-                <div class="callout-label">Technical Insight</div>
-                <p>
-                  The algorithm uses
-                  <strong>Differential Resistance Mapping</strong>. By comparing
-                  the stretch of the outer fabric layer against the inner base
-                  layer, we can calculate the exact radius of the spinal curve
-                  ($r$) with 98% accuracy.
-                </p>
-              </div>
-
-              <h2 class="section" id="section-3">Stabilizing the Chain</h2>
-              <p>
-                By identifying the exact moment a "slouch" becomes dangerous,
-                sensoria triggers localized haptic feedback. This "nudges" the
-                wearer back into <strong>Anatomical Alignment</strong>,
-                resetting the kinetic chain and ensuring that muscle tension is
-                distributed evenly across the torso rather than concentrated on
-                the spinal ligaments.
-              </p>
-
-              <h2>Article Tags</h2>
-              <div class="article-tags">
-                <span class="art-tag">Kinetic Chain</span>
-                <span class="art-tag">Spinal Profiling</span>
-                <span class="art-tag">Kyphosis Prevention</span>
-                <span class="art-tag">Smart Fabric</span>
-                <span class="art-tag">Torso Cluster</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="sidebar">
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Reading Progress</div>
-                <div class="read-progress-wrap">
-                  <div class="read-progress-label">
-                    <span>Progress</span><span id="progress-pct">0%</span>
+      <header class="article-hero">
+         <div class="container">
+            <div class="category-tag">Torso &amp; Smart Fabrics</div>
+            <h1>Spinal Alignment and the "Slouch-Limit" Algorithm</h1>
+            <p class="subtitle">
+               How sensors embedded along the length of a smart-fabric shirt track
+               the curvature of the thoracic spine to prevent permanent structural
+               shifts.
+            </p>
+            <div class="article-meta">
+               <div class="meta-author">
+                  <div class="ava">
+                     <img class="ava-img" src="../../../media/mark.jpg" />
                   </div>
-                  <div class="read-progress-bar">
-                    <div class="read-progress-fill" id="progress-fill"></div>
+                  <div>
+                     <div class="ava-name">Mark España</div>
+                     <div class="ava-role">Navigation</div>
                   </div>
-                </div>
-              </div>
-
-              <div class="sidebar-card">
-                <div class="sidebar-heading">In This Article</div>
-                <ul class="toc-list">
-                  <li>
-                    <a href="#section-1" class="toc-link"
-                      >Continuous Spinal Profiling</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#section-2" class="toc-link"
-                      >The "Slouch-Limit" and Kyphosis</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#section-3" class="toc-link"
-                      >Stabilizing the Chain</a
-                    >
-                  </li>
-                </ul>
-              </div>
-
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Share This Article</div>
-                <div class="share-btns">
-                  <button class="share-btn">
-                    <i class="bi bi-facebook"></i> Facebook
-                  </button>
-                  <button class="share-btn">
-                    <i class="bi bi-twitter-x"></i> X
-                  </button>
-                  <button class="share-btn">
-                    <i class="bi bi-link-45deg"></i> Copy Link
-                  </button>
-                </div>
-              </div>
+               </div>
+               <div class="meta-divider d-none d-md-block"></div>
+               <div class="meta-stat">
+                  <i class="bi bi-calendar3"></i> April 11, 2026
+               </div>
+               <div class="meta-stat"><i class="bi bi-clock"></i> 8 min read</div>
+               <div class="meta-stat"><i class="bi bi-eye"></i> 3,412 views</div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="related">
-      <div class="container">
-        <div class="mb-4">
-          <div class="sec-eyebrow">Keep reading</div>
-          <h2 class="sec-title">More from <i>Torso &amp; Smart Fabrics</i></h2>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="rel-card">
-              <div class="rel-img-ph">
-                <span class="rel-chip">Torso &amp; Smart Fabrics</span>
-                <img
-                  src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1000"
-                />
-              </div>
-              <div class="rel-body">
-                <h5>Graphene and Beyond: Future Yarns</h5>
-                <p>
-                  The shift from bulky wires to graphene-coated threads and
-                  silver-plated nylon for a seamless feel.
-                </p>
-              </div>
-              <div class="rel-footer">
-                <span>Mark España · 10 mins</span>
-                <a href="graphene.html" class="read-more"
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
+            <div class="hero-img-wrap">
+               <div class="hero-img-ph">
+                  <img
+                     src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1000"
+                     alt="Conceptual spine visualization and biometric data"
+                     />
+               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="rel-card">
-              <div class="rel-img-ph">
-                <span class="rel-chip">Torso &amp; Smart Fabrics</span>
-                <img
-                  src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000"
-                />
-              </div>
-              <div class="rel-body">
-                <h5>The Smart Fabric Revolution in Sports</h5>
-                <p>
-                  How elite athletes use the Torso Cluster to optimize power
-                  transfer and reduce mechanical waste.
-                </p>
-              </div>
-              <div class="rel-footer">
-                <span>Mark España · 9 mins</span>
-                <a href="smartFabric.html" class="read-more"
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
+         </div>
+      </header>
+      <section id="article-body">
+         <div class="container">
+            <div class="row g-5">
+               <div class="col-lg-8">
+                  <article class="article-content">
+                     <p>
+                        Postural integrity is the bedrock of the
+                        <strong>Kinetic Chain</strong>. When the thoracic spine—the
+                        upper and middle back—deviates from its natural alignment, it
+                        creates a ripple effect of mechanical inefficiency that travels
+                        from the neck down to the lumbar region.
+                     </p>
+                     <h2 class="section" id="section-1">
+                        Continuous Spinal Profiling
+                     </h2>
+                     <p>
+                        Sensoria moves beyond static posture checks through
+                        <strong>Continuous Spinal Profiling</strong>. The torso cluster
+                        features a vertical ribbon of flex-sensitive conductive yarns
+                        integrated directly into the weave of the fabric.
+                     </p>
+                     <p>
+                        As the wearer moves, these yarns stretch and contract, altering
+                        their electrical resistance. The onboard processor maps these
+                        fluctuations to build a high-fidelity digital profile of the
+                        spine's curvature in real-time.
+                     </p>
+                     <div class="pull-quote">
+                        <p>
+                           "The spine isn't a static rod; it's a dynamic bridge. By
+                           profiling it continuously, we can distinguish between a
+                           natural reach and a high-risk structural slump."
+                        </p>
+                     </div>
+                     <h2 class="section" id="section-2">
+                        The "Slouch-Limit" and Kyphosis
+                     </h2>
+                     <p>
+                        The danger of poor posture isn't just immediate discomfort; it
+                        is structural adaptation. Chronic slouching can lead to
+                        <strong>Kyphosis</strong>, where the vertebrae and ligaments
+                        physically adapt to a rounded shape, making a "hunchback"
+                        permanent.
+                     </p>
+                     <p>
+                        Our <strong>"Slouch-Limit" Algorithm</strong> calculates a
+                        threshold based on two variables:
+                        <strong>Magnitude of Curve</strong> and
+                        <strong>Duration of Sustention</strong>. If the fabric detects a
+                        curve exceeding 45 degrees for more than 12 minutes, the system
+                        flags it as a "Kyphosis Risk State."
+                     </p>
+                     <div class="callout">
+                        <div class="callout-label">Technical Insight</div>
+                        <p>
+                           The algorithm uses
+                           <strong>Differential Resistance Mapping</strong>. By comparing
+                           the stretch of the outer fabric layer against the inner base
+                           layer, we can calculate the exact radius of the spinal curve
+                           ($r$) with 98% accuracy.
+                        </p>
+                     </div>
+                     <h2 class="section" id="section-3">Stabilizing the Chain</h2>
+                     <p>
+                        By identifying the exact moment a "slouch" becomes dangerous,
+                        sensoria triggers localized haptic feedback. This "nudges" the
+                        wearer back into <strong>Anatomical Alignment</strong>,
+                        resetting the kinetic chain and ensuring that muscle tension is
+                        distributed evenly across the torso rather than concentrated on
+                        the spinal ligaments.
+                     </p>
+                     <h2>Article Tags</h2>
+                     <div class="article-tags">
+                        <span class="art-tag">Kinetic Chain</span>
+                        <span class="art-tag">Spinal Profiling</span>
+                        <span class="art-tag">Kyphosis Prevention</span>
+                        <span class="art-tag">Smart Fabric</span>
+                        <span class="art-tag">Torso Cluster</span>
+                     </div>
+                  </article>
+               </div>
+               <div class="col-lg-4">
+                  <div class="sidebar">
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">Reading Progress</div>
+                        <div class="read-progress-wrap">
+                           <div class="read-progress-label">
+                              <span>Progress</span><span id="progress-pct">0%</span>
+                           </div>
+                           <div class="read-progress-bar">
+                              <div class="read-progress-fill" id="progress-fill"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">In This Article</div>
+                        <ul class="toc-list">
+                           <li>
+                              <a href="#section-1" class="toc-link"
+                                 >Continuous Spinal Profiling</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-2" class="toc-link"
+                                 >The "Slouch-Limit" and Kyphosis</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-3" class="toc-link"
+                                 >Stabilizing the Chain</a
+                                 >
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">Share This Article</div>
+                        <div class="share-btns">
+                           <button class="share-btn">
+                           <i class="bi bi-facebook"></i> Facebook
+                           </button>
+                           <button class="share-btn">
+                           <i class="bi bi-twitter-x"></i> X
+                           </button>
+                           <button class="share-btn">
+                           <i class="bi bi-link-45deg"></i> Copy Link
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══ FOOTER ══ -->
-   <footer>
-      <div class="container">
-        <div class="row g-5">
-          <!-- Brand -->
-          <div class="col-lg-3">
-            <div class="footer-logo">sensoria.</div>
-            <p class="footer-tagline">
-              Bridging wearable technology and human physiology. Educating
-              bodies, one article at a time.
-            </p>
-            <div class="footer-social mt-3">
-              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
-              ></a>
+         </div>
+      </section>
+      <section id="related">
+         <div class="container">
+            <div class="mb-4">
+               <div class="sec-eyebrow">Keep reading</div>
+               <h2 class="sec-title">More from <i>Torso &amp; Smart Fabrics</i></h2>
             </div>
-            <div class="mt-4">
-              <div class="footer-heading">Contact</div>
-              <div class="footer-contact-item">
-                <i class="bi bi-instagram"></i> @_theergolab
-              </div>
-              <div class="footer-contact-item">
-                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
-              </div>
-              <div class="footer-contact-item">
-                <i class="bi bi-facebook"></i> The Ergo Lab
-              </div>
+            <div class="row g-4">
+               <div class="col-md-4">
+                  <div class="rel-card">
+                     <div class="rel-img-ph">
+                        <span class="rel-chip">Torso &amp; Smart Fabrics</span>
+                        <img
+                           src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1000"
+                           />
+                     </div>
+                     <div class="rel-body">
+                        <h5>Graphene and Beyond: Future Yarns</h5>
+                        <p>
+                           The shift from bulky wires to graphene-coated threads and
+                           silver-plated nylon for a seamless feel.
+                        </p>
+                     </div>
+                     <div class="rel-footer">
+                        <span>Mark España · 10 mins</span>
+                        <a href="graphene.html" class="read-more"
+                           >Read More <i class="bi bi-arrow-right"></i
+                           ></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="rel-card">
+                     <div class="rel-img-ph">
+                        <span class="rel-chip">Torso &amp; Smart Fabrics</span>
+                        <img
+                           src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000"
+                           />
+                     </div>
+                     <div class="rel-body">
+                        <h5>The Smart Fabric Revolution in Sports</h5>
+                        <p>
+                           How elite athletes use the Torso Cluster to optimize power
+                           transfer and reduce mechanical waste.
+                        </p>
+                     </div>
+                     <div class="rel-footer">
+                        <span>Mark España · 9 mins</span>
+                        <a href="smartFabric.html" class="read-more"
+                           >Read More <i class="bi bi-arrow-right"></i
+                           ></a>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-
-          <!-- The Cluster + Feedback -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">The Cluster</div>
-            <ul class="footer-links">
-              <li><a href="../cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="../cluster.html">Head &amp; Neck</a></li>
-              <li>
-                <a href="../cluster.html">Torso &amp; Smart Fabrics</a>
-              </li>
-            </ul>
-            <div class="footer-heading mt-4">Feedback</div>
-            <ul class="footer-links">
-              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
-              <li>
-                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Engineering + Case Studies -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">Engineering</div>
-            <ul class="footer-links">
-              <li><a href="../../engineering/engineering.html">Material Science</a></li>
-              <li>
-                <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
-              </li>
-              <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
-            </ul>
-            <div class="footer-heading mt-4">Case Studies</div>
-            <ul class="footer-links">
-              <li>
-                <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
-              </li>
-              <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
-              <li>
-                <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Ethics + General -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">Ethics</div>
-            <ul class="footer-links">
-              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
-              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
-              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
-            </ul>
-            <div class="footer-heading mt-4">General</div>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="../../about/about.html">About / Contact</a></li>
-              <li><a href="../../privacy.html">Privacy Policy</a></li>
-              <li><a href="../../cookies.html">Cookies</a></li>
-              <li><a href="../../terms.html">Terms</a></li>
-            </ul>
-          </div>
-
-          <!-- Meet the Team -->
-          <div class="col-lg-3">
-            <div class="footer-heading">Meet the Team</div>
-            <p
-              style="
-                font-size: 0.82rem;
-                opacity: 0.5;
-                margin-bottom: 1rem;
-                line-height: 1.6;
-              "
-            >
-              sensoria is a student project by
-              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
-              Group 4, CIP 1101-CSAD.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 0.45rem">
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Team Leader:</span
-                >
-                Amir Lopez
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Content Manager:</span
-                >
-                Gianna Ebue
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >UI Designer:</span
-                >
-                Mico Parungao
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
-                Patricia Pelicano &amp; Aica Ortega
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
-                Noel Bandoy &amp; Kim Datuin
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Navigation Expert:</span
-                >
-                Mark España
-              </div>
+         </div>
+      </section>
+      <!-- ══ FOOTER ══ -->
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <!-- Brand -->
+               <div class="col-lg-3">
+                  <div class="footer-logo">sensoria.</div>
+                  <p class="footer-tagline">
+                     Bridging wearable technology and human physiology. Educating
+                     bodies, one article at a time.
+                  </p>
+                  <div class="footer-social mt-3">
+                     <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+                     <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+                     <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
+                        ></a>
+                  </div>
+                  <div class="mt-4">
+                     <div class="footer-heading">Contact</div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-instagram"></i> @_theergolab
+                     </div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
+                     </div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-facebook"></i> The Ergo Lab
+                     </div>
+                  </div>
+               </div>
+               <!-- The Cluster + Feedback -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">The Cluster</div>
+                  <ul class="footer-links">
+                     <li><a href="../cluster.html">Wrist &amp; Forearm</a></li>
+                     <li><a href="../cluster.html">Head &amp; Neck</a></li>
+                     <li>
+                        <a href="../cluster.html">Torso &amp; Smart Fabrics</a>
+                     </li>
+                  </ul>
+                  <div class="footer-heading mt-4">Feedback</div>
+                  <ul class="footer-links">
+                     <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+                     <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+                     <li>
+                        <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Engineering + Case Studies -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">Engineering</div>
+                  <ul class="footer-links">
+                     <li><a href="../../engineering/engineering.html">Material Science</a></li>
+                     <li>
+                        <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
+                     </li>
+                     <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
+                  </ul>
+                  <div class="footer-heading mt-4">Case Studies</div>
+                  <ul class="footer-links">
+                     <li>
+                        <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
+                     </li>
+                     <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
+                     <li>
+                        <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Ethics + General -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">Ethics</div>
+                  <ul class="footer-links">
+                     <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+                     <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+                     <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
+                  </ul>
+                  <div class="footer-heading mt-4">General</div>
+                  <ul class="footer-links">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="../../about/about.html">About / Contact</a></li>
+                     <li><a href="../../privacy.html">Privacy Policy</a></li>
+                     <li><a href="../../cookies.html">Cookies</a></li>
+                     <li><a href="../../terms.html">Terms</a></li>
+                  </ul>
+               </div>
+               <!-- Meet the Team -->
+               <div class="col-lg-3">
+                  <div class="footer-heading">Meet the Team</div>
+                  <p
+                     style="
+                     font-size: 0.82rem;
+                     opacity: 0.5;
+                     margin-bottom: 1rem;
+                     line-height: 1.6;
+                     "
+                     >
+                     sensoria is a student project by
+                     <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+                     Group 4, CIP 1101-CSAD.
+                  </p>
+                  <div style="display: flex; flex-direction: column; gap: 0.45rem">
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Team Leader:</span
+                           >
+                        Amir Lopez
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Content Manager:</span
+                           >
+                        Gianna Ebue
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >UI Designer:</span
+                           >
+                        Mico Parungao
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                        Patricia Pelicano &amp; Aica Ortega
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                        Noel Bandoy &amp; Kim Datuin
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Navigation Expert:</span
+                           >
+                        Mark España
+                     </div>
+                  </div>
+                  <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+                     Media sources: Unsplash, Freepik, Pexels
+                  </p>
+               </div>
             </div>
-            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
-              Media sources: Unsplash, Freepik, Pexels
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div
-          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
-        >
-          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
-          <div class="d-flex gap-3">
-            <a href="../../privacy.html">Privacy Policy</a>
-            <a href="../../cookies.html">Cookies</a>
-            <a href="../../terms.html">Terms</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../js/article_template.js"></script>
-  </body>
+         </div>
+         <div class="footer-bottom">
+            <div
+               class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+               >
+               <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+               <div class="d-flex gap-3">
+                  <a href="../../privacy.html">Privacy Policy</a>
+                  <a href="../../cookies.html">Cookies</a>
+                  <a href="../../terms.html">Terms</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../../../js/article_template.js"></script>
+   </body>
 </html>
