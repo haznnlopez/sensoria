@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ergonomic Fit — sensoria</title>
+    <title>Ergonomic Fit Systems — sensoria</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,6 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+
+    <link href="../../../media/logo.png" rel="icon">
     <link href="../../../css/shared.css" rel="stylesheet">
     <link href="../../../css/article_template.css" rel="stylesheet" />
 
@@ -27,8 +29,10 @@
     <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -42,22 +46,25 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link" href="../../articles.html">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link " href="../casestudies.html">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link active" href="../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -76,12 +83,11 @@
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Engineering</a>
+            <a href="../engineering.html">Engineering & Design</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
-          <li class="breadcrumb-item active">Anthropometrics</li>
+          <li class="breadcrumb-item active">Ergonomic Fit Systems: Why Size and Form Matter in Wearable Design</li>
         </ol>
       </div>
     </div>
@@ -89,7 +95,7 @@
     <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
         <div class="container">
-            <div class="category-tag">Engineering · Anthropometrics</div>
+            <div class="category-tag">Anthropometrics</div>
 
             <h1>
               Ergonomic Fit Systems: Why Size and Form Matter in Wearable Design
@@ -102,7 +108,9 @@
 
             <div class="article-meta">
               <div class="meta-author">
-                <div class="ava">AO</div>
+                <div class="ava">
+                  <img class="ava-img" src="../../../media/aica.JPG">
+                </div>
               <div>
                 <div class="ava-name">Aica Ortega</div>
                 <div class="ava-role">Developer</div>
@@ -119,7 +127,7 @@
             <div class="hero-img-wrap">
               <div class="hero-img-ph">
                   <img
-                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1615387000482-2f3d4b2c50d4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Advanced wearable material science and smart fabric engineering"
                   />
               </div>
@@ -274,40 +282,7 @@
                 </div>
               </div>
 
-              <!-- Related in sidebar -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Related Reads</div>
-                <!-- ★ EDIT: swap with actual related article titles/links -->
-                <div class="related-mini">
-                  <div class="related-mini-thumb">Img</div>
-                <div>
-                  <div class="related-mini-title">
-                    Motion Range and Joint-Based Design
-                  </div>
-                    <div class="related-mini-meta">Anthropometrics · 6 min</div>
-                  </div>
-                </div>
-
-                <div class="related-mini">
-                  <div class="related-mini-thumb">Img</div>
-                  <div>
-                    <div class="related-mini-title">
-                      Body Proportions in Smart Wearables
-                    </div>
-                    <div class="related-mini-meta">Anthropometrics · 7 min</div>
-                  </div>
-                </div>
-
-                <div class="related-mini">
-                  <div class="related-mini-thumb">Img</div>
-                  <div>
-                    <div class="related-mini-title">
-                      Smart Fabrics and Flexible Fit Systems
-                    </div>
-                    <div class="related-mini-meta">Material Science · 6 min</div>
-                  </div>
-                </div>
-              </div>
+              
     </section>
 
     <!-- ══ RELATED ARTICLES (bottom) ══ -->
