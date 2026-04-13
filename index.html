@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sensoria — Smart of All Time</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/shared.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ════════════════════════════
+     STICKY HEADER
+════════════════════════════ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="media/logo.png">
+          </div>
+          <span class="logo-text">sensoria</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="pages/cluster/cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/feedBack/feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/casestudy/casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/engineering/engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about/about.html">About</a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap mt-3 mt-lg-0">
+            <i class="bi bi-search srch-icon"></i>
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ════════════════════════════
+     VERTICAL SIDEBAR
+════════════════════════════ -->
+    <aside id="sidebar">
+      <div
+        class="sbar-item active"
+        data-label="Home"
+        data-section="hero"
+        onclick="location.href = '#hero'"
+      >
+        <i class="bi bi-house-fill"></i>
+      </div>
+      <div
+        class="sbar-item"
+        data-label="Our Pillars"
+        data-section="pillars"
+        onclick="location.href = '#pillars'"
+      >
+        <i class="bi bi-grid-fill"></i>
+      </div>
+      <div
+        class="sbar-item"
+        data-label="Featured Read"
+        data-section="featured"
+        onclick="location.href = '#featured'"
+      >
+        <i class="bi bi-bookmark-star-fill"></i>
+      </div>
+      <div
+        class="sbar-item"
+        data-label="Latest Articles"
+        data-section="articles"
+        onclick="location.href = '#articles'"
+      >
+        <i class="bi bi-newspaper"></i>
+      </div>
+      <div
+        class="sbar-item"
+        data-label="Case Studies"
+        data-section="casestudies"
+        onclick="location.href = '#casestudies'"
+      >
+        <i class="bi bi-journal-medical"></i>
+      </div>
+      <div
+        class="sbar-item"
+        data-label="Newsletter"
+        data-section="newsletter"
+        onclick="location.href = '#newsletter'"
+      >
+        <i class="bi bi-envelope-paper-fill"></i>
+      </div>
+      </div>
+    </aside>
+
+    <!-- ════════════════════════════
+     HERO
+════════════════════════════ -->
+    <section id="hero">
+      <div class="hero-blob"></div>
+
+      <!-- image right — Unsplash: woman checking smartwatch, athletic -->
+      <div class="hero-img-col d-none d-lg-flex">
+        <div class="hero-img-shape">
+          <img
+            src="media/hero.png"
+            alt="Athlete checking smartwatch wearable device"
+          />
+        </div>
+      </div>
+
+      <!-- text left -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="hero-text">
+              <div class="hero-eyebrow">
+                Discover the Future of Smart Technology
+              </div>
+              <h1>Smart of<br /><em>All Time</em></h1>
+              <p class="sub">
+                Sensoria bridges the gap between wearable technologies and human
+                physiology — educating you on how smart devices correct posture,
+                reduce strain, and optimize movement.
+              </p>
+              <a href="#pillars" class="btn-primary-s">Explore More</a>
+              <a href="#contact" class="btn-secondary-s">About Us</a>
+            </div>
+          </div>
+        </div>
+        <!-- mobile image -->
+        <div class="d-flex d-lg-none justify-content-center mt-4">
+          <div
+            class="hero-img-shape"
+            style="width: clamp(220px, 70vw, 380px); height: 420px"
+          >
+            <img
+              src="media/hero.png"
+              alt="Athlete checking smartwatch wearable device"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     TOPIC PILLARS
+════════════════════════════ -->
+    <section id="pillars">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="sec-eyebrow">What we cover</div>
+          <h2 class="sec-title">Five Pillars of Wearable Knowledge</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg fade-up">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="bi bi-person-arms-up"></i>
+              </div>
+              <h5>The Cluster</h5>
+              <p>
+                Exploring hardware's intersection with human anatomy — how
+                wearables align with natural movement to improve posture and
+                prevent injury.
+              </p>
+              <a href="pages/cluster/cluster.html" class="explore-link"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg fade-up">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="bi bi-broadcast-pin"></i></div>
+              <h5>Feedback &amp; Behavior</h5>
+              <p>
+                How haptic cues and software nudges retrain muscle memory and
+                guide users toward healthier, sustainable movement patterns.
+              </p>
+              <a href="pages/feedBack/feedback.html" class="explore-link"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg fade-up">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i class="bi bi-book-half"></i>
+              </div>
+              <h5>Case Studies</h5>
+              <p>
+                Real-world evidence across industrial exoskeletons, athletic
+                motion suits, and medical rehabilitation gloves.
+              </p>
+              <a href="pages/casestudy/casestudies.html" class="explore-link"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg fade-up">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="bi bi-cpu-fill"></i></div>
+              <h5>Design &amp; Engineering</h5>
+              <p>
+                The technical "how" — from material science and anthropometrics
+                to power management and compact sensor systems.
+              </p>
+              <a href="pages/engineering/engineering.html" class="explore-link"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg fade-up">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i
+                  class="bi bi-rocket-takeoff-fill"
+                  style="font-size: 1.2rem"
+                ></i>
+              </div>
+              <h5>Future &amp; Ethics</h5>
+              <p>
+                Long-term societal impacts, neural integration, regulatory
+                standards, and the ethics of AI-powered wearables.
+              </p>
+              <a href="pages/ethics/ethics.html" class="explore-link"
+                >Read More <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     FEATURED ARTICLE
+════════════════════════════ -->
+    <section id="featured">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <div class="sec-eyebrow">Editor's pick</div>
+            <h2 class="sec-title">Featured Read</h2>
+          </div>
+          <a href="pages/articles.html" class="read-more d-none d-md-flex"
+            >View all articles <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+        <div class="feat-card fade-up">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <div class="feat-img-ph">
+                <img style="height: 100%; width:100%; object-fit: cover;" src="https://framerusercontent.com/images/qkLIJvSUOffbQHryRL7PeswGePM.png">
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="feat-body">
+                <div class="feat-tag">The Cluster / Head & Neck</div>
+                <h3>
+                  Haptic Feedback Loops: Training the Brain through the Skin
+                </h3>
+                <p>
+                  Examining "Nudge Theory"—using localized micro-vibrations to subconsciously prompt posture correction and close the loop between data and habit.
+                </p>
+                <div class="feat-meta">
+                  <div class="ava-sm">
+                    <img style="height: 100%; width:100%; object-fit: cover; border-radius: 50%" src="media/mark.jpg">
+                  </div>
+                  <span>Mark España &nbsp;·&nbsp; 5 min read</span>
+                  <span><i class="bi bi-eye"></i> 1.8k views</span>
+                </div>
+                <a
+                  href="pages/cluster/headAndNeck/haptic.html"
+                  class="btn-primary-s d-inline-block"
+                  style="
+                    margin-top: 1.4rem;
+                    font-size: 0.85rem;
+                    padding: 0.6rem 1.4rem;
+                  "
+                  >Read Article <i class="bi bi-arrow-right ms-1"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     ARTICLE GRID
+════════════════════════════ -->
+    <section id="articles">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <div class="sec-eyebrow">Recent posts</div>
+            <h2 class="sec-title">Latest Articles</h2>
+          </div>
+          <a href="pages/articles.html" class="read-more d-none d-md-flex"
+            >See all <i class="bi bi-arrow-right"></i
+          ></a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c1">
+                <span class="art-chip">Biomechanics</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  Wrist &amp; Forearm Sensors: How They Decode Repetitive Strain
+                  Before It Becomes Injury
+                </h5>
+                <p>
+                  Examining how accelerometers and flex sensors in wrist bands
+                  detect micro-movements that predict RSI development.
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Mark España &nbsp;·&nbsp; 6 min</span>
+                <a href="pages/cluster/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c2">
+                <span class="art-chip">Engineering</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  Smart Fabrics: The Material Science Behind Textiles That
+                  Monitor Your Body
+                </h5>
+                <p>
+                  From conductive yarns to pressure-sensitive membranes — how
+                  engineers weave sensing capability into everyday clothing.
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Kim Datuin &nbsp;·&nbsp; 7 min</span>
+                <a href="pages/engineering/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c3">
+                <span class="art-chip">Future &amp; Ethics</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  Neural Interfaces and the Consent Question: Who Owns Your
+                  Biometric Data?
+                </h5>
+                <p>
+                  As AI wearables collect increasingly personal signals, privacy
+                  laws struggle to keep pace. What regulatory landscape is
+                  taking shape?
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Amir Lopez &nbsp;·&nbsp; 10 min</span>
+                <a href="pages/ethics/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c4">
+                <span class="art-chip">Biomechanics</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  Head &amp; Neck Posture: Why Your Smart Collar Knows More Than
+                  Your Physiotherapist
+                </h5>
+                <p>
+                  Inertial measurement units in cervical wearables can capture
+                  1,000 data points per second on head position and velocity.
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Aica Ortega &nbsp;·&nbsp; 5 min</span>
+                <a href="pages/cluster/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c5">
+                <span class="art-chip">Feedback</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  The Psychology of Haptic Nudges: Can Vibration Alone Change a
+                  Habit?
+                </h5>
+                <p>
+                  Behavioral science meets wearable design — a look at how
+                  feedback frequency, intensity, and timing influence long-term
+                  habit formation.
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Patricia Pelicano &nbsp;·&nbsp; 8 min</span>
+                <a href="pages/feedBack/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="art-card">
+              <div class="art-img-ph c6">
+                <span class="art-chip">Engineering</span>Article Image
+              </div>
+              <div class="art-inner">
+                <h5>
+                  Power &amp; Heat Management: How Wearables Stay Cool When Your
+                  Body Doesn't
+                </h5>
+                <p>
+                  Efficient power circuits and thermal dissipation strategies
+                  keep wearables safe, comfortable, and functional through
+                  intense activity.
+                </p>
+              </div>
+              <div class="art-footer">
+                <span>Noel Bandoy &nbsp;·&nbsp; 6 min</span>
+                <a href="pages/engineering/article_template.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     CASE STUDIES
+════════════════════════════ -->
+    <section id="casestudies">
+      <div class="container">
+        <div class="text-center mb-5">
+          <div class="sec-eyebrow">Real-world applications</div>
+          <h2 class="sec-title">Case Studies</h2>
+          <p
+            class="mt-3"
+            style="
+              color: rgba(221, 220, 242, 0.65);
+              font-size: 0.92rem;
+              max-width: 520px;
+              margin: 1rem auto 0;
+            "
+          >
+            Wearables in action — across three major sectors that prove the
+            technology's tangible impact on human bodies and livelihoods.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 fade-up">
+            <div class="cs-card">
+              <div class="cs-sector">Industrial</div>
+              <h5>Exoskeletons</h5>
+              <p>
+                Back and shoulder frames redistribute load, reducing cumulative
+                strain and preventing musculoskeletal injury among workers who
+                lift heavy objects daily.
+              </p>
+              <a href="pages/casestudy/casestudy_template.html" class="cs-link"
+                >Click to View <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="cs-card">
+              <div class="cs-sector">Athletic</div>
+              <h5>Motion-Tracking Suits</h5>
+              <p>
+                Joint and limb sensors capture movement in real time, providing
+                coaches and athletes with objective data to correct form and
+                avoid injury before it occurs.
+              </p>
+              <a href="pages/casestudy/casestudy_template.html" class="cs-link"
+                >Click to View <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4 fade-up">
+            <div class="cs-card">
+              <div class="cs-sector">Medical</div>
+              <h5>Smart Rehabilitation Gloves</h5>
+              <p>
+                Finger and palm sensors guide precise motor movements,
+                accelerating recovery from stroke and injury while restoring
+                functional independence safely.
+              </p>
+              <a href="pages/casestudy/casestudy_template.html" class="cs-link"
+                >Click to View <i class="bi bi-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     NEWSLETTER
+════════════════════════════ -->
+    <section id="newsletter">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="sec-eyebrow" style="color: rgba(221, 220, 242, 0.5)">
+              Stay informed
+            </div>
+            <h2>The latest on wearables,<br />right in your inbox.</h2>
+            <p class="mt-3">
+              New articles on biomechanics, engineering, and ethics — delivered
+              weekly. No spam. Built for curious minds.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <div class="nl-form">
+              <input type="email" placeholder="your@email.com" />
+              <button>Subscribe</button>
+            </div>
+            <div class="nl-note">
+              Trusted by 12,000+ readers. Unsubscribe anytime.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════
+     FAT FOOTER
+════════════════════════════ -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
+              <a href="/cdn-cgi/l/email-protection#1b6f737e7e697c74777a795b687e75687469727a35787476" class="soc-btn"><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bdc9d5d8d8cfdad2d1dcdffdced8d3ced2cfd4dc93ded2d0">[email&#160;protected]</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+
+          <!-- The Cluster + Feedback -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="pages/cluster/cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="pages/cluster/cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="pages/cluster/cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="pages/feedBack/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="pages/feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="pages/feedBack/feedback.html">Psychology of Ergonomics</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Engineering + Case Studies -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="pages/engineering/engineering.html">Material Science</a></li>
+              <li>
+                <a href="pages/engineering/engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="pages/engineering/engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li>
+                <a href="pages/casestudy/casestudies.html">Industrial / Exoskeletons</a>
+              </li>
+              <li><a href="pages/casestudy/casestudies.html">Athletic Performance</a></li>
+              <li>
+                <a href="pages/casestudy/casestudies.html">Medical / Rehabilitative</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ethics + General -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="pages/ethics/ethics.html">Neural Interfaces</a></li>
+              <li><a href="pages/ethics/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="pages/ethics/ethics.html">Evolutionary Impact</a></li>
+              <li><a href="pages/ethics/cookies.html">Cookies</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/about/about.html">About / Contact</a></li>
+              <li><a href="privacypolicy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet the Team -->
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Leader:</span
+                >
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Content:</span
+                >
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >UI Design:</span
+                >
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
+                Pelicano &amp; Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">QA:</span>
+                Bandoy &amp; Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Navigation:</span
+                >
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="pages/ethics/cookies.html">Cookies</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/shared.js"></script>
+    <script>
+      // Close mobile nav on link click
+      document
+        .querySelectorAll(
+          "#navMenu .nav-link:not(.dropdown-toggle), #navMenu .dropdown-item",
+        )
+        .forEach((l) => {
+          l.addEventListener("click", () => {
+            const c = bootstrap.Collapse.getInstance(
+              document.getElementById("navMenu"),
+            );
+            if (c) c.hide();
+          });
+        });
+
+      // Sidebar active state on scroll
+      const sbarItems = document.querySelectorAll(".sbar-item");
+      const sections = [
+        "hero",
+        "pillars",
+        "featured",
+        "casestudies",
+        "articles",
+      ];
+      window.addEventListener("scroll", () => {
+        let current = "hero";
+        sections.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 120) current = id;
+        });
+        sbarItems.forEach((item) => {
+          item.classList.toggle("active", item.dataset.section === current);
+        });
+      });
+
+      // Scroll fade-in
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

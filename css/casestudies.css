@@ -1,0 +1,402 @@
+/* ── Case Studies index unique styles ── */
+.cs-hero {
+  background: var(--haunted);
+  padding: 90px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+.cs-hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(191, 141, 242, 0.15) 0%,
+    transparent 70%
+  );
+}
+.cs-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: var(--silver);
+  line-height: 1.1;
+}
+.cs-hero p {
+  color: rgba(221, 220, 242, 0.68);
+  font-size: 0.97rem;
+  line-height: 1.78;
+  max-width: 620px;
+  margin-top: 1rem;
+}
+
+/* sector cards */
+#sectors {
+  padding: 90px 0;
+  background: var(--mag-grey);
+}
+.sector-card {
+  border-radius: 22px;
+  overflow: hidden;
+  border: 2px solid var(--silver);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    border-color 0.3s;
+  background: #fff;
+  height: 100%;
+}
+.sector-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 56px rgba(53, 47, 89, 0.13);
+  border-color: var(--grape);
+}
+.sc-img {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+.sc-img.industrial {
+  background: linear-gradient(135deg, #5a5470, var(--haunted));
+}
+.sc-img.athletic {
+  background: linear-gradient(135deg, #5a8a72, #2b2640);
+}
+.sc-img.medical {
+  background: linear-gradient(135deg, #6b629a, #2b2640);
+}
+.sc-sector-label {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  background: rgba(53, 47, 89, 0.82);
+  backdrop-filter: blur(4px);
+  color: var(--vodka);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 0.22rem 0.8rem;
+}
+.sc-body {
+  padding: 2rem;
+}
+.sc-body h3 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--haunted);
+  margin-bottom: 0.7rem;
+}
+.sc-body p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.72;
+}
+.sc-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+.sc-sub-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--silver);
+}
+.sc-sub-list li:last-child {
+  border: none;
+}
+.sc-sub-list i {
+  color: var(--vodka);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.sc-sub-list a {
+  color: var(--haunted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.sc-sub-list a:hover {
+  color: var(--grape);
+}
+.sc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--haunted);
+  color: var(--silver);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: 2px solid var(--haunted);
+  border-radius: 10px;
+  padding: 0.65rem 1.5rem;
+  margin-top: 0.5rem;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.2s;
+}
+.sc-btn:hover {
+  background: var(--grape);
+  color: var(--haunted);
+  transform: translateY(-2px);
+}
+
+/* stats row */
+.cs-stats {
+  padding: 60px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--silver);
+}
+.cstat-num {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 2.6rem;
+  color: var(--haunted);
+  line-height: 1;
+}
+.cstat-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  background: var(--haunted);
+  border-bottom: 2px solid var(--grape);
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  padding: 0.65rem 0;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--silver);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--haunted);
+  flex-shrink: 0;
+}
+.logo-text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+}
+.navbar-nav .nav-link {
+  color: var(--silver) !important;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--vodka) !important;
+  background: rgba(255, 255, 255, 0.07);
+}
+.navbar-nav .nav-link.active {
+  color: var(--vodka) !important;
+  background: rgba(191, 141, 242, 0.12);
+}
+.nav-search-wrap {
+  position: relative;
+}
+.nav-search {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--grape);
+  border-radius: 50px;
+  padding: 0.35rem 1rem 0.35rem 2rem;
+  color: var(--silver);
+  font-size: 0.78rem;
+  outline: none;
+  width: 160px;
+  transition:
+    width 0.3s,
+    background 0.2s;
+}
+.nav-search::placeholder {
+  color: var(--grape);
+}
+.nav-search:focus {
+  width: 200px;
+  background: rgba(255, 255, 255, 0.13);
+}
+.nav-search-wrap .srch-icon {
+  position: absolute;
+  left: 0.7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--grape);
+  font-size: 0.76rem;
+  pointer-events: none;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+/* ── FAT FOOTER ── */
+footer {
+  background: var(--dark-bg) !important;
+  color: var(--silver) !important;
+  padding: 72px 0 0 !important;
+}
+.footer-logo {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--silver);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+.footer-tagline {
+  font-size: 0.83rem;
+  color: rgba(221, 220, 242, 0.5);
+  line-height: 1.7;
+  max-width: 260px;
+}
+.footer-social {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.soc-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(221, 220, 242, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--silver);
+  font-size: 0.9rem;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+.soc-btn:hover {
+  background: var(--vodka);
+  border-color: var(--vodka);
+  color: var(--haunted);
+}
+.footer-heading {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--vodka);
+  margin-bottom: 0.75rem;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.45rem;
+}
+.footer-links a {
+  font-size: 0.82rem;
+  color: rgba(221, 220, 242, 0.6);
+  transition: color 0.18s;
+}
+.footer-links a:hover {
+  color: var(--silver);
+}
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(221, 220, 242, 0.55);
+  margin-bottom: 0.4rem;
+}
+.footer-contact-item i {
+  color: var(--grape);
+  font-size: 0.85rem;
+}
+.footer-contact-item a {
+  color: rgba(221, 220, 242, 0.55);
+}
+.footer-contact-item a:hover {
+  color: var(--silver);
+}
+.footer-bottom {
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(221, 220, 242, 0.1);
+  font-size: 0.75rem;
+  color: rgba(221, 220, 242, 0.35);
+  margin-top: 3rem;
+}
+.footer-bottom a {
+  color: rgba(221, 220, 242, 0.35);
+  transition: color 0.18s;
+}
+.footer-bottom a:hover {
+  color: var(--silver);
+}
+/* ── breadcrumb ── */
+.breadcrumb-bar {
+  background: #fff;
+  border-bottom: 1px solid var(--silver);
+  padding: 0.55rem 0;
+}
+.breadcrumb {
+  margin: 0;
+  font-size: 0.78rem;
+}
+.breadcrumb-item a {
+  color: var(--grape);
+}
+.breadcrumb-item.active {
+  color: var(--haunted);
+  font-weight: 600;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--grape);
+}

@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy — sensoria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --mag-grey: #f0f0f2;
+        --haunted: #352f59;
+        --grape: #9e99bf;
+        --vodka: #bf8df2;
+        --silver: #dddcf2;
+        --dark-bg: #2b2640;
+        --body-text: #2d3436;
+        --muted: #5a5470;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--mag-grey);
+        color: var(--body-text);
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background: var(--haunted);
+        border-bottom: 2px solid var(--grape);
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+        padding: 0.65rem 0;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        background: var(--silver);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--haunted);
+        flex-shrink: 0;
+      }
+      .logo-text {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        color: var(--silver);
+        letter-spacing: 0.04em;
+      }
+      .navbar-nav .nav-link {
+        color: var(--silver) !important;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.9rem;
+        border-radius: 6px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .navbar-nav .nav-link:hover {
+        color: var(--vodka) !important;
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+      .nav-search-wrap {
+        position: relative;
+      }
+      .nav-search {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--grape);
+        border-radius: 50px;
+        padding: 0.35rem 1rem 0.35rem 2rem;
+        color: var(--silver);
+        font-size: 0.78rem;
+        outline: none;
+        width: 160px;
+        transition: width 0.3s;
+      }
+      .nav-search::placeholder {
+        color: var(--grape);
+      }
+      .nav-search:focus {
+        width: 200px;
+      }
+      .nav-search-wrap .srch-icon {
+        position: absolute;
+        left: 0.7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--grape);
+        font-size: 0.76rem;
+        pointer-events: none;
+      }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar {
+        background: #fff;
+        border-bottom: 1px solid var(--silver);
+        padding: 0.55rem 0;
+      }
+      .breadcrumb {
+        margin: 0;
+        font-size: 0.78rem;
+      }
+      .breadcrumb-item a {
+        color: var(--grape);
+      }
+      .breadcrumb-item.active {
+        color: var(--haunted);
+        font-weight: 600;
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: var(--grape);
+      }
+
+      /* HERO */
+      .legal-hero {
+        background: linear-gradient(
+          135deg,
+          var(--haunted) 0%,
+          var(--dark-bg) 100%
+        );
+        padding: 72px 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+      .legal-hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(191, 141, 242, 0.12) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .legal-hero-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: rgba(191, 141, 242, 0.16);
+        border: 1.5px solid var(--vodka);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: var(--vodka);
+        margin-bottom: 1.2rem;
+      }
+      .legal-badge {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.18);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.85rem;
+        margin-bottom: 0.7rem;
+      }
+      .legal-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(2rem, 4.5vw, 3.4rem);
+        color: var(--silver);
+        line-height: 1.1;
+      }
+      .legal-hero .hero-meta {
+        color: rgba(221, 220, 242, 0.5);
+        font-size: 0.8rem;
+        margin-top: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .hero-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      /* MAIN LAYOUT */
+      .legal-wrap {
+        padding: 72px 0 90px;
+      }
+
+      /* sticky TOC sidebar */
+      .toc-sidebar {
+        position: sticky;
+        top: 84px;
+        background: #fff;
+        border-radius: 16px;
+        border: 1.5px solid var(--silver);
+        padding: 1.5rem;
+      }
+      .toc-title {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--vodka);
+        margin-bottom: 1rem;
+      }
+      .toc-link {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--muted);
+        padding: 0.38rem 0.5rem;
+        border-radius: 6px;
+        transition:
+          background 0.18s,
+          color 0.18s;
+        margin-bottom: 0.1rem;
+      }
+      .toc-link:hover,
+      .toc-link.active {
+        background: rgba(53, 47, 89, 0.07);
+        color: var(--haunted);
+        font-weight: 600;
+      }
+      .toc-link .toc-num {
+        color: var(--grape);
+        margin-right: 0.4rem;
+        font-size: 0.72rem;
+      }
+
+      /* legal body */
+      .legal-body {
+        max-width: 720px;
+      }
+      .legal-section {
+        margin-bottom: 3.5rem;
+        scroll-margin-top: 100px;
+      }
+      .legal-section-num {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--grape);
+        margin-bottom: 0.3rem;
+      }
+      .legal-section h2 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        color: var(--haunted);
+        margin-bottom: 1rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1.5px solid var(--silver);
+      }
+      .legal-section p {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.85;
+        margin-bottom: 0.9rem;
+      }
+      .legal-section p:last-child {
+        margin-bottom: 0;
+      }
+      .legal-section ul {
+        padding-left: 1.2rem;
+        margin-bottom: 0.9rem;
+      }
+      .legal-section ul li {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.8;
+        margin-bottom: 0.4rem;
+      }
+      .legal-section ul li::marker {
+        color: var(--grape);
+      }
+
+      /* inline highlight box */
+      .legal-highlight {
+        background: rgba(191, 141, 242, 0.08);
+        border: 1.5px solid rgba(191, 141, 242, 0.3);
+        border-radius: 12px;
+        padding: 1.2rem 1.4rem;
+        margin: 1.2rem 0;
+        display: flex;
+        gap: 0.9rem;
+        align-items: flex-start;
+      }
+      .legal-highlight i {
+        color: var(--vodka);
+        font-size: 1.1rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .legal-highlight p {
+        margin: 0;
+        font-size: 0.86rem;
+        color: var(--haunted);
+        line-height: 1.7;
+        font-weight: 500;
+      }
+
+      /* last updated chip */
+      .updated-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: rgba(53, 47, 89, 0.07);
+        border: 1px solid var(--silver);
+        border-radius: 50px;
+        font-size: 0.75rem;
+        color: var(--muted);
+        padding: 0.3rem 0.85rem;
+        margin-bottom: 2rem;
+      }
+
+      /* other docs strip */
+      .other-docs {
+        padding: 48px 0 72px;
+        background: #fff;
+        border-top: 1px solid var(--silver);
+      }
+      .doc-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background: var(--mag-grey);
+        border: 1.5px solid var(--silver);
+        border-radius: 14px;
+        padding: 1.2rem 1.4rem;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .doc-card:hover {
+        border-color: var(--grape);
+        box-shadow: 0 8px 24px rgba(53, 47, 89, 0.08);
+      }
+      .doc-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        color: var(--haunted);
+      }
+      .doc-card h6 {
+        font-weight: 700;
+        color: var(--haunted);
+        margin-bottom: 0.15rem;
+        font-size: 0.9rem;
+      }
+      .doc-card p {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin: 0;
+      }
+      .doc-arrow {
+        margin-left: auto;
+        color: var(--grape);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+
+      /* FOOTER */
+      footer {
+        background: var(--dark-bg);
+        color: var(--silver);
+        padding: 72px 0 0;
+      }
+      .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 2rem;
+        color: var(--silver);
+        letter-spacing: 0.02em;
+        margin-bottom: 0.75rem;
+      }
+      .footer-tagline {
+        font-size: 0.83rem;
+        color: rgba(221, 220, 242, 0.5);
+        line-height: 1.7;
+        max-width: 260px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+      }
+      .soc-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(221, 220, 242, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--silver);
+        font-size: 0.9rem;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .soc-btn:hover {
+        background: var(--vodka);
+        border-color: var(--vodka);
+        color: var(--haunted);
+      }
+      .footer-heading {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--vodka);
+        margin-bottom: 0.75rem;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-links li {
+        margin-bottom: 0.45rem;
+      }
+      .footer-links a {
+        font-size: 0.82rem;
+        color: rgba(221, 220, 242, 0.6);
+        transition: color 0.18s;
+      }
+      .footer-links a:hover {
+        color: var(--silver);
+      }
+      .footer-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        color: rgba(221, 220, 242, 0.55);
+        margin-bottom: 0.4rem;
+      }
+      .footer-contact-item i {
+        color: var(--grape);
+        font-size: 0.85rem;
+      }
+      .footer-bottom {
+        padding: 1.2rem 0;
+        border-top: 1px solid rgba(221, 220, 242, 0.1);
+        font-size: 0.75rem;
+        color: rgba(221, 220, 242, 0.35);
+        margin-top: 3rem;
+      }
+      .footer-bottom a {
+        color: rgba(221, 220, 242, 0.35);
+        transition: color 0.18s;
+      }
+      .footer-bottom a:hover {
+        color: var(--silver);
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.5s,
+          transform 0.5s;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <div class="logo-mark">S</div>
+          <span class="logo-text">sensoria</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="pages/cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/about.html">About</a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap mt-3 mt-lg-0">
+            <i class="bi bi-search srch-icon"></i>
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Privacy Policy</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="legal-hero">
+      <div class="container">
+        <div class="legal-hero-icon">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <div class="legal-badge">Legal</div>
+        <h1>Privacy Policy</h1>
+        <div class="hero-meta">
+          <span
+            ><i class="bi bi-calendar3"></i> Last updated: April 12, 2026</span
+          >
+          <span><i class="bi bi-clock"></i> 5 min read</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="legal-wrap">
+      <div class="container">
+        <div class="row g-5">
+          <!-- TOC Sidebar -->
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="toc-sidebar">
+              <div class="toc-title">On this page</div>
+              <a href="#s1" class="toc-link"
+                ><span class="toc-num">01</span> Who We Are</a
+              >
+              <a href="#s2" class="toc-link"
+                ><span class="toc-num">02</span> What We Collect</a
+              >
+              <a href="#s3" class="toc-link"
+                ><span class="toc-num">03</span> How We Use It</a
+              >
+              <a href="#s4" class="toc-link"
+                ><span class="toc-num">04</span> Cookies</a
+              >
+              <a href="#s5" class="toc-link"
+                ><span class="toc-num">05</span> Third Parties</a
+              >
+              <a href="#s6" class="toc-link"
+                ><span class="toc-num">06</span> Your Rights</a
+              >
+              <a href="#s7" class="toc-link"
+                ><span class="toc-num">07</span> Data Retention</a
+              >
+              <a href="#s8" class="toc-link"
+                ><span class="toc-num">08</span> Security</a
+              >
+              <a href="#s9" class="toc-link"
+                ><span class="toc-num">09</span> Children</a
+              >
+              <a href="#s10" class="toc-link"
+                ><span class="toc-num">10</span> Changes</a
+              >
+              <a href="#s11" class="toc-link"
+                ><span class="toc-num">11</span> Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="col-lg-9">
+            <div class="legal-body">
+              <div class="updated-chip">
+                <i class="bi bi-info-circle"></i> Effective April 12, 2026
+              </div>
+
+              <div class="legal-highlight">
+                <i class="bi bi-heart-fill"></i>
+                <p>
+                  sensoria is a student educational project by The Ergo Lab
+                  (Group 4, CIP 1101-CSAD). We don't sell your data, run ads, or
+                  store anything we don't need. This policy explains the very
+                  little we do collect — and why.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s1">
+                <div class="legal-section-num">01</div>
+                <h2>Who We Are</h2>
+                <p>
+                  sensoria is an educational website created by The Ergo Lab, a
+                  student group from CIP 1101-CSAD at our institution in Manila,
+                  Philippines. The site is a course project exploring the
+                  intersection of wearable technology and human ergonomics.
+                </p>
+                <p>
+                  For any privacy-related questions, you can reach us at
+                  <strong>theergolab@sensoria.com</strong> or through our
+                  Instagram <strong>@_theergolab</strong>.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s2">
+                <div class="legal-section-num">02</div>
+                <h2>What We Collect</h2>
+                <p>
+                  Because sensoria is a static educational website, we collect
+                  very little. Here is a full account of what may be gathered
+                  when you visit:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Contact form submissions</strong> — if you use our
+                    contact form on the About page, we receive your name, email
+                    address, and message content.
+                  </li>
+                  <li>
+                    <strong>Newsletter sign-ups</strong> — if you subscribe via
+                    our newsletter form, we collect your email address only.
+                  </li>
+                  <li>
+                    <strong>Automatically collected data</strong> — like all
+                    websites, our hosting provider may log your IP address,
+                    browser type, referring URL, and pages visited. We do not
+                    access or use this data for tracking purposes.
+                  </li>
+                </ul>
+                <p>
+                  We do not require account creation, do not collect payment
+                  information, and do not ask for any sensitive personal data.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s3">
+                <div class="legal-section-num">03</div>
+                <h2>How We Use It</h2>
+                <p>
+                  Any information you voluntarily provide (contact form,
+                  newsletter) is used only to:
+                </p>
+                <ul>
+                  <li>Respond to your inquiry or message</li>
+                  <li>Send you new article updates if you subscribed</li>
+                  <li>Improve the site based on general feedback</li>
+                </ul>
+                <p>
+                  We do not use your data for advertising, profiling, or sale to
+                  third parties. Full stop.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s4">
+                <div class="legal-section-num">04</div>
+                <h2>Cookies</h2>
+                <p>
+                  sensoria uses only essential cookies — small files placed in
+                  your browser that help the site function correctly. We do not
+                  use tracking cookies, advertising cookies, or analytics
+                  cookies that identify you personally.
+                </p>
+                <p>
+                  For a full breakdown of what cookies are used and why, see our
+                  <a
+                    href="cookies.html"
+                    style="
+                      color: var(--haunted);
+                      font-weight: 600;
+                      text-decoration: underline;
+                    "
+                    >Cookie Policy</a
+                  >.
+                </p>
+                <div class="legal-highlight">
+                  <i class="bi bi-cookie"></i>
+                  <p>
+                    You can disable cookies in your browser settings at any
+                    time. This may affect minor site functionality but will not
+                    prevent you from reading any content on sensoria.
+                  </p>
+                </div>
+              </div>
+
+              <div class="legal-section fade-up" id="s5">
+                <div class="legal-section-num">05</div>
+                <h2>Third Parties</h2>
+                <p>
+                  sensoria loads some resources from trusted third-party CDNs to
+                  ensure fast performance:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Google Fonts</strong> — for typography (Playfair
+                    Display, Montserrat). Google may log your IP as part of this
+                    request.
+                  </li>
+                  <li>
+                    <strong>Bootstrap CDN (jsDelivr)</strong> — for layout and
+                    UI components.
+                  </li>
+                  <li>
+                    <strong>Bootstrap Icons CDN</strong> — for iconography.
+                  </li>
+                </ul>
+                <p>
+                  These services have their own privacy policies. We do not
+                  share your personal data with any of them, and none of them
+                  receive your contact form or newsletter data.
+                </p>
+                <p>
+                  We do not use Google Analytics, Facebook Pixel, or any other
+                  behavioral tracking services.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s6">
+                <div class="legal-section-num">06</div>
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                  <li>
+                    <strong>Access</strong> any personal data we hold about you
+                  </li>
+                  <li><strong>Correct</strong> any inaccurate data</li>
+                  <li>
+                    <strong>Request deletion</strong> of your data at any time
+                  </li>
+                  <li>
+                    <strong>Unsubscribe</strong> from our newsletter by replying
+                    to any email or contacting us directly
+                  </li>
+                  <li>
+                    <strong>Withdraw consent</strong> for any processing at any
+                    time
+                  </li>
+                </ul>
+                <p>
+                  To exercise any of these rights, contact us at
+                  <strong>theergolab@sensoria.com</strong>. We will respond
+                  within 7 days.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s7">
+                <div class="legal-section-num">07</div>
+                <h2>Data Retention</h2>
+                <p>
+                  Contact form messages are retained only as long as necessary
+                  to respond to your inquiry. Newsletter email addresses are
+                  retained until you unsubscribe. We do not retain any other
+                  personal data.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s8">
+                <div class="legal-section-num">08</div>
+                <h2>Security</h2>
+                <p>
+                  sensoria is a static website hosted on a standard web host.
+                  While we take reasonable precautions, no internet transmission
+                  is 100% secure. Please do not send sensitive personal
+                  information through our contact form.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s9">
+                <div class="legal-section-num">09</div>
+                <h2>Children</h2>
+                <p>
+                  sensoria is an educational site suitable for all ages. We do
+                  not knowingly collect personal data from children under 13. If
+                  you believe a child has submitted data through our site,
+                  please contact us and we will delete it promptly.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s10">
+                <div class="legal-section-num">10</div>
+                <h2>Changes to This Policy</h2>
+                <p>
+                  If we make material changes to this Privacy Policy, we will
+                  update the "Last updated" date at the top of this page. As a
+                  student project with a limited lifespan, significant changes
+                  are unlikely. Continued use of the site after changes
+                  constitutes acceptance of the updated policy.
+                </p>
+              </div>
+
+              <div class="legal-section fade-up" id="s11">
+                <div class="legal-section-num">11</div>
+                <h2>Contact</h2>
+                <p>
+                  Privacy questions, data requests, or concerns can be directed
+                  to:
+                </p>
+                <ul>
+                  <li><strong>Email:</strong> theergolab@sensoria.com</li>
+                  <li><strong>Instagram:</strong> @_theergolab</li>
+                  <li><strong>Facebook:</strong> The Ergo Lab</li>
+                  <li><strong>Location:</strong> Manila, Philippines</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHER DOCS -->
+    <div class="other-docs">
+      <div class="container">
+        <p
+          style="
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--grape);
+            margin-bottom: 1.2rem;
+          "
+        >
+          Related documents
+        </p>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a href="cookies.html" class="doc-card">
+              <div class="doc-icon"><i class="bi bi-cookie"></i></div>
+              <div>
+                <h6>Cookie Policy</h6>
+                <p>What cookies we use and how to control them.</p>
+              </div>
+              <i class="bi bi-arrow-right doc-arrow"></i>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="terms.html" class="doc-card">
+              <div class="doc-icon"><i class="bi bi-file-text"></i></div>
+              <div>
+                <h6>Terms of Use</h6>
+                <p>Rules and conditions for using sensoria.</p>
+              </div>
+              <i class="bi bi-arrow-right doc-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
+              <a href="mailto:theergolab@sensoria.com" class="soc-btn"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> theergolab@sensoria.com
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="pages/cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="pages/cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="pages/cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="pages/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="pages/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="pages/feedback.html">Psychology of Ergonomics</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="pages/engineering.html">Material Science</a></li>
+              <li>
+                <a href="pages/engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="pages/engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li><a href="pages/casestudies.html">Industrial</a></li>
+              <li><a href="pages/casestudies.html">Athletic</a></li>
+              <li><a href="pages/casestudies.html">Medical</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="pages/ethics.html">Neural Interfaces</a></li>
+              <li><a href="pages/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="pages/ethics.html">Evolutionary Impact</a></li>
+              <li><a href="pages/ethics.html">Cookies</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/about.html">About / Contact</a></li>
+              <li>
+                <a href="privacypolicy.html" style="color: var(--silver)"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Leader:</span
+                >
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Content:</span
+                >
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >UI Design:</span
+                >
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
+                Pelicano &amp; Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">QA:</span>
+                Bandoy &amp; Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Navigation:</span
+                >
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Scroll spy for TOC
+      const sections = document.querySelectorAll(".legal-section");
+      const tocLinks = document.querySelectorAll(".toc-link");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((s) => {
+          if (window.scrollY >= s.offsetTop - 120) current = s.id;
+        });
+        tocLinks.forEach((l) =>
+          l.classList.toggle(
+            "active",
+            l.getAttribute("href") === "#" + current,
+          ),
+        );
+      });
+      // Fade-in
+      const io = new IntersectionObserver(
+        (e) =>
+          e.forEach((x) => {
+            if (x.isIntersecting) x.target.classList.add("visible");
+          }),
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>
