@@ -16,18 +16,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link href="..\..\..\css\article_template.css" rel="stylesheet" />
-
-    <style id="shared-nav-override">
-      
-    </style>
+    <link rel="icon" href="../../../media/logo.png" />
+    <link href="../../../css/article_template.css" rel="stylesheet" />
+    <link href="../../../css/shared.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png" />
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -41,22 +40,26 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link active" href="../cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../feedBack/feedback.html"
+                >Feedback</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../casestudy/casestudies.html"
+                >Case Studies</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link" href="../../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link" href="../../ethics.html">Ethics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -71,127 +74,150 @@
       </div>
     </nav>
 
-    <!-- ══ BREADCRUMB ══ -->
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Feedback &amp; Behavior</a>
+            <a href="../../../index.html">Home</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
+          <li class="breadcrumb-item">
+            <a href="../feedback.html">Feedback & Behavior</a>
+          </li>
           <li class="breadcrumb-item active">Relearning Every Step</li>
         </ol>
       </div>
     </div>
 
-    <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
       <div class="container">
-        <!-- ★ EDIT: change category tag to match topic -->
-        <div class="category-tag">Feedback &amp; Behavior</div>
+        <div class="category-tag">Head &amp; Neck</div>
 
-        <!-- ★ EDIT: article title -->
         <h1>
-         Article: Relearning Every Step: The Science Behind Gait Feedback
+          Relearning Every Step: The Science Behind Gait Feedback
         </h1>
 
-        <!-- ★ EDIT: article subtitle / deck -->
         <p class="subtitle">
-         Gait is something most people never think about—until something goes wrong. Every step we take is the result of complex coordination between muscles, joints, and the nervous system. When even a small imbalance occurs, it can slowly lead to discomfort, poor posture, or injury. Gait feedback technology brings attention to these hidden patterns, helping individuals understand how their bodies truly move.
+          Gait is something most people never think about—until something goes wrong. Every step we take is the result of complex coordination between muscles, joints, and the nervous system. When even a small imbalance occurs, it can slowly lead to discomfort, poor posture, or injury. Gait feedback technology brings attention to these hidden patterns, helping individuals understand how their bodies truly move.
         </p>
 
         <div class="article-meta">
           <div class="meta-author">
-            <!-- ★ EDIT: author initials, name, role -->
             <div class="ava">
-              <img class="ava-img" src="../../../media/noel.jpg" />
+              <img class="ava-img" src="../../../media/mark.jpg" />
             </div>
             <div>
-              <div class="ava-name">Noel Bandoy</div>
-              <div class="ava-role">Quality Assurance</div>
+              <div class="ava-name">Mark España</div>
+              <div class="ava-role">Navigation</div>
             </div>
           </div>
           <div class="meta-divider d-none d-md-block"></div>
-          <!-- ★ EDIT: update date, read time, views -->
           <div class="meta-stat">
-            <i class="bi bi-calendar3"></i> April 12, 2026
+            <i class="bi bi-calendar3"></i> April 11, 2026
           </div>
           <div class="meta-stat"><i class="bi bi-clock"></i> 8 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 6,767 views</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 2,408 views</div>
         </div>
 
-        <!-- ★ EDIT: swap src for real article hero image -->
         <div class="hero-img-wrap">
           <div class="hero-img-ph">
             <img
-              src="https://www.mychiro.com.au/wp-content/uploads/2026/02/image_d5b5f94df589ffbebea16ffef5ec0e9d-1024x683.jpeg"
-              alt="Wearable device providing real-time gait correction feedback during walking."
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
+              alt="Close up of electronic components and smart wearable sensors"
             />
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ══ ARTICLE BODY ══ -->
     <section id="article-body">
       <div class="container">
         <div class="row g-5">
-          <!-- ── MAIN CONTENT ── -->
           <div class="col-lg-8">
             <article class="article-content">
-              <!-- ★ EDIT: replace all content below with actual article body -->
-
               <p>
-                At its core, <b>gait feedback is about awareness.</b> Wearable devices track movement using sensors that detect motion, orientation, and pressure. These tools capture details like how evenly weight is distributed, how long each step lasts, and how the body shifts during movement. What used to require a laboratory can now be monitored in real-world environments.
+                The human head weighs approximately 10–12 pounds in a neutral
+                position. However, as the cervical spine tilts forward—a
+                phenomenon colloquially known as "Tech Neck"—the effective
+                weight on the neck muscles can soar to 60 pounds. To combat
+                this, the sensoria Smart Collar utilizes high-precision IMUs.
               </p>
 
-              <h2 class="section" id="section-1">The Power of Real-Time Feedback  </h2>
+              <h2 class="section" id="section-1">The 9-Axis System</h2>
               <p>
-                What makes this technology powerful is its ability to respond instantly. <b>Instead of analyzing movement after the fact, gait feedback systems provide real-time</b> signals when something is off. A slight vibration or notification can alert a user that their stride is uneven or their posture needs adjustment. This immediate response allows corrections to happen in the moment, not after damage has been done.
+                At the heart of our tracking is the 9-axis IMU. This system
+                combines three distinct sensors to create a complete picture of
+                head orientation in 3D space:
               </p>
-              <p>
-                Over time, these repeated <b>corrections begin to reshape movement habits</b>. The body adapts by developing more efficient patterns, improving balance and coordination naturally. This process is similar to learning a new skill—except instead of conscious effort, the body gradually “learns” better movement through consistent feedback.
-              </p>
+              <ul>
+                <li>
+                  <strong>Accelerometer:</strong> Measures linear acceleration
+                  and gravity to detect tilt.
+                </li>
+                <li>
+                  <strong>Gyroscope:</strong> Measures angular velocity to track
+                  the speed of rotation.
+                </li>
+                <li>
+                  <strong>Magnetometer:</strong> Acts as a digital compass to
+                  maintain a stable heading relative to the Earth's magnetic
+                  field.
+                </li>
+              </ul>
 
               <div class="pull-quote">
                 <p>
-                  "You don’t improve movement by guessing—you improve it by measuring and responding to it."</p>
-                <cite
-                  >— Dr. Rafael Mendoza, Human Movement Analyst</cite
-                >
+                  "Precision monitoring of the cervical spine isn't about
+                  knowing where the head is; it's about detecting the
+                  microscopic tremors of muscle fatigue."
+                </p>
               </div>
 
-              <h2 class="section" id="section-2">Supporting Rehabilitation and Recovery</h2>
+              <h2 class="section" id="section-2">Why 1,000Hz Sampling?</h2>
               <p>
-               As wearable technology continues to evolve, gait feedback is becoming more accessible and more precise. It represents a shift toward proactive health—where small adjustments today can prevent bigger problems tomorrow. By turning each step into a source of information, <b>this technology empowers people to move smarter, safer, and more efficiently.</b>
-              </p>
-
-
-              <h2>References: </h2>
-              <p>Ginis, P., Nackaerts, E., Nieuwboer, A., & Heremans, E. (2017). Cueing for people with Parkinson’s disease with freezing of gait: A narrative review of the state-of-the-art and novel perspectives. Annals of Physical and Rehabilitation Medicine, 61(6), 407–413. https://doi.org/10.1016/j.rehab.2017.08.002<a style="text-decoration: underline;" href="https://doi.org/10.1016/j.rehab.2017.08.002" title="Cueing for people with Parkinson’s disease with freezing of gait" >https://doi.org/10.1016/j.rehab.2017.08.002</a>
+                Most commercial wearables sample at 50Hz or 100Hz. While
+                sufficient for counting steps, these rates miss the
+                "micro-bobbing" movements of a neck struggling to support the
+                head.
               </p>
               <p>
-              Tao, W., Liu, T., Zheng, R., and Feng, H. (2012). Gait analysis using wearable sensors. Sensors, 12(2), 2255–2283.<a style="text-decoration: underline;" href="https://doi.org/10.3390/s120202255" title="Gait analysis using wearable sensors." >https://doi.org/10.3390/s120202255</a> 
+                By sampling at 1,000Hz (1,000 data points per second), sensoria
+                captures the high-frequency oscillations that signal the onset
+                of fatigue. This high-fidelity data allows our algorithms to
+                distinguish between a deliberate look down at a phone and the
+                slow, involuntary "slump" of a tired spine.
               </p>
+
+              <div class="callout">
+                <div class="callout-label">Technical Insight</div>
+                <p>
+                  High-frequency sampling allows us to apply
+                  <strong>Sensor Fusion</strong> algorithms that eliminate
+                  "drift," ensuring the collar remains accurate even after hours
+                  of continuous use during long work or gaming sessions.
+                </p>
+              </div>
+
+              <h2 class="section" id="section-3">Preventing Tech Neck</h2>
               <p>
-             World Health Organization. (2010). Global recommendations on physical activity for health. <a style="text-decoration: underline;" href="https://www.who.int" title="Global recommendations on physical activity for health." >https://www.who.int</a> 
-                .</p>
+                By identifying the early signatures of Tech Neck, the Smart
+                Collar provides real-time haptic feedback. This subtle nudge
+                encourages the user to reset their cervical alignment,
+                distributing the weight back onto the skeletal structure rather
+                than overworking the posterior neck muscles.
+              </p>
 
-      
-
-              <!-- ★ EDIT: update tags to match the article topic -->
               <h2 class="art-tag-title">= Article Tags =</h2>
               <div class="article-tags">
-                <span class="art-tag">Respond instantly</span>
-                <span class="art-tag">Detect issues</span>
-                <span class="art-tag">Alert a user</span>
+                <span class="art-tag">IMU Technology</span>
+                <span class="art-tag">Cervical Spine</span>
+                <span class="art-tag">Tech Neck</span>
+                <span class="art-tag">Head & Neck</span>
+                <span class="art-tag">Engineering</span>
               </div>
             </article>
           </div>
 
-          <!-- ── SIDEBAR ── -->
-         <div class="col-lg-4">
+          <div class="col-lg-4">
             <div class="sidebar">
               <div class="sidebar-card">
                 <div class="sidebar-heading">Reading Progress</div>
@@ -205,25 +231,23 @@
                 </div>
               </div>
 
-              <!-- Table of Contents -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">In This Article</div>
-                <!-- ★ EDIT: update TOC links to match your h2 IDs and titles -->
                 <ul class="toc-list">
                   <li>
-                    <a href="#section-1" class="toc-link"
-                      >The Power of Real-Time Feedback</a
-                    >
+                    <a href="#section-1" class="toc-link">The 9-Axis System</a>
                   </li>
                   <li>
-                    <a href="#section-2" class="toc-link"
-                      >Supporting Rehabilitation and Recovery</a
+                    <a href="#section-2" class="toc-link">1,000Hz Sampling</a>
+                  </li>
+                  <li>
+                    <a href="#section-3" class="toc-link"
+                      >Preventing Tech Neck</a
                     >
-                  </l>
+                  </li>
                 </ul>
               </div>
 
-              <!-- Share -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">Share This Article</div>
                 <div class="share-btns">
@@ -238,61 +262,67 @@
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ══ RELATED ARTICLES (bottom) ══ -->
     <section id="related">
       <div class="container">
         <div class="mb-4">
           <div class="sec-eyebrow">Keep reading</div>
-          <h2 class="sec-title">More from Feedback &amp; Behavior</h2>
+          <h2 class="sec-title">More from Head &amp; Neck</h2>
         </div>
         <div class="row g-4">
-          <!-- ★ EDIT: replace with real related articles -->
           <div class="col-md-4">
             <div class="rel-card">
-              <div
-                class="rel-img-ph"
-                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
-              >
-                <span class="rel-chip">Feedback & Behavior</span>
+              <div class="rel-img-ph">
+                <img
+                  src="https://framerusercontent.com/images/qkLIJvSUOffbQHryRL7PeswGePM.png"
+                />
+                <span class="rel-chip">Head &amp; Neck</span>
               </div>
               <div class="rel-body">
                 <h5>
-                  Smarter Steps: How Gait Feedback Enhances Movement
+                  Haptic Feedback Loops: Training the Brain through the Skin
                 </h5>
                 <p>
-                  The way we move every day—whether walking to class or running during exercise—plays a major role in our overall health. Gait feedback technology is changing how people understand and improve their movement. By using wearable devices, individuals can now receive real-time insights that help correct posture and walking patterns before they lead to injury.
-
+                  Examining "Nudge Theory"—using localized micro-vibrations to
+                  subconsciously prompt posture correction and close the loop
+                  between data and habit.
                 </p>
               </div>
               <div class="rel-footer">
-                <span>Noel Bandoy · 6 min</span>
-                <a href="smarterSteps.html" class="read-more"
+                <span>Mark España · 5 mins</span>
+                <a href="haptic.html" class="read-more"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></a>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="rel-card">
-              <div
-                class="rel-img-ph"
-                style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
-              >
-                <span class="rel-chip">Feedback & Behavior</span>
+              <div class="rel-img-ph">
+                <img
+                  src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=1000"
+                />
+                <span class="rel-chip">Head &amp; Neck</span>
               </div>
               <div class="rel-body">
                 <h5>
-                   Walking Right: The Role of Gait Feedback in Lower Limb Health
+                  The 12-Pound Weight: The Physics of Forward Head Posture
                 </h5>
                 <p>
-                  Healthy movement starts from the ground up. The lower limbs carry the body’s weight and are responsible for balance, mobility, and posture. Gait feedback technology provides a modern solution to improving how we use these essential parts of the body, helping people move more safely and efficiently.
+                  Explaining the "lever effect" how every inch of forward
+                  movement adds 10 lbs of functional weight to your spine, and
+                  how the Smart Collar calculates this torque in real-time.
                 </p>
               </div>
               <div class="rel-footer">
-                <span>Noel Bandoy · 7 min</span>
-                <a href="RelearningEveryStep.html" class="read-more"
+                <span>Mark España · 6 mins</span>
+                <a href="haptic.html" class="read-more"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></a>
               </div>
@@ -302,11 +332,9 @@
       </div>
     </section>
 
-    <!-- ══ FOOTER ══ -->
     <footer>
       <div class="container">
         <div class="row g-5">
-          <!-- Brand -->
           <div class="col-lg-3">
             <div class="footer-logo">sensoria.</div>
             <p class="footer-tagline">
@@ -335,58 +363,106 @@
             </div>
           </div>
 
-          <!-- The Cluster + Feedback -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">The Cluster</div>
             <ul class="footer-links">
-              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="cluster.html">Head &amp; Neck</a></li>
-              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+              <li>
+                <a href="../cluster.html#articles-list">Wrist &amp; Forearm</a>
+              </li>
+              <li>
+                <a href="../cluster.html#articles-list">Head &amp; Neck</a>
+              </li>
+              <li>
+                <a href="../cluster.html#articles-list"
+                  >Torso &amp; Smart Fabrics</a
+                >
+              </li>
             </ul>
             <div class="footer-heading mt-4">Feedback</div>
             <ul class="footer-links">
-              <li><a href="feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
-              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Haptic Reconditioning</a
+                >
+              </li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Gait &amp; Lower Limb</a
+                >
+              </li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Psychology of Ergonomics</a
+                >
+              </li>
             </ul>
           </div>
 
-          <!-- Engineering + Case Studies -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Engineering</div>
             <ul class="footer-links">
-              <li><a href="engineering.html">Material Science</a></li>
               <li>
-                <a href="engineering.html">Power &amp; Heat Management</a>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Material Science</a
+                >
               </li>
-              <li><a href="engineering.html">Anthropometrics</a></li>
+              <li>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Power &amp; Heat Management</a
+                >
+              </li>
+              <li>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Anthropometrics</a
+                >
+              </li>
             </ul>
             <div class="footer-heading mt-4">Case Studies</div>
             <ul class="footer-links">
-              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
-              <li><a href="casestudies.html">Athletic Performance</a></li>
-              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Industrial / Exoskeletons</a
+                >
+              </li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Athletic Performance</a
+                >
+              </li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Medical / Rehabilitative</a
+                >
+              </li>
             </ul>
           </div>
 
-          <!-- Ethics + General -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Ethics</div>
             <ul class="footer-links">
-              <li><a href="ethics.html">Neural Interfaces</a></li>
-              <li><a href="ethics.html">Regulatory Landscape</a></li>
-              <li><a href="ethics.html">Evolutionary Impact</a></li>
-              <li><a href="ethics.html">Cookies</a></li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list">Neural Interfaces</a>
+              </li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list"
+                  >Regulatory Landscape</a
+                >
+              </li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list"
+                  >Evolutionary Impact</a
+                >
+              </li>
+              <li><a href="../../ethics/ethics.html#articles-list">Cookies</a></li>
             </ul>
             <div class="footer-heading mt-4">General</div>
             <ul class="footer-links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About / Contact</a></li>
+              <li><a href="../../../index.html">Home</a></li>
+              <li><a href="../../about/about.html">About / Contact</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
 
-          <!-- Meet the Team -->
           <div class="col-lg-3">
             <div class="footer-heading">Meet the Team</div>
             <p
@@ -448,15 +524,15 @@
         >
           <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
           <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="ethics.html">Cookies</a>
-            <a href="#">Terms</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/article_template.js"></script>
+    <script src="../../../js/article_template.js"></script>
   </body>
 </html>
