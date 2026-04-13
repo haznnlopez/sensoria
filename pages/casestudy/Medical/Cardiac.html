@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ergonomic Cardiac Monitors — sensoria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../../media/logo.png" />
+    <link rel="stylesheet" href="../../../css/casestudy_template.css" />
+    <link rel="stylesheet" href="../../../css/shared.css" />
+  </head>
+  <body>
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
+          <span class="logo-text">sensoria</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="../../articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap mt-3 mt-lg-0">
+            <i class="bi bi-search srch-icon"></i>
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══ BREADCRUMB ══ -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../casestudies.html">Case Studies</a></li>
+          <li class="breadcrumb-item active">Wearable Gait Analysis in Knee Replacement Recovery</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ══ CASE STUDY HERO ══ -->
+    <header class="cs-hero">
+      <!-- ★ EDIT: swap for a real sector-relevant image -->
+      <div class="cs-hero-img">
+        <img
+          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+          alt="Wearable gait analysis during knee replacement recovery"
+        />
+      </div>
+      <div class="cs-hero-overlay"></div>
+      <div class="container cs-hero-content">
+        <!-- ★ EDIT: update sector label -->
+        <div class="sector-badge">
+          <div class="sector-badge-dot"></div>
+          Medical Sector
+        </div>
+
+        <!-- ★ EDIT: case study title -->
+        <h1>
+          Wearable Gait Analysis in Knee Replacement Recovery
+        </h1>
+
+        <!-- ★ EDIT: summary sentence -->
+        <p class="subtitle">
+          Wearable sensors such as IMUs, smart bands, motion trackers, and instrumented insoles used to monitor walking symmetry, step quality, knee motion, and functional recovery after total knee replacement.
+        </p>
+
+        <div class="cs-hero-meta">
+          <!-- ★ EDIT: author, date, read time -->
+          <div class="ava">
+            <img class="ava-img" src="../../../media/kim.jpg" />
+          </div>
+          <div>
+            <div class="ava-name">Kimberly Datuin</div>
+            <div class="ava-role">Quality Assurance</div>
+          </div>
+          <div class="meta-stat">
+            <i class="bi bi-calendar3"></i> April 12, 2026
+          </div>
+          <div class="meta-stat"><i class="bi bi-clock"></i> 9 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 6,214 views</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ STATS STRIP ══ -->
+    <!-- ★ EDIT: replace numbers with real case study metrics -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="row align-items-center g-3">
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">41,893</div>
+              <div class="stat-label">Strides analyzed in remote recovery tracking</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">r = -0.87</div>
+              <div class="stat-label">Correlation between gait asymmetry and recovery time</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">5–7 days</div>
+              <div class="stat-label">Typical real-world monitoring window in IMU studies</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">18 sessions</div>
+              <div class="stat-label">Feasible gait-training sessions reported after TKA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ BODY ══ -->
+    <section id="cs-body">
+      <div class="container">
+        <div class="row g-5">
+          <!-- ── MAIN CONTENT ── -->
+          <div class="col-lg-8">
+            <article class="cs-content">
+              <!-- ★ EDIT: replace all content below with actual case study body -->
+
+              <p>
+                Wearable gait analysis in knee replacement recovery refers to the use of body-worn sensors to measure how a patient walks after total knee arthroplasty (TKA). Instead of relying only on occasional clinic visits or simple step counts, these systems capture stride-by-stride movement patterns such as walking speed, step symmetry, stance time, cadence, knee motion, and turning behavior. This gives clinicians a more detailed picture of how recovery is progressing in daily life.
+              </p>
+
+              <h2 class="section" id="section-1">What is Wearable Gait Analysis?</h2>
+              <p>
+                Wearable gait analysis uses lightweight sensors placed on the feet, shins, waist, lower back, or operated leg to track walking performance during rehabilitation. Common systems include inertial measurement units (IMUs), accelerometers, gyroscopes, smart bands, and wearable motion trackers paired with mobile apps. After knee replacement, these tools help therapists move beyond subjective observation by providing objective data on how safely and efficiently a patient is walking.
+              </p>
+
+              <div class="finding">
+                <div class="finding-label">In knee replacement recovery, wearable gait analysis is commonly used for:</div>
+                <ul>
+                  <li>
+                    Tracking walking symmetry between the operated and non-operated leg
+                  </li>
+                  <li>
+                    Measuring gait speed, cadence, stride length, and turning quality
+                  </li>
+                  <li>
+                    Monitoring knee range of motion and functional mobility at home
+                  </li>
+                  <li>
+                    Detecting slow or abnormal recovery patterns earlier
+                  </li>
+                  <li>
+                    Supporting remote rehabilitation and therapist decision-making
+                  </li>
+                </ul>
+              </div>
+
+              <h2 class="section" id="section-2">How the Technology Works</h2>
+              <p>
+                Most wearable gait systems combine motion sensors with software that translates body movement into clinically useful recovery metrics. Small IMUs detect acceleration and angular velocity during walking. From this signal, the platform estimates step time, stride time, gait speed, swing and stance phases, turning velocity, and movement symmetry. Some systems also pair with knee motion trackers to monitor flexion and extension during exercises.
+              </p>
+              <p>
+                In practice, patients wear the sensors during supervised therapy, short walking tests, or free-living activity at home. The data are then uploaded to a dashboard or mobile application, where clinicians can review whether walking is becoming faster, smoother, and more symmetrical over time. This is valuable after TKA because recovery is not only about how much the knee bends, but also about whether the person regains confident and efficient walking in real life.
+              </p>
+
+              <figure class="inline-img">
+                <div class="inline-img-ph">
+                  <img
+                    src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
+                    alt="Wearable gait analysis during rehabilitation"
+                  />
+                </div>
+                <figcaption>
+                  Example of lower-limb rehabilitation where wearable sensors can be used to monitor gait quality, step symmetry, and functional walking recovery after knee replacement surgery.
+                </figcaption>
+              </figure>
+
+              <h2 class="section" id="section-3">Key Findings from Wearable Gait Analysis Studies</h2>
+              <p>
+                Recent studies show that wearable systems can capture recovery features that standard clinic checkups often miss. A 2025 study on post-surgical remote gait analysis reported that asymmetry indices derived from 41,893 strides were strongly associated with recovery time, with correlations around r = -0.87, while simple step counts were much less informative. This suggests that gait quality can be more meaningful than just how much a patient walks.
+              </p>
+              <p>
+                Other research has shown that IMU-based monitoring can profile real-world walking over several days, giving insight into dominant gait speed, stride timing, activity volume, and turning behavior. Reviews published in 2023 to 2025 also describe wearable sensors as useful for evaluating mobility, knee range of motion, and functional rehabilitation after total knee arthroplasty, especially when used alongside app-based or home-based recovery programs.
+              </p>
+
+              <h2 class="section" id="section-4">Limitations and Patient Feedback</h2>
+              <p>
+                Although wearable gait analysis is promising, it still has practical limitations. Sensor placement must be consistent, and data quality can drop if the device shifts, is worn incorrectly, or is used inconsistently at home. Some systems are excellent at detecting gait timing but less direct when estimating joint angles or identifying the cause of an abnormal walking pattern without clinical context.
+              </p>
+              <p>
+                Patient acceptance also depends on comfort and simplicity. Older adults recovering from knee replacement may prefer devices that are lightweight, easy to put on, and do not interfere with walking aids, clothing, or wound care. Studies on remote rehabilitation consistently point to adherence, ease of setup, and clear feedback as important factors influencing whether patients continue using the technology outside the clinic.
+              </p>
+              <p>
+                Another limitation is interpretation. Wearable data can show that gait is asymmetrical or slow, but it may not fully explain whether the cause is pain, fear of movement, weakness, balance deficits, or compensatory habits. That is why these devices work best as part of rehabilitation, not as a replacement for therapist assessment.
+              </p>
+
+              <h2 class="section" id="section-5">Implications for Ergonomics Design</h2>
+              <p>
+                For Sensoria, this case study highlights how wearable gait analysis can improve ergonomic support in medical recovery by making rehabilitation more adaptive, measurable, and patient-centered. After knee replacement, many patients struggle with uneven loading, cautious walking, reduced confidence, and movement compensation. Wearable systems help reveal these patterns early so that therapy and product design can respond to the user’s actual movement behavior rather than assumptions.
+              </p>
+              <p>
+                From an ergonomics perspective, the best designs are discreet, lightweight, easy to don independently, and comfortable enough for repeated daily use. Interfaces should present recovery data in a simple way for patients while still giving therapists detailed metrics. Good ergonomic design also means minimizing setup errors, skin irritation, and device bulk so that recovery technology supports movement instead of becoming another barrier to it.
+              </p>
+              <p>
+                For a team like Sensoria, the key takeaway is that successful rehabilitation wearables should not only collect accurate gait data, but also fit naturally into the recovery routine of older adults. A device that is clinically useful, physically comfortable, and easy to understand is more likely to support long-term adherence and better functional outcomes.
+              </p>
+
+              <!-- tags -->
+              <!-- ★ EDIT: update tags to match case study topic -->
+              <h2 class="cs-tag-title">Case Study Tags</h2>
+              <div class="cs-tags">
+                <span class="cs-tag">Medical</span>
+                <span class="cs-tag">Wearable Gait Analysis</span>
+                <span class="cs-tag">Knee Replacement</span>
+                <span class="cs-tag">Rehabilitation</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── SIDEBAR ── -->
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <!-- Reading Progress -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Reading Progress</div>
+                <div class="read-progress-wrap">
+                  <div class="read-progress-label">
+                    <span>Progress</span><span id="progress-pct">0%</span>
+                  </div>
+                  <div class="read-progress-bar">
+                    <div class="read-progress-fill" id="progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Case Study Info Card -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Case Study Info</div>
+                <div class="sector-info">
+                  <!-- ★ EDIT: update all metadata fields -->
+                  <div class="sector-row">
+                    <div class="sector-row-label">Sector</div>
+                    <div class="sector-row-val">Medical </div>
+                  </div>
+                  <div class="sector-row">
+                    <div class="sector-row-label">Device Type</div>
+                    <div class="sector-row-val">
+                      Wearable Gait Analysis
+                    </div>
+                  </div>
+                  <div class="sector-row">
+                    <div class="sector-row-label">Primary Outcome</div>
+                    <div class="sector-row-val">
+                      Gait symmetry and walking recovery tracking
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table of Contents -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">In This Case Study</div>
+                <!-- ★ EDIT: update TOC to match your h2 IDs and titles -->
+                <ul class="toc-list">
+                  <li>
+                    <a href="#section-1" class="toc-link"
+                      >What is Wearable Gait Analysis?</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-2" class="toc-link"
+                      >How the Technology Works</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-3" class="toc-link"
+                      >Key Findings from Wearable Gait Analysis Studies</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-4" class="toc-link"
+                      >Limitations and Patient Feedback</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-5" class="toc-link"
+                      >Implications for Ergonomics Design</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Share -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Share This Case Study</div>
+                <div class="share-btns">
+                  <button class="share-btn">
+                    <i class="bi bi-facebook"></i> Facebook
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-twitter-x"></i> X
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-link-45deg"></i> Copy Link
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ OTHER CASE STUDIES ══ -->
+    <section id="other-cases">
+      <div class="container">
+        <div class="mb-4">
+          <div class="sec-eyebrow">Related Case Studies</div>
+          <h2 class="sec-title">More from the <i>Medical Sector</i></h2>
+        </div>
+        <div class="row g-4">
+          <!-- ★ EDIT: link to actual other case study pages -->
+          <div class="col-md-6">
+            <div class="oc-card">
+              <div
+                class="oc-img-ph"
+                style="background: linear-gradient(135deg, #5a8a72, #2b2640)"
+              >
+                <img src="https://cdn.neofect.com/www/assets/images/smart-glove/ProductSmartGlove.png">
+                <span class="oc-sector-chip">Medical</span>
+              </div>
+              <div class="oc-body">
+                <h5>Smart Gloves in Post-Stroke Rehabilitation</h5>
+                <p>
+                  Wearable sensor-based or soft-robotic gloves used to support hand exercises, assist grasp and release, track movement, and provide feedback during therapy.
+                </p>
+                <a href="WearableGait.html" class="oc-link"
+                  >Click to View <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="oc-card">
+              <div
+                class="oc-img-ph"
+                style="background: linear-gradient(135deg, #6b629a, #2b2640)"
+              >
+                <img src="https://www.caremax.com.au/media/wysiwyg/162-content3.jpg">
+                <span class="oc-sector-chip">Medical</span>
+              </div>
+              <div class="oc-body">
+                <h5>Cervical Sensors in Chronic Neck Pain Management</h5>
+                <p>
+                  Wearable cervical sensors use inertial, posture, and motion-tracking technology to monitor neck movement, identify harmful postures, and support exercise-based management for chronic neck pain.
+                </p>
+                <a href="CervicalSensors.html" class="oc-link"
+                  >Click to View <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+
+          <!-- The Cluster + Feedback -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="../../cluster/cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="../../cluster/cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="../../cluster/cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Engineering + Case Studies -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="../../engineering/engineering.html">Material Science</a></li>
+              <li>
+                <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li>
+                <a href="../casestudies.html">Industrial / Exoskeletons</a>
+              </li>
+              <li><a href="../casestudies.html">Athletic Performance</a></li>
+              <li>
+                <a href="../casestudies.html">Medical / Rehabilitative</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ethics + General -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="../about/about.html">About / Contact</a></li>
+              <li><a href="../../privacy.html">Privacy Policy</a></li>
+              <li><a href="../../cookies.html">Cookies</a></li>
+              <li><a href="../../terms.html">Terms</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet the Team -->
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Team Leader:</span
+                >
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Content Manager:</span
+                >
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >UI Designer:</span
+                >
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                Patricia Pelicano &amp; Aica Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                Noel Bandoy &amp; Kim Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Navigation Expert:</span
+                >
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/casestudy_template.js"></script>
+  </body>
+</html>
