@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Ownership & Ethics — sensoria</title>
+    <title>Data Privacy and Legal Regulations — sensoria</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,6 +22,7 @@
     <link href="../../../css/shared.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
@@ -38,61 +39,83 @@
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
-            <li class="nav-item"><a class="nav-link" href="cluster.html">The Cluster</a></li>
-            <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
-            <li class="nav-item"><a class="nav-link" href="casestudies.html">Case Studies</a></li>
-            <li class="nav-item"><a class="nav-link" href="engineering.html">Engineering</a></li>
-            <li class="nav-item"><a class="nav-link" href="ethics.html">Ethics</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
             <i class="bi bi-search srch-icon"></i>
-            <input class="nav-search" type="text" placeholder="Search topics…" />
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
           </div>
         </div>
       </div>
     </nav>
 
+    <!-- ══ BREADCRUMB ══ -->
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Ethics</a></li>
+          <li class="breadcrumb-item">
+            <a href="#">Ethics</a>
+          </li>
           <li class="breadcrumb-item active">Data Ownership & Neural Sovereignty</li>
         </ol>
       </div>
     </div>
 
+    <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
       <div class="container">
-        <div class="category-tag">Ethics & Governance</div>
+        <div class="category-tag">Ethics</div>
 
         <h1>
           The Neural Frontier: Who Owns the Data Inside Your Head?
         </h1>
 
         <p class="subtitle">
-          As AI-powered wearables move from tracking steps to decoding neural patterns, the boundary between "user data" and "biological identity" is vanishing. We examine the ethics of bodily autonomy in a sensor-saturated world.
+          Who really owns your health data? As wearables grow more intimate and pervasive, the legal frameworks governing your biological footprint struggle to keep pace — and the stakes for getting it wrong have never been higher.
         </p>
 
         <div class="article-meta">
           <div class="meta-author">
-            <div class="ava">GE</div>
+            <div class="ava">PP</div>
             <div>
-              <div class="ava-name">Gianna Ebue</div>
-              <div class="ava-role">Content Manager</div>
+              <div class="ava-name">Patricia Pelicano</div>
+              <div class="ava-role">Developer</div>
             </div>
           </div>
           <div class="meta-divider d-none d-md-block"></div>
-          <div class="meta-stat"><i class="bi bi-calendar3"></i> April 14, 2026</div>
-          <div class="meta-stat"><i class="bi bi-clock"></i> 10 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 12,140 views</div>
+          <div class="meta-stat">
+            <i class="bi bi-calendar3"></i> March 31, 2026
+          </div>
+          <div class="meta-stat"><i class="bi bi-clock"></i>4 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 12, 140 views</div>
         </div>
 
         <div class="hero-img-wrap">
           <div class="hero-img-ph">
             <img
-              src="https://images.unsplash.com/photo-1620712943543-bcc4628c9757?w=1200&q=80&fit=crop"
+              src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="AI neural network visualization representing data ownership"
             />
           </div>
@@ -100,9 +123,11 @@
       </div>
     </header>
 
+    <!-- ══ ARTICLE BODY ══ -->
     <section id="article-body">
       <div class="container">
         <div class="row g-5">
+          <!-- ── MAIN CONTENT ── -->
           <div class="col-lg-8">
             <article class="article-content">
 
@@ -137,18 +162,6 @@
                 </p>
               </div>
 
-              <figure class="inline-img">
-                <div class="inline-img-ph">
-                  <img
-                    src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=900&q=80&fit=crop"
-                    alt="Abstract representation of digital identity and biometric tracking"
-                  />
-                </div>
-                <figcaption>
-                  Your biological footprint is unique. Unlike a password, you cannot "reset" your DNA or your neural firing patterns once they are leaked or sold.
-                </figcaption>
-              </figure>
-
               <h2 class="section" id="section-3">The EU AI Act and the Future of Regulation</h2>
               <p>
                 The recently enacted <a href="https://artificialintelligenceact.eu/" target="_blank">EU AI Act</a> classifies many health-monitoring AI tools as "High-Risk." This requires developers to maintain strict data governance and human oversight. However, in regions without such frameworks, users are often forced into "take it or leave it" contracts where the price of health monitoring is the total surrender of data ownership.
@@ -170,6 +183,7 @@
             </article>
           </div>
 
+          <!-- ── SIDEBAR ── -->
           <div class="col-lg-4">
             <div class="sidebar">
               <div class="sidebar-card">
@@ -184,6 +198,7 @@
                 </div>
               </div>
 
+              <!-- Table of Contents -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">In This Article</div>
                 <ul class="toc-list">
@@ -194,20 +209,108 @@
                 </ul>
               </div>
 
+              <!-- Share -->
               <div class="sidebar-card">
-                <div class="sidebar-heading">Key References</div>
-                <div class="related-mini">
-                  <div>
-                    <div class="related-mini-title"><a href="https://artificialintelligenceact.eu/" target="_blank">The EU AI Act Official Text</a></div>
-                    <div class="related-mini-meta">Regulatory Standard</div>
-                  </div>
+                <div class="sidebar-heading">Share This Article</div>
+                <div class="share-btns">
+                  <button class="share-btn">
+                    <i class="bi bi-facebook"></i> Facebook
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-twitter-x"></i> X
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-link-45deg"></i> Copy Link
+                  </button>
                 </div>
-                <div class="related-mini">
-                  <div>
-                    <div class="related-mini-title"><a href="https://www.nature.com/articles/s41467-019-10933-3" target="_blank">The Myth of Anonymization</a></div>
-                    <div class="related-mini-meta">Nature Communications</div>
-                  </div>
-                </div>
+              </div>
+
+    <!-- ══ RELATED ARTICLES (bottom) ══ -->
+    <section id="related">
+      <div class="container">
+        <div class="mb-4">
+          <div class="sec-eyebrow">Keep reading</div>
+          <h2 class="sec-title">More from Ethics</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
+              >
+                <span class="rel-chip">Feedback</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  The Psychology of Haptic Nudges: Can Vibration Alone Change a
+                  Habit?
+                </h5>
+                <p>
+                  Behavioral science meets wearable design — how frequency,
+                  intensity, and timing of haptic cues influence long-term habit
+                  formation.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Patricia Pelicano · 8 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
+              >
+                <span class="rel-chip">Biomechanics</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  Gait &amp; Lower Limb Analysis: What Your Footstrike Reveals
+                  About Your Health
+                </h5>
+                <p>
+                  Pressure insoles and ankle IMUs are giving physiotherapists
+                  data they never had before — here's what they're learning.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Aica Ortega · 6 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #d4c8e0, #8a6aaa)"
+              >
+                <span class="rel-chip">Engineering</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  Wrist &amp; Forearm Sensors: Decoding Repetitive Strain Before
+                  It Becomes Injury
+                </h5>
+                <p>
+                  How accelerometers and flex sensors in wrist bands detect
+                  micro-movements that predict RSI development weeks in advance.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Mark España · 6 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
               </div>
             </div>
           </div>
@@ -215,10 +318,148 @@
       </div>
     </section>
 
+    <!-- ══ FOOTER ══ -->
     <footer>
       <div class="container">
-        <div class="footer-bottom">
-          <span>© 2026 sensoria by The Ergo Lab. Content focused on Neural Ethics.</span>
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
+              <a href="mailto:theergolab@sensoria.com" class="soc-btn"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> theergolab@sensoria.com
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+
+          <!-- The Cluster + Feedback -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="cluster.html">Head &amp; Neck</a></li>
+              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
+              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+            </ul>
+          </div>
+
+          <!-- Engineering + Case Studies -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="engineering.html">Material Science</a></li>
+              <li>
+                <a href="engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
+              <li><a href="casestudies.html">Athletic Performance</a></li>
+              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+            </ul>
+          </div>
+
+          <!-- Ethics + General -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="ethics.html">Neural Interfaces</a></li>
+              <li><a href="ethics.html">Regulatory Landscape</a></li>
+              <li><a href="ethics.html">Evolutionary Impact</a></li>
+              <li><a href="ethics.html">Cookies</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="about.html">About / Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet the Team -->
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Leader:</span>
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Content:</span>
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">UI Design:</span>
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
+                Pelicano &amp; Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">QA:</span>
+                Bandoy &amp; Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Navigation:</span>
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="ethics.html">Cookies</a>
+            <a href="#">Terms</a>
+          </div>
         </div>
       </div>
     </footer>
@@ -226,5 +467,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../js/article_template.js"></script>
     <script src="../../../js/shared.js"></script>
+  </body>
+</html>
   </body>
 </html>

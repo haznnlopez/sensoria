@@ -16,6 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+
+    <link href="../../../media/logo.png" rel="icon">
     <link href="../../../css/shared.css" rel="stylesheet">
     <link href="../../../css/article_template.css" rel="stylesheet" />
 
@@ -27,8 +29,10 @@
     <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -42,22 +46,25 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link" href="../../articles.html">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link" href="../../casestudy/casestudies.html">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link active" href="../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -76,12 +83,11 @@
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Engineering</a>
+            <a href="../engineering.html">Engineering & Design</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
-          <li class="breadcrumb-item active">Material Science</li>
+          <li class="breadcrumb-item active">Smart Fabrics: How Textiles Are Becoming Interactive Engineering Systems</li>
         </ol>
       </div>
     </div>
@@ -89,7 +95,7 @@
     <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
         <div class="container">
-            <div class="category-tag">Engineering · Material Science</div>
+            <div class="category-tag">Material Science</div>
 
             <h1>
             Smart Fabrics: How Textiles Are Becoming Interactive Engineering Systems
@@ -102,7 +108,9 @@
 
             <div class="article-meta">
               <div class="meta-author">
-                <div class="ava">AO</div>
+                <div class="ava">
+                  <img class="ava-img" src="../../../media/aica.JPG">
+                </div>
               <div>
                 <div class="ava-name">Aica Ortega</div>
                 <div class="ava-role">Developer</div>
@@ -119,7 +127,7 @@
             <div class="hero-img-wrap">
               <div class="hero-img-ph">
                   <img
-                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80&fit=crop"
+                  src="https://plus.unsplash.com/premium_photo-1663954132195-3ccf6b91e7a9?q=80&w=1396&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Advanced wearable material science and smart fabric engineering"
                   />
               </div>
@@ -145,7 +153,7 @@
                     These are known as <strong>smart fabrics</strong>.
                 </p>
 
-                <h2 id="section-1">The Science Behind Smart Textiles</h2>
+                <h2 class="section" id="section-1">The Science Behind Smart Textiles</h2>
                 <p>
                     Smart fabrics integrate conductive fibers, micro-sensors, and responsive
                     materials into traditional textile structures.
@@ -160,7 +168,7 @@
                     This allows garments to detect movement, pressure, and temperature.
                 </p>
 
-                <h2 id="section-2">Engineering Applications</h2>
+                <h2 class="section" id="section-2">Engineering Applications</h2>
                 <p>
                     Smart fabrics are widely used in sports performance, rehabilitation, and
                     health monitoring.
@@ -184,7 +192,7 @@
                     </p>
                 </div>
 
-                <h2 id="section-3">Comfort and Wearability</h2>
+                <h2 class="section" id="section-3">Comfort and Wearability</h2>
                 <p>
                     Material science must balance sensor performance with comfort.
                 </p>
@@ -197,12 +205,13 @@
                     Moisture management is especially important in active wearables.
                 </p>
 
-                <h2 id="section-4">Future of Smart Clothing</h2>
+                <h2 class="section" id="section-4">Future of Smart Clothing</h2>
                 <p>
                     Future smart fabrics may include adaptive temperature control and real-time
                     muscle fatigue monitoring.
                 </p>
 
+                <h2>Article Tags</h2>
                 <div class="article-tags">
                     <span class="art-tag">Smart Fabrics</span>
                     <span class="art-tag">Textile Engineering</span>
