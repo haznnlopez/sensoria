@@ -4,24 +4,159 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Preserving Mental Autonomy Through Cognitive Privacy Protections — sensoria</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
-    <link rel="icon" href="../../../media/logo.png" />
-    <link href="../../../css/article_template.css" rel="stylesheet" />
-    <link href="../../../css/shared.css" rel="stylesheet" />
+    <style>
+      :root {
+        --mag-grey: #f0f0f2;
+        --haunted: #352f59;
+        --grape: #9e99bf;
+        --vodka: #bf8df2;
+        --silver: #dddcf2;
+        --dark-bg: #2b2640;
+        --body-text: #2d3436;
+        --muted: #5a5470;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body { font-family: "Montserrat", sans-serif; background: var(--mag-grey); color: var(--body-text); overflow-x: hidden; }
+      a { text-decoration: none; color: inherit; }
+
+      /* NAVBAR */
+      .navbar { background: var(--haunted); border-bottom: 2px solid var(--grape); position: sticky; top: 0; z-index: 1050; padding: 0.7rem 0; }
+      .navbar-brand { display: flex; align-items: center; gap: 10px; }
+      .logo-mark { width: 38px; height: 38px; background: var(--silver); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: "Playfair Display", serif; font-size: 1.1rem; font-weight: 700; font-style: italic; color: var(--haunted); }
+      .logo-text { font-family: "Playfair Display", serif; font-size: 1.35rem; font-style: italic; color: var(--silver); letter-spacing: 0.04em; }
+      .navbar-nav .nav-link { color: var(--silver) !important; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.4rem 0.85rem; transition: color 0.2s; }
+      .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: var(--vodka) !important; }
+      .nav-search-wrap { position: relative; }
+      .nav-search { background: rgba(255,255,255,0.08); border: 1px solid var(--grape); border-radius: 50px; padding: 0.38rem 1rem 0.38rem 2rem; color: var(--silver); font-size: 0.8rem; outline: none; width: 170px; transition: width 0.3s; }
+      .nav-search::placeholder { color: var(--grape); }
+      .nav-search:focus { width: 210px; background: rgba(255,255,255,0.14); }
+      .nav-search-wrap i { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); color: var(--grape); font-size: 0.78rem; }
+      .navbar-toggler { border: none; }
+      .navbar-toggler:focus { box-shadow: none; }
+      .navbar-toggler-icon { filter: invert(1); }
+
+      /* BREADCRUMB */
+      .breadcrumb-bar { background: var(--dark-bg); padding: 0.7rem 0; border-bottom: 1px solid rgba(221,220,242,0.08); }
+      .breadcrumb { margin: 0; font-size: 0.76rem; }
+      .breadcrumb-item a { color: var(--grape); transition: color 0.2s; }
+      .breadcrumb-item a:hover { color: var(--silver); }
+      .breadcrumb-item.active { color: rgba(221,220,242,0.45); }
+      .breadcrumb-item + .breadcrumb-item::before { color: rgba(221,220,242,0.25); }
+
+      /* ARTICLE HERO */
+      .article-hero { background: linear-gradient(135deg, var(--haunted) 0%, var(--dark-bg) 100%); padding: 64px 0 0; position: relative; overflow: hidden; }
+      .article-hero::before { content: ""; position: absolute; top: -80px; right: -80px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(191,141,242,0.18) 0%, transparent 70%); pointer-events: none; }
+      .article-hero .category-tag { display: inline-block; background: rgba(191,141,242,0.18); border: 1px solid var(--vodka); color: var(--vodka); border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.28rem 1rem; margin-bottom: 1.2rem; }
+      .article-hero h1 { font-family: "Playfair Display", serif; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem); color: var(--silver); line-height: 1.15; max-width: 820px; }
+      .article-hero .subtitle { color: rgba(221,220,242,0.65); font-size: 1rem; line-height: 1.75; max-width: 680px; margin-top: 1rem; }
+      .article-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 1.4rem; margin-top: 2rem; padding: 1.4rem 0; border-top: 1px solid rgba(221,220,242,0.12); font-size: 0.8rem; color: rgba(221,220,242,0.55); }
+      .meta-author { display: flex; align-items: center; gap: 0.65rem; }
+      .ava { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(135deg, var(--silver), var(--grape)); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; color: var(--haunted); }
+      .ava-name { font-weight: 600; color: var(--silver); font-size: 0.85rem; }
+      .ava-role { font-size: 0.72rem; color: var(--grape); }
+      .meta-divider { width: 1px; height: 28px; background: rgba(221,220,242,0.15); }
+      .meta-stat { display: flex; align-items: center; gap: 0.35rem; }
+      .meta-stat i { color: var(--vodka); }
+      .hero-img-wrap { margin-top: 2.5rem; border-radius: 18px 18px 0 0; overflow: hidden; max-height: 480px; }
+      .hero-img-ph { width: 100%; height: 480px; background: linear-gradient(150deg, var(--grape) 0%, var(--haunted) 100%); display: flex; align-items: center; justify-content: center; }
+      .hero-img-ph img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+
+      /* ARTICLE BODY */
+      #article-body { padding: 60px 0 80px; }
+      .article-content { max-width: 720px; }
+      .article-content h2 { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.65rem; color: var(--haunted); margin: 2.4rem 0 0.9rem; line-height: 1.3; }
+      .article-content h3 { font-family: "Playfair Display", serif; font-size: 1.2rem; color: var(--haunted); margin: 1.8rem 0 0.7rem; }
+      .article-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.2rem; }
+      .article-content ul, .article-content ol { padding-left: 1.4rem; margin-bottom: 1.2rem; }
+      .article-content li { font-size: 0.93rem; color: var(--muted); line-height: 1.75; margin-bottom: 0.4rem; }
+      .article-content strong { color: var(--haunted); font-weight: 600; }
+
+      .pull-quote { border-left: 4px solid var(--vodka); padding: 1.2rem 1.6rem; margin: 2rem 0; background: rgba(158,153,191,0.1); border-radius: 0 12px 12px 0; }
+      .pull-quote p { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.15rem; color: var(--haunted); line-height: 1.6; margin: 0; }
+      .pull-quote cite { font-size: 0.78rem; color: var(--grape); margin-top: 0.5rem; display: block; font-style: normal; }
+
+      .callout { background: linear-gradient(135deg, rgba(53,47,89,0.06), rgba(158,153,191,0.12)); border: 1.5px solid var(--silver); border-radius: 14px; padding: 1.4rem 1.6rem; margin: 2rem 0; }
+      .callout-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--vodka); margin-bottom: 0.5rem; }
+      .callout p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.7; }
+
+      .inline-img { border-radius: 14px; overflow: hidden; margin: 2rem 0; }
+      .inline-img-ph { width: 100%; height: 280px; display: flex; align-items: center; justify-content: center; }
+      .inline-img-ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .inline-img figcaption { font-size: 0.76rem; color: var(--grape); text-align: center; padding: 0.5rem 0; font-style: italic; }
+
+      .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      .art-tag-title { padding-top: 2rem; border-top: 1px solid var(--silver); text-align: center; }
+      .art-tag { background: rgba(158,153,191,0.15); border: 1px solid var(--silver); color: var(--haunted); border-radius: 50px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.28rem 0.85rem; margin-top: 10px; transition: background 0.2s, border-color 0.2s; }
+
+      .section { scroll-margin-top: 150px; }
+
+      /* SIDEBAR */
+      .sidebar { position: sticky; top: 100px; }
+      .sidebar-card { background: #fff; border-radius: 16px; border: 1.5px solid var(--silver); padding: 1.4rem; margin-bottom: 1.4rem; }
+      .sidebar-heading { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grape); margin-bottom: 1rem; }
+      .toc-list { list-style: none; padding: 0; }
+      .toc-list li { margin-bottom: 0.5rem; }
+      .toc-list a { font-size: 0.82rem; color: var(--muted); display: flex; align-items: flex-start; gap: 0.5rem; transition: color 0.2s; }
+      .toc-list a::before { content: "—"; color: var(--silver); flex-shrink: 0; font-size: 0.7rem; margin-top: 0.15rem; }
+      .toc-list a:hover { color: var(--haunted); }
+      .toc-list a.active { color: var(--haunted); font-weight: 600; }
+      .toc-list a.active::before { color: var(--vodka); }
+      .read-progress-wrap { margin-bottom: 1rem; }
+      .read-progress-label { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--grape); margin-bottom: 0.35rem; }
+      .read-progress-bar { height: 4px; background: var(--silver); border-radius: 4px; overflow: hidden; }
+      .read-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--grape), var(--vodka)); border-radius: 4px; transition: width 0.2s; }
+      .related-mini { display: flex; gap: 0.8rem; align-items: flex-start; padding: 0.7rem 0; border-bottom: 1px solid var(--silver); }
+      .related-mini:last-child { border-bottom: none; padding-bottom: 0; }
+      .related-mini-thumb { width: 54px; height: 44px; border-radius: 8px; flex-shrink: 0; overflow: hidden; background: linear-gradient(135deg, var(--silver), var(--grape)); }
+      .related-mini-thumb img { width: 100%; height: 100%; object-fit: cover; }
+      .related-mini-title { font-size: 0.8rem; color: var(--haunted); line-height: 1.4; font-weight: 500; }
+      .related-mini-meta { font-size: 0.7rem; color: var(--grape); margin-top: 0.2rem; }
+      .share-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .share-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--mag-grey); border: 1.5px solid var(--silver); border-radius: 8px; padding: 0.45rem 0.85rem; font-size: 0.75rem; font-weight: 600; color: var(--haunted); transition: all 0.2s; cursor: pointer; }
+      .share-btn:hover { background: var(--haunted); color: var(--silver); border-color: var(--haunted); }
+      .share-btn i { font-size: 0.85rem; }
+
+      /* RELATED BOTTOM */
+      #related { padding: 60px 0; background: #fff; border-top: 1px solid var(--silver); }
+      .sec-eyebrow { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--grape); font-weight: 600; margin-bottom: 0.35rem; }
+      .sec-title { font-family: "Playfair Display", serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--haunted); line-height: 1.2; }
+      .rel-card { background: var(--mag-grey); border-radius: 16px; border: 1.5px solid var(--silver); overflow: hidden; height: 100%; transition: transform 0.3s, box-shadow 0.3s; }
+      .rel-card:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(53,47,89,0.1); }
+      .rel-img-ph { aspect-ratio: 16/9; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+      .rel-img-ph img { width: 100%; height: 100%; object-fit: cover; }
+      .rel-chip { position: absolute; top: 10px; left: 12px; background: rgba(53,47,89,0.82); backdrop-filter: blur(4px); color: var(--silver); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 50px; padding: 0.18rem 0.7rem; }
+      .rel-body { padding: 1.2rem; }
+      .rel-body h5 { font-family: "Playfair Display", serif; font-style: italic; font-size: 1rem; color: var(--haunted); line-height: 1.4; margin-bottom: 0.4rem; }
+      .rel-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+      .rel-footer { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.2rem; border-top: 1px solid var(--silver); font-size: 0.73rem; color: var(--grape); }
+      .read-more { display: inline-flex; align-items: center; gap: 0.3rem; color: var(--haunted); font-size: 0.78rem; font-weight: 600; transition: gap 0.2s, color 0.2s; }
+      .read-more:hover { gap: 0.55rem; color: var(--grape); }
+
+      /* FOOTER */
+      footer { background: var(--dark-bg); color: rgba(221,220,242,0.7); padding: 60px 0 0; }
+      .footer-logo { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.7rem; color: var(--silver); margin-bottom: 0.8rem; }
+      .footer-tagline { font-size: 0.85rem; opacity: 0.5; line-height: 1.7; max-width: 270px; }
+      .footer-heading { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--vodka); font-weight: 600; margin-bottom: 1rem; }
+      .footer-links { list-style: none; padding: 0; }
+      .footer-links li { margin-bottom: 0.5rem; }
+      .footer-links a { color: rgba(221,220,242,0.5); font-size: 0.85rem; transition: color 0.2s; }
+      .footer-links a:hover { color: var(--silver); }
+      .footer-social { display: flex; gap: 0.65rem; margin-top: 1.4rem; }
+      .soc-btn { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(221,220,242,0.18); display: flex; align-items: center; justify-content: center; color: rgba(221,220,242,0.5); font-size: 0.9rem; transition: all 0.2s; }
+      .soc-btn:hover { background: var(--grape); color: var(--haunted); border-color: transparent; }
+      .footer-contact-item { font-size: 0.8rem; color: rgba(221,220,242,0.45); display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; }
+      .footer-bottom { margin-top: 50px; padding: 1.2rem 0; border-top: 1px solid rgba(221,220,242,0.08); font-size: 0.78rem; color: rgba(221,220,242,0.3); }
+      .footer-bottom a { color: rgba(221,220,242,0.3); transition: color 0.2s; }
+      .footer-bottom a:hover { color: var(--grape); }
+    </style>
   </head>
   <body>
+
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
@@ -54,8 +189,8 @@
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Ethics</a></li>
-          <li class="breadcrumb-item active">Cognitive Privacy</li>
+          <li class="breadcrumb-item"><a href="ethics.html">Ethics</a></li>
+          <li class="breadcrumb-item active">Cognitive Privacy Protections</li>
         </ol>
       </div>
     </div>
@@ -63,10 +198,10 @@
     <!-- ARTICLE HERO -->
     <header class="article-hero">
       <div class="container">
-        <div class="category-tag">Ethics &amp; Neural Interfaces</div>
+        <div class="category-tag">Ethics &amp; Neural Rights</div>
         <h1>Preserving Mental Autonomy Through Cognitive Privacy Protections</h1>
         <p class="subtitle">
-          Brain-computer interfaces bypass traditional physical inputs entirely — allowing users to control digital systems through cognitive intent alone. We examine how BCIs work, where they stand today, and what they mean for the future of human agency.
+          As neural sensors enter everyday life, the last frontier of personal privacy — the mind itself — faces unprecedented exposure. The legal and ethical frameworks protecting our cognitive freedom have never been more urgent.
         </p>
         <div class="article-meta">
           <div class="meta-author">
@@ -77,15 +212,15 @@
             </div>
           </div>
           <div class="meta-divider d-none d-md-block"></div>
-          <div class="meta-stat"><i class="bi bi-calendar3"></i> April 10, 2026</div>
-          <div class="meta-stat"><i class="bi bi-clock"></i> 8 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 5,382 views</div>
+          <div class="meta-stat"><i class="bi bi-calendar3"></i> April 13, 2026</div>
+          <div class="meta-stat"><i class="bi bi-clock"></i> 10 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 5,874 views</div>
         </div>
         <div class="hero-img-wrap">
           <div class="hero-img-ph">
             <img
-              src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80&fit=crop"
-              alt="Brain-computer interface neuroscience technology"
+              src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=1200&q=80&fit=crop"
+              alt="Neural interface brain data privacy concept"
             />
           </div>
         </div>
@@ -96,114 +231,126 @@
     <section id="article-body">
       <div class="container">
         <div class="row g-5">
+
           <!-- MAIN CONTENT -->
           <div class="col-lg-8">
             <article class="article-content">
 
               <p>
-                Brain-computer interfaces (BCIs) represent one of the most consequential leaps in the history of human-technology interaction. By bypassing traditional physical inputs — keyboards, touchscreens, voice commands — these systems allow users to control digital environments through cognitive intent alone. This article examines how BCIs function, the science underpinning them, where they are today, and what their proliferation means for our understanding of human agency.
+                Should anyone have access to your thoughts? The emergence of consumer-grade neural sensors — EEG headbands, brainwave-tracking focus tools, emotion-detecting wearables — has turned a philosophical question into an urgent policy problem. The inner workings of our consciousness are no longer sealed behind the skull. They are increasingly readable, storable, and transmittable. Protecting them requires a fundamental rethinking of what "privacy" means in the age of wearable neurotechnology.
               </p>
 
-              <h2 class="section" id="section-1">Should anyone have access to your thoughts?</h2>
+              <h2 class="section" id="section-1">Should Anyone Have Access to Your Thoughts?</h2>
               <p>
-                The ability to monitor brain activity introduces profound ethical questions regarding the last frontier of personal privacy: the mind. Protecting the inner workings of our consciousness is critical to ensuring that personal thoughts and subconscious reactions remain secure from external probing. As neural sensors become more common, the legal definition of "privacy" must expand to include our mental states.
+                The ability to monitor brain activity introduces profound ethical questions regarding the last frontier of personal privacy: the mind. As neural sensors become embedded in headsets, earbuds, and smart helmets, the electrical signatures of our cognitive states — attention, stress, emotion, intent — become data points that can be captured and analyzed without the user ever consciously consenting to sharing them.
               </p>
               <p>
-                BCIs work by detecting the neural correlates of intent — the electrical patterns the brain produces when a person prepares or executes a thought. The system then maps those patterns to actions, effectively translating thought into instruction. The result is an interface that feels, at its best, like an extension of the self.
+                Protecting the inner workings of our consciousness is critical to ensuring that personal thoughts and subconscious reactions remain secure from external probing. Unlike location data or browsing history, brain data is not something a person chooses to produce. It is generated automatically as a byproduct of being alive and conscious. As neural sensors become more common, the legal definition of "privacy" must expand to include our mental states — not just our physical behaviors and digital footprints.
               </p>
 
               <div class="pull-quote">
                 <p>
-                  "The brain doesn't distinguish between moving your hand and intending to move your hand. BCIs exploit exactly that ambiguity."
+                  "The mind is the only space that has always been truly private. Neural wearables are the first technology that can walk through that door uninvited."
                 </p>
-                <cite>— Dr. Anna Reyes, Neural Engineering Lab, University of Santo Tomas</cite>
+                <cite>— Prof. Marisol Tan, Neuroethics, De La Salle University</cite>
               </div>
-
-              <h2 class="section" id="section-2">The line between helpful and invasive technology
-              <p>
-                While tracking focus can help a student optimize their study habits, using that same data to analyze emotional states or stress levels can quickly cross into invasive surveillance. Technology must be designed with strict ethical boundaries to ensure it assists the user without exploiting their psychological baseline. The challenge lies in benefiting from the insights without sacrificing the sanctity of our inner lives.
-              </p>
-
-              <div class="callout">
-                <div class="callout-label">How It Works</div>
-                <p>
-                  Raw EEG data is inherently noisy — contaminated by muscle movement, eye blinks, and ambient electrical interference. Advanced machine learning algorithms, trained on thousands of hours of labeled brain activity, filter this noise in real time to isolate the clean signal of a user's specific intent. The goal: sub-200ms latency from thought to action.
-                </p>
-              </div>
-
-              <p>
-                Invasive systems go further. Implanted electrode arrays placed directly on or within brain tissue achieve far greater signal resolution, enabling control at the level of individual neurons. These systems are currently restricted to clinical research contexts, but they have produced some of the most dramatic demonstrations of BCI capability.
-              </p>
 
               <!-- Inline image 1 -->
               <figure class="inline-img">
                 <div class="inline-img-ph">
                   <img
-                    src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=900&q=80&fit=crop"
-                    alt="EEG electrodes brain signal research lab"
+                    src="https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=900&q=80&fit=crop"
+                    alt="EEG headset brain monitoring neural wearable"
                   />
                 </div>
                 <figcaption>
-                  EEG headsets capture brain electrical activity via scalp electrodes. Real-time signal processing filters neural noise to decode intent.
+                  Consumer EEG headsets can capture detailed brainwave data during everyday tasks — raising questions about who owns those neural signals.
                 </figcaption>
               </figure>
 
-              <h2 class="section" id="section-3">From Science Fiction to Reality: Where We Are Now</h2>
+              <h2 class="section" id="section-2">The Line Between Helpful and Invasive Technology</h2>
               <p>
-                What was once confined to speculative fiction has crossed into both laboratory reality and early commercial availability. The technology exists on a spectrum: at one end, consumer-grade non-invasive headsets that track focus, stress, and meditative states; at the other, surgically implanted arrays capable of restoring complex motor control in patients with complete paralysis.
+                The distinction between useful and exploitative neurotech is deceptively thin. While tracking focus can help a student optimize their study habits — alerting them when attention drifts, suggesting break intervals, correlating rest patterns with performance — using that same data to analyze emotional states or stress levels can quickly cross into invasive surveillance.
               </p>
               <p>
-                Notable milestones include research demonstrating that patients with ALS can type at conversational speeds using neural signals alone, and trials where paralyzed individuals have operated robotic arms with multi-finger dexterity. These are no longer proof-of-concept experiments — they are early clinical realities operating outside the laboratory.
+                Technology must be designed with strict ethical boundaries to ensure it assists the user without exploiting their psychological baseline. A wearable that helps you concentrate is a productivity tool. A wearable that sells your stress profile to an insurance company or flags your emotional instability to an employer is something else entirely. The challenge lies in benefiting from the insights without sacrificing the sanctity of our inner lives.
               </p>
 
-              <h2 class="section" id="section-4">Empowering the Disabled Through Neural Control</h2>
+              <div class="callout">
+                <div class="callout-label">Design Principle</div>
+                <p>
+                  Ethical neurotech should operate on a strict <strong>minimum necessary data</strong> principle — capturing only the signals required for the stated function, processing locally where possible, and deleting raw neural data immediately after use rather than storing it for future analysis.
+                </p>
+              </div>
+
+              <h2 class="section" id="section-3">When Monitoring Becomes Mind-Reading</h2>
               <p>
-                For individuals living with severe paralysis, locked-in syndrome, or neurodegenerative conditions such as ALS, BCIs are not a convenience — they are a restoration of fundamental human dignity. By routing decoded brain signals directly to robotic limbs, communication software, or environmental controls, these users can regain independence without requiring any functional motor pathway.
+                As machine learning models become more sophisticated at decoding neural patterns, the gap between tracking electrical signals and interpreting actual intent is closing rapidly. Early EEG devices could only detect broad states — relaxed vs. focused. Today's models can classify specific cognitive tasks, infer emotional valence, and in some laboratory settings, decode fragments of imagined speech.
+              </p>
+              <p>
+                This capability requires rigorous oversight to prevent the unauthorized extraction of cognitive data by third parties. Without protection, our very thoughts could potentially be harvested as a new form of "neural metadata" — raw material for behavioral profiles more intimate than anything a keyboard or camera could capture.
               </p>
 
               <!-- Inline image 2 -->
               <figure class="inline-img">
                 <div class="inline-img-ph">
                   <img
-                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=900&q=80&fit=crop"
-                    alt="Medical rehabilitation technology assistive device"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80&fit=crop"
+                    alt="Machine learning AI data neural decoding concept"
                   />
                 </div>
                 <figcaption>
-                  BCI-driven assistive systems have allowed patients with complete motor paralysis to communicate and control their environment in real time.
+                  AI models trained on large neural datasets are increasingly capable of inferring cognitive state, intent, and emotion from brainwave patterns alone.
                 </figcaption>
               </figure>
 
+              <h2 class="section" id="section-4">Who Controls Your Brain Data?</h2>
               <p>
-                The implications extend beyond physical control. Communication BCIs give voice to individuals who have lost the ability to speak or type — restoring the capacity for social connection, creative expression, and informed consent in medical decision-making. In this context, the technology carries ethical weight that goes well beyond its engineering specifications.
+                Ownership of neurological data is currently undefined in most legal jurisdictions. In practice, the company providing the headset often retains broad rights to the data collected through their platform — rights buried in terms-of-service agreements that users routinely accept without reading. This creates a power imbalance with no historical precedent.
+              </p>
+              <p>
+                The ownership of neurological data must be legally assigned exclusively to the individual, rather than the company providing the device. Without this framework, cognitive data could be monetized by tech companies, sold to advertisers targeting subconscious associations, or even used by employers to assess performance, attention, or emotional resilience during hiring or reviews. Absolute sovereignty over one's own brain data is essential for maintaining individual freedom in a connected age.
               </p>
 
               <div class="callout">
-                <div class="callout-label">Clinical Impact</div>
+                <div class="callout-label">Legal Gap</div>
                 <p>
-                  Research trials have demonstrated that implanted BCIs can enable individuals with complete upper-limb paralysis to achieve <strong>typing speeds exceeding 90 characters per minute</strong> using neural signals alone — approaching the pace of natural conversation.
+                  As of 2026, only <strong>Chile, Colorado, and a handful of other jurisdictions</strong> have enacted laws that explicitly extend privacy protections to neural data. The vast majority of the world lacks any specific legal framework governing who owns or can access brainwave information collected by consumer devices.
                 </p>
               </div>
 
-              <h2 class="section" id="section-5">Are We Redefining What It Means to Interact?</h2>
+              <h2 class="section" id="section-5">The Fight to Protect Cognitive Freedom</h2>
               <p>
-                BCIs are doing something more profound than improving input speed or accessibility — they are fundamentally dissolving the boundary between user and device. When technology responds to intention rather than action, the traditional model of interaction (human → tool → outcome) collapses into something closer to: human intention → outcome.
+                "Cognitive Liberty" is emerging as a fundamental human right in the era of neurotechnology. The term, first articulated by legal scholar Nita Farahany, encompasses both the freedom to alter one's own mental state and — crucially — the freedom to keep one's mental state private from external scrutiny.
               </p>
               <p>
-                This shift invites urgent questions about identity, autonomy, and privacy. If a device can read the neural correlates of intent, what else can it read? Who owns that data? Can an interface that exists partly inside the skull be hacked, manipulated, or weaponized? These are not distant hypotheticals — they are the live ethical terrain that regulators, researchers, and ethicists are navigating right now.
+                Advocates are fighting for legal guarantees that protect individuals from algorithmic manipulation and ensure they cannot be forced to share their mental states as a condition of employment, insurance, or access to services. The right to cognitive privacy sits alongside freedom of thought as a cornerstone of human dignity in an age when thought itself is becoming legible to machines.
               </p>
               <p>
-                The transition suggests a future where technology is no longer a tool we hold or wear, but an extension of our own nervous system. That future is closer than most people assume — and it demands the same quality of critical scrutiny we apply to any technology embedded this deeply in human life.
+                Protecting cognitive freedom ensures that technology remains a tool for empowerment rather than a mechanism for mental control. As neurotechnology matures, the principles we establish now will determine whether wearable devices serve the people who wear them — or the systems that monitor them.
               </p>
+
+              <!-- Inline image 3 -->
+              <figure class="inline-img">
+                <div class="inline-img-ph">
+                  <img
+                    src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=80&fit=crop"
+                    alt="Human rights cognitive liberty protest concept"
+                  />
+                </div>
+                <figcaption>
+                  Advocates for cognitive liberty argue that the right to mental privacy must be enshrined in law before neurotechnology outpaces regulation.
+                </figcaption>
+              </figure>
 
               <h2 class="art-tag-title">= Article Tags =</h2>
               <div class="article-tags">
-                <span class="art-tag">Brain-Computer Interfaces</span>
-                <span class="art-tag">Neural Interfaces</span>
-                <span class="art-tag">Ethics</span>
-                <span class="art-tag">Assistive Technology</span>
-                <span class="art-tag">EEG</span>
-                <span class="art-tag">Human-Machine Interaction</span>
+                <span class="art-tag">Cognitive Privacy</span>
+                <span class="art-tag">Neural Ethics</span>
+                <span class="art-tag">Neurotech</span>
+                <span class="art-tag">Brain Data</span>
+                <span class="art-tag">Cognitive Liberty</span>
+                <span class="art-tag">Data Ownership</span>
               </div>
             </article>
           </div>
@@ -211,6 +358,7 @@
           <!-- SIDEBAR -->
           <div class="col-lg-4">
             <div class="sidebar">
+
               <!-- Reading Progress -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">Reading Progress</div>
@@ -228,11 +376,11 @@
               <div class="sidebar-card">
                 <div class="sidebar-heading">In This Article</div>
                 <ul class="toc-list">
-                  <li><a href="#section-1" class="toc-link">Can Your Thoughts Control Technology?</a></li>
-                  <li><a href="#section-2" class="toc-link">Inside the Mind: How Devices Read Brain Signals</a></li>
-                  <li><a href="#section-3" class="toc-link">From Science Fiction to Reality</a></li>
-                  <li><a href="#section-4" class="toc-link">Empowering the Disabled Through Neural Control</a></li>
-                  <li><a href="#section-5" class="toc-link">Are We Redefining What It Means to Interact?</a></li>
+                  <li><a href="#section-1" class="toc-link">Should Anyone Have Access to Your Thoughts?</a></li>
+                  <li><a href="#section-2" class="toc-link">The Line Between Helpful and Invasive Technology</a></li>
+                  <li><a href="#section-3" class="toc-link">When Monitoring Becomes Mind-Reading</a></li>
+                  <li><a href="#section-4" class="toc-link">Who Controls Your Brain Data?</a></li>
+                  <li><a href="#section-5" class="toc-link">The Fight to Protect Cognitive Freedom</a></li>
                 </ul>
               </div>
 
@@ -242,64 +390,65 @@
                 <div class="share-btns">
                   <button class="share-btn"><i class="bi bi-facebook"></i> Facebook</button>
                   <button class="share-btn"><i class="bi bi-twitter-x"></i> X</button>
-                  <button class="share-btn"><i class="bi bi-link-45deg"></i> Copy Link</button>
+                  <button class="share-btn" id="copy-link-btn"><i class="bi bi-link-45deg"></i> Copy Link</button>
                 </div>
               </div>
 
-              <!-- Related in sidebar -->
+              <!-- Related Reads -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">Related Reads</div>
                 <div class="related-mini">
                   <div class="related-mini-thumb">
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=120&q=70&fit=crop" alt="Neural implant ethics" />
+                    <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=120&q=70&fit=crop" alt="Neural interfaces" />
                   </div>
                   <div>
-                    <div class="related-mini-title">The Ethics of Neural Implants</div>
+                    <div class="related-mini-title">Neural Interfaces &amp; Regulatory Landscape</div>
                     <div class="related-mini-meta">Ethics · 7 min</div>
                   </div>
                 </div>
                 <div class="related-mini">
                   <div class="related-mini-thumb">
-                    <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=120&q=70&fit=crop" alt="Haptic feedback wearable" />
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=120&q=70&fit=crop" alt="Evolutionary impact" />
                   </div>
                   <div>
-                    <div class="related-mini-title">How Haptic Feedback Is Rewiring Movement</div>
-                    <div class="related-mini-meta">Feedback · 9 min</div>
+                    <div class="related-mini-title">The Evolutionary Impact of Wearable Augmentation</div>
+                    <div class="related-mini-meta">Ethics · 9 min</div>
                   </div>
                 </div>
                 <div class="related-mini">
                   <div class="related-mini-thumb">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=120&q=70&fit=crop" alt="Regulatory landscape wearables" />
+                    <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=120&q=70&fit=crop" alt="Haptic feedback" />
                   </div>
                   <div>
-                    <div class="related-mini-title">Regulatory Landscape for Neural Wearables</div>
-                    <div class="related-mini-meta">Ethics · 5 min</div>
+                    <div class="related-mini-title">How Real-Time Haptic Feedback Is Rewiring Movement</div>
+                    <div class="related-mini-meta">Feedback · 9 min</div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- RELATED ARTICLES -->
+    <!-- RELATED ARTICLES (bottom) -->
     <section id="related">
       <div class="container">
         <div class="mb-4">
           <div class="sec-eyebrow">Keep reading</div>
-          <h2 class="sec-title">More from Ethics &amp; Neural Interfaces</h2>
+          <h2 class="sec-title">More from Ethics</h2>
         </div>
         <div class="row g-4">
           <div class="col-md-4">
             <div class="rel-card">
-              <div class="rel-img-ph" style="background: linear-gradient(135deg, #c5c0e0, #6b629a);">
-                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=70&fit=crop" alt="Neural implant ethics" />
+              <div class="rel-img-ph" style="background: linear-gradient(135deg, #c5c0e0, #6b629a)">
+                <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600&q=70&fit=crop" alt="Neural interfaces" />
                 <span class="rel-chip">Ethics</span>
               </div>
               <div class="rel-body">
-                <h5>The Ethics of Neural Implants: Consent, Identity, and the Right to Mental Privacy</h5>
-                <p>As BCIs cross from research labs into clinical and consumer settings, who owns the data generated inside your own skull?</p>
+                <h5>Neural Interfaces: Drawing the Line Between Treatment and Enhancement</h5>
+                <p>As brain-computer interfaces move from clinical tools to consumer products, regulators face hard questions about what counts as medical necessity versus cognitive augmentation.</p>
               </div>
               <div class="rel-footer">
                 <span>Amir Lopez · 7 min</span>
@@ -309,32 +458,32 @@
           </div>
           <div class="col-md-4">
             <div class="rel-card">
-              <div class="rel-img-ph" style="background: linear-gradient(135deg, #b8d4c8, #5a8a72);">
-                <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&q=70&fit=crop" alt="Medical regulatory technology" />
-                <span class="rel-chip">Regulation</span>
+              <div class="rel-img-ph" style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=70&fit=crop" alt="Regulatory landscape" />
+                <span class="rel-chip">Ethics</span>
               </div>
               <div class="rel-body">
-                <h5>Regulatory Landscape: How Governments Are (and Aren't) Keeping Up With Neural Tech</h5>
-                <p>FDA, CE marking, and the emerging patchwork of neural device law — what protection exists today?</p>
+                <h5>The Regulatory Landscape of Wearable Neurotechnology in 2026</h5>
+                <p>A survey of how different jurisdictions are approaching the governance of devices that collect physiological and neural data from consumers.</p>
               </div>
               <div class="rel-footer">
-                <span>Mico Parungao · 5 min</span>
+                <span>Aica Ortega · 6 min</span>
                 <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="rel-card">
-              <div class="rel-img-ph" style="background: linear-gradient(135deg, #d4c8e0, #8a6aaa);">
-                <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=600&q=70&fit=crop" alt="Wearable haptic feedback" />
-                <span class="rel-chip">Feedback</span>
+              <div class="rel-img-ph" style="background: linear-gradient(135deg, #d4c8e0, #8a6aaa)">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=70&fit=crop" alt="Evolutionary impact" />
+                <span class="rel-chip">Ethics</span>
               </div>
               <div class="rel-body">
-                <h5>How Real-Time Haptic Feedback Is Rewiring the Way Our Bodies Learn Movement</h5>
-                <p>Tactile signals and software nudges that retrain muscle memory — delivering correction on the spot, not after the fact.</p>
+                <h5>Evolutionary Impact: Are Wearables Reshaping Human Cognition?</h5>
+                <p>Long-term reliance on biofeedback and external cognitive aids may be altering the way our brains develop and self-regulate. Researchers are watching closely.</p>
               </div>
               <div class="rel-footer">
-                <span>Gianna Ebue · 9 min</span>
+                <span>Mark España · 8 min</span>
                 <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -408,9 +557,7 @@
           </div>
           <div class="col-lg-3">
             <div class="footer-heading">Meet the Team</div>
-            <p style="font-size: 0.82rem; opacity: 0.5; margin-bottom: 1rem; line-height: 1.6;">
-              sensoria is a student project by <strong style="color: var(--silver)">The Ergo Lab.</strong> — Group 4, CIP 1101-CSAD.
-            </p>
+            <p style="font-size: 0.82rem; opacity: 0.5; margin-bottom: 1rem; line-height: 1.6;">sensoria is a student project by <strong style="color: var(--silver)">The Ergo Lab.</strong> — Group 4, CIP 1101-CSAD.</p>
             <div style="display: flex; flex-direction: column; gap: 0.45rem">
               <div style="font-size: 0.8rem; color: rgba(221,220,242,0.6)"><span style="color: var(--vodka); font-weight: 600">Leader:</span> Amir Lopez</div>
               <div style="font-size: 0.8rem; color: rgba(221,220,242,0.6)"><span style="color: var(--vodka); font-weight: 600">Content:</span> Gianna Ebue</div>
@@ -436,7 +583,43 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <script src="../../../js/article_template.js"></script>
-    <script src="../../../js/shared.js"></script>
+    <script>
+      // Reading progress bar
+      function updateProgress() {
+        const article = document.getElementById('article-body');
+        const fill = document.getElementById('progress-fill');
+        const pct = document.getElementById('progress-pct');
+        if (!article || !fill || !pct) return;
+        const rect = article.getBoundingClientRect();
+        const total = article.offsetHeight - window.innerHeight;
+        const scrolled = Math.max(0, -rect.top);
+        const percent = Math.min(100, Math.round((scrolled / total) * 100));
+        fill.style.width = percent + '%';
+        pct.textContent = percent + '%';
+      }
+
+      // Active TOC link
+      function updateTOC() {
+        const sections = document.querySelectorAll('.section');
+        const links = document.querySelectorAll('.toc-link');
+        let current = '';
+        sections.forEach(sec => {
+          if (window.scrollY >= sec.offsetTop - 180) current = sec.id;
+        });
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+        });
+      }
+
+      window.addEventListener('scroll', () => { updateProgress(); updateTOC(); });
+
+      // Copy link button
+      document.getElementById('copy-link-btn').addEventListener('click', function () {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          this.innerHTML = '<i class="bi bi-check2"></i> Copied!';
+          setTimeout(() => { this.innerHTML = '<i class="bi bi-link-45deg"></i> Copy Link'; }, 2000);
+        });
+      });
+    </script>
   </body>
 </html>
