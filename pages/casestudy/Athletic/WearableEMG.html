@@ -1,596 +1,556 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wearable EMG in Strength & Conditioning — sensoria</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="../../../media/logo.png" />
-    <link rel="stylesheet" href="../../../css/casestudy_template.css" />
-    <link rel="stylesheet" href="../../../css/shared.css" />
-  </head>
-  <body>
-    <!-- ══ NAVBAR ══ -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container">
-        <a class="navbar-brand" href="../../../index.html">
-          <div class="logo-mark">
-            <img class="logo-img" src="../../../media/logo.png">
-          </div>
-          <span class="logo-text">sensoria</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav mx-auto gap-lg-1">
-            <li class="nav-item">
-              <a class="nav-link" href="../../articles.html">Articles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="../casestudies.html">Case Studies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../about/about.html">About</a>
-            </li>
-          </ul>
-          <div class="nav-search-wrap mt-3 mt-lg-0">
-            <i class="bi bi-search srch-icon"></i>
-            <input
-              class="nav-search"
-              type="text"
-              placeholder="Search topics…"
-            />
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ══ BREADCRUMB ══ -->
-    <div class="breadcrumb-bar">
-      <div class="container">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="../casestudies.html">Case Studies</a></li>
-          <li class="breadcrumb-item active">Wearable EMG in Strength & Conditioning</li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- ══ CASE STUDY HERO ══ -->
-    <header class="cs-hero">
-      <!-- ★ EDIT: swap for a real sector-relevant image -->
-      <div class="cs-hero-img">
-        <img
-          src="https://simplifaster.com/wp-content/uploads/2025/04/EMG-Buyers-Guide-Lead.jpg"
-          alt="EMG strength training"
-        />
-      </div>
-      <div class="cs-hero-overlay"></div>
-      <div class="container cs-hero-content">
-        <!-- ★ EDIT: update sector label -->
-        <div class="sector-badge">
-          <div class="sector-badge-dot"></div>
-          Athletic Sector
-        </div>
-
-        <!-- ★ EDIT: case study title -->
-        <h1>   
-          Wearable EMG in Strength & Conditioning
-        </h1>
-
-        <!-- ★ EDIT: summary sentence -->
-        <p class="subtitle">
-          How wearable electromyography helps coaches and athletes monitor muscle activation, compare exercise variations, and track training load in real time.
-        </p>
-
-        <div class="cs-hero-meta">
-          <!-- ★ EDIT: author, date, read time -->
-          <div class="ava">
-            <img class="ava-img" src="../../../media/kim.jpg" />
-          </div>
-          <div>
-            <div class="ava-name">Kimberly Datuin</div>
-            <div class="ava-role">Quality Assurance</div>
-          </div>
-          <div class="meta-stat">
-            <i class="bi bi-calendar3"></i> March 15, 2026
-          </div>
-          <div class="meta-stat"><i class="bi bi-clock"></i> 10 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 5,830 views</div>
-        </div>
-      </div>
-    </header>
-
-    <!-- ══ STATS STRIP ══ -->
-    <!-- ★ EDIT: replace numbers with real case study metrics -->
-    <div class="stats-strip">
-      <div class="container">
-        <div class="row align-items-center g-3">
-          <div class="col-6 col-md-3">
-            <div class="stat-item">
-              <div class="stat-num">12.0%</div>
-              <div class="stat-label">Overall consistency</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="stat-item">
-              <div class="stat-num">12 km/h</div>
-
-              <div class="stat-label">Speed levels tested</div>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="stat-item">
-              <div class="stat-num">ICC = 0.85–0.96</div>
-              <div class="stat-label">Reliability in squat testing</div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ══ BODY ══ -->
-    <section id="cs-body">
-      <div class="container">
-        <div class="row g-5">
-          <!-- ── MAIN CONTENT ── -->
-          <div class="col-lg-8">
-            <article class="cs-content">
-              <!-- ★ EDIT: replace all content below with actual case study body -->
-
-              <p>
-                Wearable EMG uses textile electrodes or wireless sensors to measure muscle activation during training. In strength and conditioning, that matters because coaches often want objective information about which muscles are working hardest, whether an exercise variation changes recruitment, and how muscular load changes across a session. A recent review on resistance-training wearables notes that sEMG is one of the main tools used to monitor muscle activity in real time during exercise.
-              </p>
-
-               <!-- inline image -->
-              <figure class="inline-img">
-                <div class="inline-img-ph">
-                  <img
-                    src="https://images.openai.com/static-rsc-4/E70Ma_MiukjAhnrciXo7D8QZWmLz5vEEBWCwLK_ObTnCfJrx_ia6P037H7VN4DzpsM0kyREkPIh3FeS3AR5lPntvLamGI5KBlL8Ta-M0owJI1oxKniwun8JQ3a3lZzdCRBkyYlkHvBtDRHW43bNpWsTP54fErx432KFqA9Ko-hBcuTLmdhdL_hYIST_W_tls?purpose=fullsize"
-                    alt="Callibri Muscle Tracker"
-                  />
-                </div>
-                <figcaption>
-                  Shows a person exercising with multiple EMG sensors on the back and shoulders while data are viewed on a laptop. Good for a coaching / data-analysis.
-              </figure>
-
-              <h2 class="section" id="section-1">Problem Statement</h2>
-              <p>
-                A strength and conditioning staff wanted a better way to answer three practical questions during lower-body training: which squat variation produced greater muscle activation, whether athletes were loading the target muscles as intended, and whether muscular load was changing meaningfully as exercise intensity increased. Video and coach observation were helpful, but they could not directly measure internal muscle activation. Wearable EMG offered a portable way to add that missing layer of information.
-              </p>
-
-
-              <h2 class="section" id="section-2">How the Wearable EMG Was Used</h2>
-              <p>
-                Athletes wore EMG-enabled compression garments during lower-body sessions. Coaches focused on quadriceps, hamstrings, and gluteal activation during squat work and used EMG-derived training-load data during conditioning runs. The goal was not to replace strength coaches, but to give them objective evidence on whether a movement pattern or exercise setup was producing the desired muscular response.
-              </p>
-
-              <h2 class="section" id="section-3">Objectives of Wearable EMG</h2>
-              <p>
-                The program used wearable EMG to: <br><br>
-
-                1. Measure muscle activation during common strength exercises.<br>
-                
-                2. Compare exercise variations objectively.<br>
-                
-                3. Monitor muscular training load during dynamic exercise.<br>
-                
-                4. Improve individual coaching decisions with real-time neuromuscular data.<br>
-              </p>
-
-              <h2 class="section" id="section-4">Statistical Findings</h2>
-              <p>
-                These findings show that wearable EMG can provide valid, reliable, and practically useful muscle-activation data for strength and conditioning, especially for exercise comparison, load monitoring, and individualized coaching.
-              </p>
-
-              <!-- comparison table -->
-              <div class="cs-table-wrap">
-                <table class="cs-table">
-                  <thead>
-                    <tr>
-                      <th>METRIC</th>
-                      <th>FINDING</th>
-                      <th>VALUE</th>
-                      <th>IMPACT</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- ★ EDIT: update all table data with real findings -->
-                    <tr>
-                      <td class="td-label">Lab comparison accuracy</td>
-                      <td>Wearable EMG closely matched research-grade EMG</td>
-                      <td>0.2%–7.3% difference</td>
-                      <td><strong style="color: #5a8a72">Strong validity</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="td-label">Squat activation difference</td>
-                      <td>Free barbell squat increased quadriceps activation</td>
-                      <td>14–15 µV</td>
-                      <td><strong style="color: #5a8a72">Better muscle recruitment</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="td-label">Reliability</td>
-                      <td>Excellent repeated-measure reliability</td>
-                      <td>ICC 0.85–0.96</td>
-                      <td><strong style="color: #5a8a72">Consistent tracking</strong></td>
-                    </tr>
-                    <tr>
-                      <td class="td-label">Load sensitivityionship</td>
-                      <td>EMG detected significant load differences across running speeds</td>
-                      <td>Significant result (11.50)</td>
-                      <td><strong style="color: #5a8a72">Real-time monitoring</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <h2 class="section" id="section-5">Limitations and Athlete Feedback</h2>
-              <p>
-                Wearable EMG is useful, but it is not perfect. Signal quality still depends on garment fit, skin contact, and movement artifact. In the Athos validation study, 18% of sets were removed because of unreliable contact quality in at least one measured muscle, especially early in a session, suggesting that warm-up and sensor settling time matter. The broader resistance-training review also notes challenges with noise, interpretation, and integrating wearable metrics into day-to-day coaching decisions.
-              </p>
-
-               <div class="pull-quote">
-                <p>
-                  He said he was initially worried about how the sensors would feel, but once they were on, he “didn’t even notice them,” and was surprised by how much the system could measure without interfering with motion or performance
-                </p>
-                <cite
-                  >— Emilio Bonifacio, MLB / Dominican Republic National Team</cite
-                >
-              </div>
-
-              <p>
-                Wearable EMG gives strength and conditioning staff a practical way to measure muscle activation outside the laboratory. Current evidence shows that it can produce research-grade-like data, distinguish meaningful differences between exercise setups, and track changes in muscular demand as intensity changes. Its biggest value is not that it replaces coaching, but that it gives coaches objective neuromuscular evidence to support better exercise selection, load monitoring, and technique feedback.
-              </p>
-
-
-
-              
-
-              <!-- tags -->
-              <!-- ★ EDIT: update tags to match case study topic -->
-              <h2 class="cs-tag-title">Case Study Tags</h2>
-              <div class="cs-tags">
-                <span class="cs-tag">Athletic</span>
-                <span class="cs-tag">Wearable EMG</span>
-                <span class="cs-tag">Quadriceps activation</span>
-                <span class="cs-tag">Biomechanical</span>
-              </div>
-            </article>
-          </div>
-
-          <!-- ── SIDEBAR ── -->
-          <div class="col-lg-4">
-            <div class="sidebar">
-              <!-- Reading Progress -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Reading Progress</div>
-                <div class="read-progress-wrap">
-                  <div class="read-progress-label">
-                    <span>Progress</span><span id="progress-pct">0%</span>
-                  </div>
-                  <div class="read-progress-bar">
-                    <div class="read-progress-fill" id="progress-fill"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Case Study Info Card -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Case Study Info</div>
-                <div class="sector-info">
-                  <!-- ★ EDIT: update all metadata fields -->
-                  <div class="sector-row">
-                    <div class="sector-row-label">Sector</div>
-                    <div class="sector-row-val">Athletic / Training</div>
-                  </div>
-                  <div class="sector-row">
-                    <div class="sector-row-label">Device Type</div>
-                    <div class="sector-row-val">
-                      Wearable EMG
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Table of Contents -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">In This Case Study</div>
-                <!-- ★ EDIT: update TOC to match your h2 IDs and titles -->
-                <ul class="toc-list">
-                  <li>
-                    <a href="#section-1" class="toc-link"
-                      >Problem Statement</a
-                    >
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Wearable EMG in Strength & Conditioning — sensoria</title>
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+         rel="stylesheet"
+         />
+      <link rel="icon" href="../../../media/logo.png" />
+      <link rel="stylesheet" href="../../../css/casestudy_template.css" />
+      <link rel="stylesheet" href="../../../css/shared.css" />
+   </head>
+   <body>
+      <!-- ══ NAVBAR ══ -->
+      <nav class="navbar navbar-expand-lg">
+         <div class="container">
+            <a class="navbar-brand" href="../../../index.html">
+               <div class="logo-mark">
+                  <img class="logo-img" src="../../../media/logo.png">
+               </div>
+               <span class="logo-text">sensoria</span>
+            </a>
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="collapse"
+               data-bs-target="#navMenu"
+               >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+               <ul class="navbar-nav mx-auto gap-lg-1">
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../articles.html">Articles</a>
                   </li>
-                  <li>
-                    <a href="#section-2" class="toc-link"
-                      >How the Wearable EMG Was Used</a
-                    >
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
                   </li>
-                  <li>
-                    <a href="#section-3" class="toc-link"
-                      >Objectives of Wearable EMG</a
-                    >
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
                   </li>
-                  <li>
-                    <a href="#section-4" class="toc-link"
-                      >Statistical Findings</a
-                    >
+                  <li class="nav-item">
+                     <a class="nav-link active" href="../casestudies.html">Case Studies</a>
                   </li>
-                  <li>
-                    <a href="#section-5" class="toc-link"
-                      >Limitations and Athlete Feedback</a
-                    >
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
                   </li>
-                </ul>
-              </div>
-
-              <!-- Share -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Share This Case Study</div>
-                <div class="share-btns">
-                  <button class="share-btn">
-                    <i class="bi bi-facebook"></i> Facebook
-                  </button>
-                  <button class="share-btn">
-                    <i class="bi bi-twitter-x"></i> X
-                  </button>
-                  <button class="share-btn">
-                    <i class="bi bi-link-45deg"></i> Copy Link
-                  </button>
-                </div>
-              </div>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="../../about/about.html">About</a>
+                  </li>
+               </ul>
+               <div class="nav-search-wrap mt-3 mt-lg-0">
+                  <i class="bi bi-search srch-icon"></i>
+                  <input
+                     class="nav-search"
+                     type="text"
+                     placeholder="Search topics…"
+                     />
+               </div>
             </div>
-          </div>
-        </div>
+         </div>
+      </nav>
+      <!-- ══ BREADCRUMB ══ -->
+      <div class="breadcrumb-bar">
+         <div class="container">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
+               <li class="breadcrumb-item"><a href="../casestudies.html">Case Studies</a></li>
+               <li class="breadcrumb-item active">Wearable EMG in Strength & Conditioning</li>
+            </ol>
+         </div>
       </div>
-    </section>
-
-    <!-- ══ OTHER CASE STUDIES ══ -->
-    <section id="other-cases">
-      <div class="container">
-        <div class="mb-4">
-          <div class="sec-eyebrow">Related Case Studies</div>
-          <h2 class="sec-title">More from the <i>Athletic Sector</i></h2>
-        </div>
-        <div class="row g-4">
-          <!-- ★ EDIT: link to actual other case study pages -->
-          <div class="col-md-6">
-            <div class="oc-card">
-              <div
-                class="oc-img-ph"
-                style="background: linear-gradient(135deg, #5a8a72, #2b2640)"
-              >
-                <img src="https://punktum.net/wp-content/uploads/2025/04/Real-Time-Feedback-with-Wearables-optimized.jpg">
-                <span class="oc-sector-chip">Athletic</span>
-              </div>
-              <div class="oc-body">
-                <h5>Motion-Tracking Suits in Elite Sprint Training</h5>
-                <p>
-                  How wearable technology helped improve sprint analysis, technique feedback, and athlete monitoring.
-                </p>
-                <a href="SprintTraining.html" class="oc-link"
-                  >Click to View <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
+      <!-- ══ CASE STUDY HERO ══ -->
+      <header class="cs-hero">
+         <!-- ★ EDIT: swap for a real sector-relevant image -->
+         <div class="cs-hero-img">
+            <img
+               src="https://simplifaster.com/wp-content/uploads/2025/04/EMG-Buyers-Guide-Lead.jpg"
+               alt="EMG strength training"
+               />
+         </div>
+         <div class="cs-hero-overlay"></div>
+         <div class="container cs-hero-content">
+            <!-- ★ EDIT: update sector label -->
+            <div class="sector-badge">
+               <div class="sector-badge-dot"></div>
+               Athletic Sector
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="oc-card">
-              <div
-                class="oc-img-ph"
-                style="background: linear-gradient(135deg, #6b629a, #2b2640)"
-              > 
-                <img src="https://studyfinds.com/wp-content/uploads/2025/04/shutterstock_2481115319-scaled.jpg">
-                <span class="oc-sector-chip">Athletic</span>
-              </div>
-              <div class="oc-body">
-                <h5>Smart Insoles and Running Economy</h5>
-                <p>
-                  How motion-tracking suits, smart insoles, and joint-angle sensors give coaches and athletes objective, real-time biomechanical data to improve form and reduce injury risk.
-                </p>
-                <a href="SmartInsole.html" class="oc-link"
-                  >Click to View <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row g-5">
-          <!-- Brand -->
-          <div class="col-lg-3">
-            <div class="footer-logo">sensoria.</div>
-            <p class="footer-tagline">
-              Bridging wearable technology and human physiology. Educating
-              bodies, one article at a time.
+            <!-- ★ EDIT: case study title -->
+            <h1>   
+               Wearable EMG in Strength & Conditioning
+            </h1>
+            <!-- ★ EDIT: summary sentence -->
+            <p class="subtitle">
+               How wearable electromyography helps coaches and athletes monitor muscle activation, compare exercise variations, and track training load in real time.
             </p>
-            <div class="footer-social mt-3">
-              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
-              ></a>
+            <div class="cs-hero-meta">
+               <!-- ★ EDIT: author, date, read time -->
+               <div class="ava">
+                  <img class="ava-img" src="../../../media/kim.jpg" />
+               </div>
+               <div>
+                  <div class="ava-name">Kimberly Datuin</div>
+                  <div class="ava-role">Quality Assurance</div>
+               </div>
+               <div class="meta-stat">
+                  <i class="bi bi-calendar3"></i> March 15, 2026
+               </div>
+               <div class="meta-stat"><i class="bi bi-clock"></i> 10 min read</div>
+               <div class="meta-stat"><i class="bi bi-eye"></i> 5,830 views</div>
             </div>
-            <div class="mt-4">
-              <div class="footer-heading">Contact</div>
-              <div class="footer-contact-item">
-                <i class="bi bi-instagram"></i> @_theergolab
-              </div>
-              <div class="footer-contact-item">
-                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
-              </div>
-              <div class="footer-contact-item">
-                <i class="bi bi-facebook"></i> The Ergo Lab
-              </div>
+         </div>
+      </header>
+      <!-- ══ STATS STRIP ══ -->
+      <!-- ★ EDIT: replace numbers with real case study metrics -->
+      <div class="stats-strip">
+         <div class="container">
+            <div class="row align-items-center g-3">
+               <div class="col-6 col-md-3">
+                  <div class="stat-item">
+                     <div class="stat-num">12.0%</div>
+                     <div class="stat-label">Overall consistency</div>
+                  </div>
+               </div>
+               <div class="col-6 col-md-3">
+                  <div class="stat-item">
+                     <div class="stat-num">12 km/h</div>
+                     <div class="stat-label">Speed levels tested</div>
+                  </div>
+               </div>
+               <div class="col-6 col-md-3">
+                  <div class="stat-item">
+                     <div class="stat-num">ICC = 0.85–0.96</div>
+                     <div class="stat-label">Reliability in squat testing</div>
+                  </div>
+               </div>
             </div>
-          </div>
-
-          <!-- The Cluster + Feedback -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">The Cluster</div>
-            <ul class="footer-links">
-              <li><a href="../../cluster/cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="../../cluster/cluster.html">Head &amp; Neck</a></li>
-              <li>
-                <a href="../../cluster/cluster.html">Torso &amp; Smart Fabrics</a>
-              </li>
-            </ul>
-            <div class="footer-heading mt-4">Feedback</div>
-            <ul class="footer-links">
-              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
-              <li>
-                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Engineering + Case Studies -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">Engineering</div>
-            <ul class="footer-links">
-              <li><a href="../../engineering/engineering.html">Material Science</a></li>
-              <li>
-                <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
-              </li>
-              <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
-            </ul>
-            <div class="footer-heading mt-4">Case Studies</div>
-            <ul class="footer-links">
-              <li>
-                <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
-              </li>
-              <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
-              <li>
-                <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Ethics + General -->
-          <div class="col-6 col-lg-2">
-            <div class="footer-heading">Ethics</div>
-            <ul class="footer-links">
-              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
-              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
-              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
-            </ul>
-            <div class="footer-heading mt-4">General</div>
-            <ul class="footer-links">
-              <li><a href="#">Home</a></li>
-              <li><a href="../../about/about.html">About / Contact</a></li>
-              <li><a href="../../privacy.html">Privacy Policy</a></li>
-              <li><a href="../../cookies.html">Cookies</a></li>
-              <li><a href="../../terms.html">Terms</a></li>
-            </ul>
-          </div>
-
-          <!-- Meet the Team -->
-          <div class="col-lg-3">
-            <div class="footer-heading">Meet the Team</div>
-            <p
-              style="
-                font-size: 0.82rem;
-                opacity: 0.5;
-                margin-bottom: 1rem;
-                line-height: 1.6;
-              "
-            >
-              sensoria is a student project by
-              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
-              Group 4, CIP 1101-CSAD.
-            </p>
-            <div style="display: flex; flex-direction: column; gap: 0.45rem">
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Team Leader:</span
-                >
-                Amir Lopez
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Content Manager:</span
-                >
-                Gianna Ebue
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >UI Designer:</span
-                >
-                Mico Parungao
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
-                Patricia Pelicano &amp; Aica Ortega
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
-                Noel Bandoy &amp; Kim Datuin
-              </div>
-              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600"
-                  >Navigation Expert:</span
-                >
-                Mark España
-              </div>
-            </div>
-            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
-              Media sources: Unsplash, Freepik, Pexels
-            </p>
-          </div>
-        </div>
+         </div>
       </div>
-
-      <div class="footer-bottom">
-        <div
-          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
-        >
-          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
-          <div class="d-flex gap-3">
-            <a href="../../privacy.html">Privacy Policy</a>
-            <a href="../../cookies.html">Cookies</a>
-            <a href="../../terms.html">Terms</a>
-          </div>
-        </div>
       </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../js/casestudy_template.js"></script>
-    <script src="../../../js/shared.js"></script>
-  </body>
+      <!-- ══ BODY ══ -->
+      <section id="cs-body">
+         <div class="container">
+            <div class="row g-5">
+               <!-- ── MAIN CONTENT ── -->
+               <div class="col-lg-8">
+                  <article class="cs-content">
+                     <!-- ★ EDIT: replace all content below with actual case study body -->
+                     <p>
+                        Wearable EMG uses textile electrodes or wireless sensors to measure muscle activation during training. In strength and conditioning, that matters because coaches often want objective information about which muscles are working hardest, whether an exercise variation changes recruitment, and how muscular load changes across a session. A recent review on resistance-training wearables notes that sEMG is one of the main tools used to monitor muscle activity in real time during exercise.
+                     </p>
+                     <!-- inline image -->
+                     <figure class="inline-img">
+                        <div class="inline-img-ph">
+                           <img
+                              src="https://images.openai.com/static-rsc-4/E70Ma_MiukjAhnrciXo7D8QZWmLz5vEEBWCwLK_ObTnCfJrx_ia6P037H7VN4DzpsM0kyREkPIh3FeS3AR5lPntvLamGI5KBlL8Ta-M0owJI1oxKniwun8JQ3a3lZzdCRBkyYlkHvBtDRHW43bNpWsTP54fErx432KFqA9Ko-hBcuTLmdhdL_hYIST_W_tls?purpose=fullsize"
+                              alt="Callibri Muscle Tracker"
+                              />
+                        </div>
+                        <figcaption>
+                        Shows a person exercising with multiple EMG sensors on the back and shoulders while data are viewed on a laptop. Good for a coaching / data-analysis.
+                     </figure>
+                     <h2 class="section" id="section-1">Problem Statement</h2>
+                     <p>
+                        A strength and conditioning staff wanted a better way to answer three practical questions during lower-body training: which squat variation produced greater muscle activation, whether athletes were loading the target muscles as intended, and whether muscular load was changing meaningfully as exercise intensity increased. Video and coach observation were helpful, but they could not directly measure internal muscle activation. Wearable EMG offered a portable way to add that missing layer of information.
+                     </p>
+                     <h2 class="section" id="section-2">How the Wearable EMG Was Used</h2>
+                     <p>
+                        Athletes wore EMG-enabled compression garments during lower-body sessions. Coaches focused on quadriceps, hamstrings, and gluteal activation during squat work and used EMG-derived training-load data during conditioning runs. The goal was not to replace strength coaches, but to give them objective evidence on whether a movement pattern or exercise setup was producing the desired muscular response.
+                     </p>
+                     <h2 class="section" id="section-3">Objectives of Wearable EMG</h2>
+                     <p>
+                        The program used wearable EMG to: <br><br>
+                        1. Measure muscle activation during common strength exercises.<br>
+                        2. Compare exercise variations objectively.<br>
+                        3. Monitor muscular training load during dynamic exercise.<br>
+                        4. Improve individual coaching decisions with real-time neuromuscular data.<br>
+                     </p>
+                     <h2 class="section" id="section-4">Statistical Findings</h2>
+                     <p>
+                        These findings show that wearable EMG can provide valid, reliable, and practically useful muscle-activation data for strength and conditioning, especially for exercise comparison, load monitoring, and individualized coaching.
+                     </p>
+                     <!-- comparison table -->
+                     <div class="cs-table-wrap">
+                        <table class="cs-table">
+                           <thead>
+                              <tr>
+                                 <th>METRIC</th>
+                                 <th>FINDING</th>
+                                 <th>VALUE</th>
+                                 <th>IMPACT</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <!-- ★ EDIT: update all table data with real findings -->
+                              <tr>
+                                 <td class="td-label">Lab comparison accuracy</td>
+                                 <td>Wearable EMG closely matched research-grade EMG</td>
+                                 <td>0.2%–7.3% difference</td>
+                                 <td><strong style="color: #5a8a72">Strong validity</strong></td>
+                              </tr>
+                              <tr>
+                                 <td class="td-label">Squat activation difference</td>
+                                 <td>Free barbell squat increased quadriceps activation</td>
+                                 <td>14–15 µV</td>
+                                 <td><strong style="color: #5a8a72">Better muscle recruitment</strong></td>
+                              </tr>
+                              <tr>
+                                 <td class="td-label">Reliability</td>
+                                 <td>Excellent repeated-measure reliability</td>
+                                 <td>ICC 0.85–0.96</td>
+                                 <td><strong style="color: #5a8a72">Consistent tracking</strong></td>
+                              </tr>
+                              <tr>
+                                 <td class="td-label">Load sensitivityionship</td>
+                                 <td>EMG detected significant load differences across running speeds</td>
+                                 <td>Significant result (11.50)</td>
+                                 <td><strong style="color: #5a8a72">Real-time monitoring</strong></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <h2 class="section" id="section-5">Limitations and Athlete Feedback</h2>
+                     <p>
+                        Wearable EMG is useful, but it is not perfect. Signal quality still depends on garment fit, skin contact, and movement artifact. In the Athos validation study, 18% of sets were removed because of unreliable contact quality in at least one measured muscle, especially early in a session, suggesting that warm-up and sensor settling time matter. The broader resistance-training review also notes challenges with noise, interpretation, and integrating wearable metrics into day-to-day coaching decisions.
+                     </p>
+                     <div class="pull-quote">
+                        <p>
+                           He said he was initially worried about how the sensors would feel, but once they were on, he “didn’t even notice them,” and was surprised by how much the system could measure without interfering with motion or performance
+                        </p>
+                        <cite
+                           >— Emilio Bonifacio, MLB / Dominican Republic National Team</cite
+                           >
+                     </div>
+                     <p>
+                        Wearable EMG gives strength and conditioning staff a practical way to measure muscle activation outside the laboratory. Current evidence shows that it can produce research-grade-like data, distinguish meaningful differences between exercise setups, and track changes in muscular demand as intensity changes. Its biggest value is not that it replaces coaching, but that it gives coaches objective neuromuscular evidence to support better exercise selection, load monitoring, and technique feedback.
+                     </p>
+                     <!-- tags -->
+                     <!-- ★ EDIT: update tags to match case study topic -->
+                     <h2 class="cs-tag-title">Case Study Tags</h2>
+                     <div class="cs-tags">
+                        <span class="cs-tag">Athletic</span>
+                        <span class="cs-tag">Wearable EMG</span>
+                        <span class="cs-tag">Quadriceps activation</span>
+                        <span class="cs-tag">Biomechanical</span>
+                     </div>
+                  </article>
+               </div>
+               <!-- ── SIDEBAR ── -->
+               <div class="col-lg-4">
+                  <div class="sidebar">
+                     <!-- Reading Progress -->
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">Reading Progress</div>
+                        <div class="read-progress-wrap">
+                           <div class="read-progress-label">
+                              <span>Progress</span><span id="progress-pct">0%</span>
+                           </div>
+                           <div class="read-progress-bar">
+                              <div class="read-progress-fill" id="progress-fill"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Case Study Info Card -->
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">Case Study Info</div>
+                        <div class="sector-info">
+                           <!-- ★ EDIT: update all metadata fields -->
+                           <div class="sector-row">
+                              <div class="sector-row-label">Sector</div>
+                              <div class="sector-row-val">Athletic / Training</div>
+                           </div>
+                           <div class="sector-row">
+                              <div class="sector-row-label">Device Type</div>
+                              <div class="sector-row-val">
+                                 Wearable EMG
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Table of Contents -->
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">In This Case Study</div>
+                        <!-- ★ EDIT: update TOC to match your h2 IDs and titles -->
+                        <ul class="toc-list">
+                           <li>
+                              <a href="#section-1" class="toc-link"
+                                 >Problem Statement</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-2" class="toc-link"
+                                 >How the Wearable EMG Was Used</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-3" class="toc-link"
+                                 >Objectives of Wearable EMG</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-4" class="toc-link"
+                                 >Statistical Findings</a
+                                 >
+                           </li>
+                           <li>
+                              <a href="#section-5" class="toc-link"
+                                 >Limitations and Athlete Feedback</a
+                                 >
+                           </li>
+                        </ul>
+                     </div>
+                     <!-- Share -->
+                     <div class="sidebar-card">
+                        <div class="sidebar-heading">Share This Case Study</div>
+                        <div class="share-btns">
+                           <button class="share-btn">
+                           <i class="bi bi-facebook"></i> Facebook
+                           </button>
+                           <button class="share-btn">
+                           <i class="bi bi-twitter-x"></i> X
+                           </button>
+                           <button class="share-btn">
+                           <i class="bi bi-link-45deg"></i> Copy Link
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ══ OTHER CASE STUDIES ══ -->
+      <section id="other-cases">
+         <div class="container">
+            <div class="mb-4">
+               <div class="sec-eyebrow">Related Case Studies</div>
+               <h2 class="sec-title">More from the <i>Athletic Sector</i></h2>
+            </div>
+            <div class="row g-4">
+               <!-- ★ EDIT: link to actual other case study pages -->
+               <div class="col-md-6">
+                  <div class="oc-card">
+                     <div
+                        class="oc-img-ph"
+                        style="background: linear-gradient(135deg, #5a8a72, #2b2640)"
+                        >
+                        <img src="https://punktum.net/wp-content/uploads/2025/04/Real-Time-Feedback-with-Wearables-optimized.jpg">
+                        <span class="oc-sector-chip">Athletic</span>
+                     </div>
+                     <div class="oc-body">
+                        <h5>Motion-Tracking Suits in Elite Sprint Training</h5>
+                        <p>
+                           How wearable technology helped improve sprint analysis, technique feedback, and athlete monitoring.
+                        </p>
+                        <a href="SprintTraining.html" class="oc-link"
+                           >Click to View <i class="bi bi-arrow-right"></i
+                           ></a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="oc-card">
+                     <div
+                        class="oc-img-ph"
+                        style="background: linear-gradient(135deg, #6b629a, #2b2640)"
+                        > 
+                        <img src="https://studyfinds.com/wp-content/uploads/2025/04/shutterstock_2481115319-scaled.jpg">
+                        <span class="oc-sector-chip">Athletic</span>
+                     </div>
+                     <div class="oc-body">
+                        <h5>Smart Insoles and Running Economy</h5>
+                        <p>
+                           How motion-tracking suits, smart insoles, and joint-angle sensors give coaches and athletes objective, real-time biomechanical data to improve form and reduce injury risk.
+                        </p>
+                        <a href="SmartInsole.html" class="oc-link"
+                           >Click to View <i class="bi bi-arrow-right"></i
+                           ></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <div class="container">
+            <div class="row g-5">
+               <!-- Brand -->
+               <div class="col-lg-3">
+                  <div class="footer-logo">sensoria.</div>
+                  <p class="footer-tagline">
+                     Bridging wearable technology and human physiology. Educating
+                     bodies, one article at a time.
+                  </p>
+                  <div class="footer-social mt-3">
+                     <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+                     <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+                     <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
+                        ></a>
+                  </div>
+                  <div class="mt-4">
+                     <div class="footer-heading">Contact</div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-instagram"></i> @_theergolab
+                     </div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
+                     </div>
+                     <div class="footer-contact-item">
+                        <i class="bi bi-facebook"></i> The Ergo Lab
+                     </div>
+                  </div>
+               </div>
+               <!-- The Cluster + Feedback -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">The Cluster</div>
+                  <ul class="footer-links">
+                     <li><a href="../../cluster/cluster.html">Wrist &amp; Forearm</a></li>
+                     <li><a href="../../cluster/cluster.html">Head &amp; Neck</a></li>
+                     <li>
+                        <a href="../../cluster/cluster.html">Torso &amp; Smart Fabrics</a>
+                     </li>
+                  </ul>
+                  <div class="footer-heading mt-4">Feedback</div>
+                  <ul class="footer-links">
+                     <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+                     <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+                     <li>
+                        <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Engineering + Case Studies -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">Engineering</div>
+                  <ul class="footer-links">
+                     <li><a href="../../engineering/engineering.html">Material Science</a></li>
+                     <li>
+                        <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
+                     </li>
+                     <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
+                  </ul>
+                  <div class="footer-heading mt-4">Case Studies</div>
+                  <ul class="footer-links">
+                     <li>
+                        <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
+                     </li>
+                     <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
+                     <li>
+                        <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- Ethics + General -->
+               <div class="col-6 col-lg-2">
+                  <div class="footer-heading">Ethics</div>
+                  <ul class="footer-links">
+                     <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+                     <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+                     <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
+                  </ul>
+                  <div class="footer-heading mt-4">General</div>
+                  <ul class="footer-links">
+                     <li><a href="#">Home</a></li>
+                     <li><a href="../../about/about.html">About / Contact</a></li>
+                     <li><a href="../../privacy.html">Privacy Policy</a></li>
+                     <li><a href="../../cookies.html">Cookies</a></li>
+                     <li><a href="../../terms.html">Terms</a></li>
+                  </ul>
+               </div>
+               <!-- Meet the Team -->
+               <div class="col-lg-3">
+                  <div class="footer-heading">Meet the Team</div>
+                  <p
+                     style="
+                     font-size: 0.82rem;
+                     opacity: 0.5;
+                     margin-bottom: 1rem;
+                     line-height: 1.6;
+                     "
+                     >
+                     sensoria is a student project by
+                     <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+                     Group 4, CIP 1101-CSAD.
+                  </p>
+                  <div style="display: flex; flex-direction: column; gap: 0.45rem">
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Team Leader:</span
+                           >
+                        Amir Lopez
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Content Manager:</span
+                           >
+                        Gianna Ebue
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >UI Designer:</span
+                           >
+                        Mico Parungao
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                        Patricia Pelicano &amp; Aica Ortega
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                        Noel Bandoy &amp; Kim Datuin
+                     </div>
+                     <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                        <span style="color: var(--vodka); font-weight: 600"
+                           >Navigation Expert:</span
+                           >
+                        Mark España
+                     </div>
+                  </div>
+                  <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+                     Media sources: Unsplash, Freepik, Pexels
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="footer-bottom">
+            <div
+               class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+               >
+               <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+               <div class="d-flex gap-3">
+                  <a href="../../privacy.html">Privacy Policy</a>
+                  <a href="../../cookies.html">Cookies</a>
+                  <a href="../../terms.html">Terms</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../../../js/casestudy_template.js"></script>
+      <script src="../../../js/shared.js"></script>
+   </body>
 </html>
- 
