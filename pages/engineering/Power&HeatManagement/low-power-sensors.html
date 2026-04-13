@@ -16,19 +16,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+    <link href="../../../media/logo.png" rel="icon">
     <link href="../../../css/shared.css" rel="stylesheet">
     <link href="../../../css/article_template.css" rel="stylesheet" />
-
-    <style id="shared-nav-override">
-      
-    </style>
   </head>
   <body>
     <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -42,22 +41,25 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link" href="../../articles.html">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link" href="../../casestudy/casestudies.html">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link active" href="../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -76,12 +78,11 @@
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Engineering</a>
+            <a href="../engineering.html">Engineering & Design</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
-          <li class="breadcrumb-item active">Power & Heat Management</li>
+          <li class="breadcrumb-item active">Low-Power Sensor Engineering for Continuous Wearable Monitoring</li>
         </ol>
       </div>
     </div>
@@ -89,7 +90,7 @@
     <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
         <div class="container">
-            <div class="category-tag">Engineering · Power & Heat Management</div>
+            <div class="category-tag">Power & Heat Management</div>
 
             <h1>
               Low-Power Sensor Engineering for Continuous Wearable Monitoring
@@ -102,7 +103,9 @@
 
             <div class="article-meta">
               <div class="meta-author">
-                <div class="ava">AO</div>
+                <div class="ava">
+                  <img class="ava-img" src="../../../media/aica.JPG">
+                </div>
               <div>
                 <div class="ava-name">Aica Ortega</div>
                 <div class="ava-role">Developer</div>
@@ -119,7 +122,7 @@
             <div class="hero-img-wrap">
               <div class="hero-img-ph">
                   <img
-                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1722289016701-7661d52f38c5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Advanced wearable material science and smart fabric engineering"
                   />
               </div>
@@ -147,7 +150,7 @@
                 a critical part of wearable design.
                 </p>
 
-                <h2 id="section-1">Understanding Power Consumption in Wearables</h2>
+                <h2 class="section" id="section-1">Understanding Power Consumption in Wearables</h2>
                 <p>
                 Wearable devices consume energy through sensors, microcontrollers, wireless communication modules, 
                 and haptic feedback systems. Each component contributes to the overall energy demand.
@@ -158,7 +161,7 @@
                 while Bluetooth transmission periodically sends data to external devices, increasing power usage.
                 </p>
 
-                <h2 id="section-2">Energy Optimization Strategies</h2>
+                <h2 class="section" id="section-2">Energy Optimization Strategies</h2>
                 <p>
                 Engineers reduce power consumption by implementing low-energy chips, sleep modes, 
                 and adaptive sampling rates. These techniques allow devices to operate only when necessary.
@@ -169,7 +172,7 @@
                 event-based activation when movement is detected.
                 </p>
 
-                <h2 id="section-3">Balancing Performance and Battery Life</h2>
+                <h2 class="section" id="section-3">Balancing Performance and Battery Life</h2>
                 <p>
                 A major design challenge is balancing real-time responsiveness with long battery life. 
                 Higher performance typically requires more energy, which can lead to faster depletion.
@@ -179,12 +182,13 @@
                 Power-efficient algorithms help maintain functionality without sacrificing user experience.
                 </p>
 
-                <h2 id="section-4">The Future of Energy-Efficient Wearables</h2>
+                <h2 class="section" id="section-4">The Future of Energy-Efficient Wearables</h2>
                 <p>
                 Future systems may rely on energy harvesting technologies such as motion, heat, 
                 or solar energy to supplement battery power.
                 </p>
 
+                <h2>Article Tags</h2>
                 <div class="article-tags">
                 <span class="art-tag">Power Efficiency</span>
                 <span class="art-tag">Wearable Systems</span>
@@ -253,46 +257,8 @@
                   </button>
                 </div>
               </div>
-
-              <!-- Related in sidebar -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Related Reads</div>
-                <!-- ★ EDIT: swap with actual related article titles/links -->
-                <div class="related-mini">
-                <div class="related-mini-thumb">Img</div>
-                <div>
-                    <a href="thermal-dissipation.html" class="related-mini-title">
-                    Thermal Dissipation in Wearables: Managing Heat in Compact Devices
-                    </a>
-                    <div class="related-mini-meta">
-                    Engineering · 4 min
-                    </div>
-                </div>
-                </div>
-
-                <div class="related-mini">
-                <div class="related-mini-thumb">Img</div>
-                <div>
-                    <a href="nanomaterials-wearables.html" class="related-mini-title">
-                    Nanomaterials in Wearable Engineering
-                    </a>
-                    <div class="related-mini-meta">
-                    Material Science · 7 min
-                    </div>
-                </div>
-                </div>
-
-                <div class="related-mini">
-                <div class="related-mini-thumb">Img</div>
-                <div>
-                    <a href="smart-fabrics.html" class="related-mini-title">
-                    Smart Fabrics: Interactive Engineering Systems
-                    </a>
-                    <div class="related-mini-meta">
-                    Material Science · 6 min
-                    </div>
-                </div>
-                </div>
+            </div>
+          </div>
     </section>
 
     <!-- ══ RELATED ARTICLES (bottom) ══ -->
@@ -300,7 +266,7 @@
       <div class="container">
         <div class="mb-4">
           <div class="sec-eyebrow">Keep reading</div>
-          <h2 class="sec-title">More from Engineering &amp; Material Science</h2>
+          <h2 class="sec-title">More from <i>Power & Heat Management</i></h2>
         </div>
         <div class="row g-4">
           <!-- ★ EDIT: replace with real related articles -->
@@ -331,32 +297,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="rel-card">
-              <div
-                class="rel-img-ph"
-                style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
-              >
-                <span class="rel-chip">Biomechanics</span>
-              </div>
-              <div class="rel-body">
-                <h5>
-                  Gait &amp; Lower Limb Analysis: What Your Footstrike Reveals
-                  About Your Health
-                </h5>
-                <p>
-                  Pressure insoles and ankle IMUs are giving physiotherapists
-                  data they never had before — here's what they're learning.
-                </p>
-              </div>
-              <div class="rel-footer">
-                <span>Aica Ortega · 6 min</span>
-                <a href="#" class="read-more"
-                  >Read More <i class="bi bi-arrow-right"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+
           <div class="col-md-4">
             <div class="rel-card">
               <div
@@ -401,9 +342,7 @@
             <div class="footer-social mt-3">
               <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
               <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
-              <a href="mailto:theergolab@sensoria.com" class="soc-btn"
-                ><i class="bi bi-envelope-fill"></i
+              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
               ></a>
             </div>
             <div class="mt-4">
@@ -412,7 +351,7 @@
                 <i class="bi bi-instagram"></i> @_theergolab
               </div>
               <div class="footer-contact-item">
-                <i class="bi bi-envelope-fill"></i> theergolab@sensoria.com
+                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
               </div>
               <div class="footer-contact-item">
                 <i class="bi bi-facebook"></i> The Ergo Lab
@@ -424,15 +363,19 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">The Cluster</div>
             <ul class="footer-links">
-              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="cluster.html">Head &amp; Neck</a></li>
-              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+              <li><a href="../../cluster/cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="../../cluster/cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="../../cluster/cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
             </ul>
             <div class="footer-heading mt-4">Feedback</div>
             <ul class="footer-links">
-              <li><a href="feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
-              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+              </li>
             </ul>
           </div>
 
@@ -440,17 +383,21 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Engineering</div>
             <ul class="footer-links">
-              <li><a href="engineering.html">Material Science</a></li>
+              <li><a href="../engineering.html">Material Science</a></li>
               <li>
-                <a href="engineering.html">Power &amp; Heat Management</a>
+                <a href="../engineering.html">Power &amp; Heat Management</a>
               </li>
-              <li><a href="engineering.html">Anthropometrics</a></li>
+              <li><a href="../engineering.html">Anthropometrics</a></li>
             </ul>
             <div class="footer-heading mt-4">Case Studies</div>
             <ul class="footer-links">
-              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
-              <li><a href="casestudies.html">Athletic Performance</a></li>
-              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
+              </li>
+              <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
+              </li>
             </ul>
           </div>
 
@@ -458,16 +405,17 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Ethics</div>
             <ul class="footer-links">
-              <li><a href="ethics.html">Neural Interfaces</a></li>
-              <li><a href="ethics.html">Regulatory Landscape</a></li>
-              <li><a href="ethics.html">Evolutionary Impact</a></li>
-              <li><a href="ethics.html">Cookies</a></li>
+              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
             </ul>
             <div class="footer-heading mt-4">General</div>
             <ul class="footer-links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About / Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="../../about/about.html">About / Contact</a></li>
+              <li><a href="../../privacy.html">Privacy Policy</a></li>
+              <li><a href="../../cookies.html">Cookies</a></li>
+              <li><a href="../../terms.html">Terms</a></li>
             </ul>
           </div>
 
@@ -489,33 +437,33 @@
             <div style="display: flex; flex-direction: column; gap: 0.45rem">
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Leader:</span
+                  >Team Leader:</span
                 >
                 Amir Lopez
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Content:</span
+                  >Content Manager:</span
                 >
                 Gianna Ebue
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >UI Design:</span
+                  >UI Designer:</span
                 >
                 Mico Parungao
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
-                Pelicano &amp; Ortega
+                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                Patricia Pelicano &amp; Aica Ortega
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">QA:</span>
-                Bandoy &amp; Datuin
+                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                Noel Bandoy &amp; Kim Datuin
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Navigation:</span
+                  >Navigation Expert:</span
                 >
                 Mark España
               </div>
@@ -533,15 +481,16 @@
         >
           <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
           <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="ethics.html">Cookies</a>
-            <a href="#">Terms</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/article_template.js"></script>
+    <script src="../../../js/article_template.js"></script>
+    <script src="../../../js/shared.js"></script>
   </body>
 </html>
