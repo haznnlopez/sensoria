@@ -17,6 +17,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+    <link href="../../css/authors.css" rel="stylesheet">
+    <link href="../../css/shared.css" rel="stylesheet">
   </head>
   <body>
     <!-- NAVBAR -->
@@ -89,8 +91,7 @@
         >
           <!-- Avatar -->
           <div class="author-avatar">
-            <!-- ★ EDIT: replace initials with <img> tag for actual photo -->
-            GE
+            <img src="../../media/gianna.jpg">
           </div>
 
           <!-- Text -->
@@ -772,39 +773,7 @@
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // ── Filter articles by pillar ──────────────────────────────────────────────
-      function filterArticles(btn, pillar) {
-        document
-          .querySelectorAll(".filter-chip")
-          .forEach((c) => c.classList.remove("active"));
-        btn.classList.add("active");
-
-        let visible = 0;
-        document
-          .querySelectorAll("#articles-grid > [data-pillar]")
-          .forEach((card) => {
-            const show = pillar === "all" || card.dataset.pillar === pillar;
-            card.style.display = show ? "" : "none";
-            if (show) visible++;
-          });
-
-        document.getElementById("empty-state").style.display =
-          visible === 0 ? "block" : "none";
-      }
-
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("visible");
-              io.unobserve(e.target);
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
-      document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
-    </script>
+    <script src="../../js/shared.js"></script>
+    <script src="../../js/authors.js"></script>
   </body>
 </html>

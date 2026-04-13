@@ -309,3 +309,105 @@
         display: block;
         margin-bottom: 1rem;
       }
+      /* ── EXPLORE OTHER AUTHORS ── */
+      #explore-authors {
+        padding: 72px 0;
+        background: #fff;
+        border-top: 1px solid var(--silver);
+      }
+      .author-card {
+        background: var(--mag-grey);
+        border: 1.5px solid var(--silver);
+        border-radius: 16px;
+        padding: 1.5rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s,
+          border-color 0.3s;
+        color: inherit;
+        height: 100%;
+      }
+      .author-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 40px rgba(53, 47, 89, 0.11);
+        border-color: var(--grape);
+      }
+      .author-card-avatar {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--haunted);
+        border: 2px solid rgba(53, 47, 89, 0.12);
+        flex-shrink: 0;
+      }
+      .author-card-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .author-card-name {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.05rem;
+        color: var(--haunted);
+        line-height: 1.2;
+      }
+      .author-card-role {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.12);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.18rem 0.75rem;
+      }
+      .author-card-bio {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .author-card-meta {
+        display: flex;
+        gap: 1.2rem;
+        justify-content: center;
+        margin-top: auto;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--silver);
+        width: 100%;
+      }
+      .author-card-meta-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem;
+      }
+      .author-card-meta-num {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--vodka);
+        line-height: 1;
+      }
+      .author-card-meta-label {
+        font-size: 0.62rem;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
