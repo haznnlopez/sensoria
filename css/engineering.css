@@ -134,24 +134,12 @@
         font-weight: 600;
         color: rgba(255, 255, 255, 0.5);
       }
-      .alc-img.c1 {
-        background: linear-gradient(135deg, #c5c0e0, #6b629a);
+      .alc-card-img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
       }
-      .alc-img.c2 {
-        background: linear-gradient(135deg, #b8d4c8, #5a8a72);
-      }
-      .alc-img.c3 {
-        background: linear-gradient(135deg, #d4c8e0, #8a6aaa);
-      }
-      .alc-img.c4 {
-        background: linear-gradient(135deg, #c8d8e8, #5a7890);
-      }
-      .alc-img.c5 {
-        background: linear-gradient(135deg, #e0d4c0, #9a7850);
-      }
-      .alc-img.c6 {
-        background: linear-gradient(135deg, #d8c8d8, #8a5a8a);
-      }
+      
       .alc-chip {
         position: absolute;
         top: 10px;
