@@ -1,8 +1,185 @@
-/* ============================================================
-   sensoria — ethics.css
-   Page-specific styles for ethics.html
-   Add styles here that ONLY apply to this page.
-   Shared styles live in shared.css
-   ============================================================ */
+/* ── Section Index unique styles ── */
+.section-hero {
+  background: linear-gradient(135deg, var(--haunted) 0%, var(--dark-bg) 100%);
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.section-hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(191, 141, 242, 0.15) 0%,
+    transparent 70%
+  );
+}
+.section-hero .hero-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgba(191, 141, 242, 0.18);
+  border: 1.5px solid var(--vodka);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--vodka);
+  margin-bottom: 1.4rem;
+}
+.section-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: var(--silver);
+  line-height: 1.15;
+}
+.section-hero .hero-desc {
+  color: rgba(221, 220, 242, 0.68);
+  font-size: 0.97rem;
+  line-height: 1.78;
+  max-width: 640px;
+  margin-top: 1rem;
+}
+.section-hero .hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.hero-stat-num {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--vodka);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 0.72rem;
+  color: rgba(221, 220, 242, 0.45);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
 
-/* Add your ethics-specific CSS below */
+/* sub-topics strip */
+.subtopics-strip {
+  padding: 28px 0;
+  background: #fff;
+  border-bottom: 1px solid var(--silver);
+}
+.stopic-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--mag-grey);
+  border: 1.5px solid var(--silver);
+  border-radius: 50px;
+  padding: 0.45rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--haunted);
+  transition: all 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.stopic-chip:hover,
+.stopic-chip.active {
+  background: var(--haunted);
+  color: var(--silver);
+  border-color: var(--haunted);
+}
+
+/* article list cards */
+#articles-list {
+  padding: 80px 0;
+  background: var(--mag-grey);
+}
+.art-list-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  border: 1.5px solid var(--silver);
+  overflow: hidden;
+  height: 100%;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  color: inherit;
+}
+.art-list-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 44px rgba(53, 47, 89, 0.12);
+}
+.alc-img {
+  aspect-ratio: 16/9;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+.alc-card-img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.alc-chip {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: rgba(53, 47, 89, 0.82);
+  backdrop-filter: blur(4px);
+  color: var(--silver);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 50px;
+  padding: 0.18rem 0.7rem;
+}
+.alc-body {
+  padding: 1.3rem;
+  flex: 1;
+}
+.alc-body h5 {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--haunted);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+.alc-body p {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.alc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.3rem;
+  border-top: 1px solid var(--silver);
+  font-size: 0.74rem;
+  color: var(--grape);
+}
+.read-more-s {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--haunted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: gap 0.2s;
+}

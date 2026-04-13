@@ -16,247 +16,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../../css/shared.css" />
-    <link rel="stylesheet" href="../../../css/feedback.css" />
-
-    <style id="shared-nav-override">
-      /* ── SHARED NAV + FOOTER OVERRIDE ── */
-      :root {
-        --mag-grey: #f0f0f2;
-        --haunted: #352f59;
-        --grape: #9e99bf;
-        --vodka: #bf8df2;
-        --silver: #dddcf2;
-        --dark-bg: #2b2640;
-        --body-text: #2d3436;
-        --muted: #5a5470;
-      }
-      /* ── NAVBAR ── */
-      .navbar {
-        background: var(--haunted);
-        border-bottom: 2px solid var(--grape);
-        position: sticky;
-        top: 0;
-        z-index: 1050;
-        padding: 0.65rem 0;
-      }
-      .navbar-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .logo-mark {
-        width: 36px;
-        height: 36px;
-        background: var(--silver);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Playfair Display", serif;
-        font-size: 1rem;
-        font-weight: 700;
-        font-style: italic;
-        color: var(--haunted);
-        flex-shrink: 0;
-      }
-      .logo-text {
-        font-family: "Playfair Display", serif;
-        font-size: 1.3rem;
-        font-style: italic;
-        color: var(--silver);
-        letter-spacing: 0.04em;
-      }
-      .navbar-nav .nav-link {
-        color: var(--silver) !important;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        padding: 0.4rem 0.9rem;
-        border-radius: 6px;
-        transition:
-          background 0.2s,
-          color 0.2s;
-      }
-      .navbar-nav .nav-link:hover {
-        color: var(--vodka) !important;
-        background: rgba(255, 255, 255, 0.07);
-      }
-      .navbar-nav .nav-link.active {
-        color: var(--vodka) !important;
-        background: rgba(191, 141, 242, 0.12);
-      }
-      .nav-search-wrap {
-        position: relative;
-      }
-      .nav-search {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid var(--grape);
-        border-radius: 50px;
-        padding: 0.35rem 1rem 0.35rem 2rem;
-        color: var(--silver);
-        font-size: 0.78rem;
-        outline: none;
-        width: 160px;
-        transition:
-          width 0.3s,
-          background 0.2s;
-      }
-      .nav-search::placeholder {
-        color: var(--grape);
-      }
-      .nav-search:focus {
-        width: 200px;
-        background: rgba(255, 255, 255, 0.13);
-      }
-      .nav-search-wrap .srch-icon {
-        position: absolute;
-        left: 0.7rem;
-        top: 50%;
-        transform: translateY(-50%);
-        color: var(--grape);
-        font-size: 0.76rem;
-        pointer-events: none;
-      }
-      .navbar-toggler {
-        border: none;
-      }
-      .navbar-toggler:focus {
-        box-shadow: none;
-      }
-      .navbar-toggler-icon {
-        filter: invert(1);
-      }
-      /* ── FAT FOOTER ── */
-      footer {
-        background: var(--dark-bg) !important;
-        color: var(--silver) !important;
-        padding: 72px 0 0 !important;
-      }
-      .footer-logo {
-        font-family: "Playfair Display", serif;
-        font-style: italic;
-        font-size: 2rem;
-        color: var(--silver);
-        letter-spacing: 0.02em;
-        margin-bottom: 0.75rem;
-      }
-      .footer-tagline {
-        font-size: 0.83rem;
-        color: rgba(221, 220, 242, 0.5);
-        line-height: 1.7;
-        max-width: 260px;
-      }
-      .footer-social {
-        display: flex;
-        gap: 0.6rem;
-        flex-wrap: wrap;
-      }
-      .soc-btn {
-        width: 36px;
-        height: 36px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(221, 220, 242, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--silver);
-        font-size: 0.9rem;
-        transition:
-          background 0.2s,
-          border-color 0.2s,
-          color 0.2s;
-      }
-      .soc-btn:hover {
-        background: var(--vodka);
-        border-color: var(--vodka);
-        color: var(--haunted);
-      }
-      .footer-heading {
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: var(--vodka);
-        margin-bottom: 0.75rem;
-      }
-      .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-      .footer-links li {
-        margin-bottom: 0.45rem;
-      }
-      .footer-links a {
-        font-size: 0.82rem;
-        color: rgba(221, 220, 242, 0.6);
-        transition: color 0.18s;
-      }
-      .footer-links a:hover {
-        color: var(--silver);
-      }
-      .footer-contact-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.8rem;
-        color: rgba(221, 220, 242, 0.55);
-        margin-bottom: 0.4rem;
-      }
-      .footer-contact-item i {
-        color: var(--grape);
-        font-size: 0.85rem;
-      }
-      .footer-contact-item a {
-        color: rgba(221, 220, 242, 0.55);
-      }
-      .footer-contact-item a:hover {
-        color: var(--silver);
-      }
-      .footer-bottom {
-        padding: 1.2rem 0;
-        border-top: 1px solid rgba(221, 220, 242, 0.1);
-        font-size: 0.75rem;
-        color: rgba(221, 220, 242, 0.35);
-        margin-top: 3rem;
-      }
-      .footer-bottom a {
-        color: rgba(221, 220, 242, 0.35);
-        transition: color 0.18s;
-      }
-      .footer-bottom a:hover {
-        color: var(--silver);
-      }
-      /* ── breadcrumb ── */
-      .breadcrumb-bar {
-        background: #fff;
-        border-bottom: 1px solid var(--silver);
-        padding: 0.55rem 0;
-      }
-      .breadcrumb {
-        margin: 0;
-        font-size: 0.78rem;
-      }
-      .breadcrumb-item a {
-        color: var(--grape);
-      }
-      .breadcrumb-item.active {
-        color: var(--haunted);
-        font-weight: 600;
-      }
-      .breadcrumb-item + .breadcrumb-item::before {
-        color: var(--grape);
-      }
-    </style>
+    <link rel="icon" href="../../media/logo.png" />
+    <link rel="stylesheet" href="../../css/feedback.css" />
+    <link rel="stylesheet" href="../../css/shared.css" />
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <div class="logo-mark">S</div>
+        <a class="navbar-brand" href="../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../media/logo.png">
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -270,22 +41,25 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link" href="../articles.html">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../cluster/cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link active" href="#">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link" href="../casestudy/casestudies.html">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link" href="../engineering/engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -304,7 +78,7 @@
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
           <li class="breadcrumb-item active">Feedback & Behavior</li>
         </ol>
       </div>
@@ -325,7 +99,7 @@
         </p>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-num">6</div>
+            <div class="hero-stat-num">10</div>
             <div class="hero-stat-label">Articles</div>
           </div>
           <div>
@@ -355,26 +129,8 @@
           <span
             class="stopic-chip"
             onclick="filterCards(this)"
-            data-tag="Haptic Reconditioning"
-            >Haptic Reconditioning</span
-          >
-          <span
-            class="stopic-chip"
-            onclick="filterCards(this)"
             data-tag="Gait & Lower Limb"
             >Gait & Lower Limb</span
-          >
-          <span
-            class="stopic-chip"
-            onclick="filterCards(this)"
-            data-tag="Gait & Lower Limb"
-            >Gait & Lower Limb</span
-          >
-          <span
-            class="stopic-chip"
-            onclick="filterCards(this)"
-            data-tag="Psychology of Ergonomics"
-            >Psychology of Ergonomics</span
           >
           <span
             class="stopic-chip"
@@ -395,145 +151,295 @@
             <h2 class="sec-title">Feedback & Behavior Articles</h2>
           </div>
           <span id="count-label" style="font-size: 0.82rem; color: var(--muted)"
-            >6 articles</span
+            >10 articles</span
           >
         </div>
         <div class="row g-4" id="cards-grid">
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_haptic.html" class="art-list-card">
-              <div class="alc-img c1">
-                <span class="alc-chip">Haptic Reconditioning</span>
-                Article Image
+            <a href="headAndNeck/haptic.html" class="art-list-card">
+              <div class="alc-img">
+                <span class="alc-chip">Head & Neck</span>
+                <img
+                  class="alc-card-img"
+                  src="https://framerusercontent.com/images/qkLIJvSUOffbQHryRL7PeswGePM.png"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
                 <h5>
-                  How Real-Time Haptic Feedback Is Rewiring the Way Our Bodies
-                  Learn Movement
+                  Haptic Feedback Loops: Training the Brain through the Skin
                 </h5>
                 <p>
-                  Immediate tactile signals retrain muscle memory faster than
-                  any post-session analysis ever could.
+                  Examining "Nudge Theory"—using localized micro-vibrations to
+                  subconsciously prompt posture correction and close the loop
+                  between data and habit.
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Gianna Ebue &nbsp;&middot;&nbsp; 9 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 5 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
               </div>
             </a>
           </div>
+
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_haptic.html" class="art-list-card">
-              <div class="alc-img c2">
-                <span class="alc-chip">Haptic Reconditioning</span>
-                Article Image
+            <a href="headAndNeck/imus.html" class="art-list-card">
+              <div class="alc-img">
+                <span class="alc-chip">Head & Neck</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
                 <h5>
-                  Vibration Patterns and Motor Learning: What the Research
-                  Actually Says
+                  IMUs in the Smart Collar: Why 1,000 Data Points per Second
+                  Matter
                 </h5>
                 <p>
-                  Not all vibrations are equal — signal timing, intensity, and
-                  pattern all determine whether haptic cues actually stick.
+                  An exploration of Inertial Measurement Units (IMUs) and how
+                  high-frequency sampling catches the subtle "head-bobbing" that
+                  signals the onset of "Tech Neck."
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Amir Lopez &nbsp;&middot;&nbsp; 8 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 8 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
               </div>
             </a>
           </div>
+
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_gait.html" class="art-list-card">
+            <a href="headAndNeck/weight.html" class="art-list-card">
               <div class="alc-img c3">
-                <span class="alc-chip">Gait & Lower Limb</span>
-                Article Image
+                <span class="alc-chip">Head & Neck</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
-                <h5>Gait Analysis: How Wearables Decode the Way You Walk</h5>
+                <h5>
+                  The 12-Pound Weight: The Physics of Forward Head Posture
+                </h5>
                 <p>
-                  Pressure insoles and ankle IMUs give physiotherapists
-                  objective data on footstrike, cadence, and asymmetry.
+                  Explaining the "lever effect" how every inch of forward
+                  movement adds 10 lbs of functional weight to your spine, and
+                  how the Smart Collar calculates this torque in real-time.
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Aica Ortega &nbsp;&middot;&nbsp; 6 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 6 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
               </div>
             </a>
           </div>
+
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_gait.html" class="art-list-card">
-              <div class="alc-img c4">
-                <span class="alc-chip">Gait & Lower Limb</span>
-                Article Image
+            <a href="torsoAndSmartFabrics/graphene.html" class="art-list-card">
+              <div class="alc-img c3">
+                <span class="alc-chip">Torso & Smart Fabrics</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
-                <h5>
-                  Running Economy and Smart Insoles: What Elite Coaches Are
-                  Learning
-                </h5>
+                <h5>Graphene and Beyond: The Future of Conductive Yarns</h5>
                 <p>
-                  Millisecond-level ground contact timing data is changing how
-                  coaches design training loads for elite runners.
+                  From bulky wires to graphene-coated threads and silver-plated
+                  nylon: how sensoria creates full-body sensor arrays that feel
+                  like a standard cotton t-shirt.
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Noel Bandoy &nbsp;&middot;&nbsp; 7 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 7 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
               </div>
             </a>
           </div>
+
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_psychology.html" class="art-list-card">
-              <div class="alc-img c5">
-                <span class="alc-chip">Psychology of Ergonomics</span>
-                Article Image
+            <a
+              href="torsoAndSmartFabrics/smartFabric.html"
+              class="art-list-card"
+            >
+              <div class="alc-img c3">
+                <span class="alc-chip">Torso & Smart Fabrics</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
-                <h5>
-                  The Psychology of Ergonomics: Why People Ignore Good Posture
-                  Advice
-                </h5>
+                <h5>The Smart Fabric Revolution in Competitive Sports</h5>
                 <p>
-                  Behavioral economics explains why knowing the right thing to
-                  do and actually doing it are two completely separate problems.
+                  Analyzing how elite athletes use the Torso Cluster to optimize
+                  their "Kinetic Chain" transferring power from core to limb
+                  with zero mechanical waste.
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Patricia Pelicano &nbsp;&middot;&nbsp; 8 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 9 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
               </div>
             </a>
           </div>
+
           <div class="col-md-6 col-lg-4 fade-up">
-            <a href="feedback_psychology.html" class="art-list-card">
-              <div class="alc-img c6">
-                <span class="alc-chip">Psychology of Ergonomics</span>
-                Article Image
+            <a
+              href="torsoAndSmartFabrics/spinalAlignment.html"
+              class="art-list-card"
+            >
+              <div class="alc-img c3">
+                <span class="alc-chip">Torso & Smart Fabrics</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
               </div>
               <div class="alc-body">
-                <h5>
-                  Habit Loops and Wearable Tech: Engineering the
-                  Cue-Routine-Reward Cycle
-                </h5>
+                <h5>Spinal Alignment and the "Slouch-Limit" Algorithm</h5>
                 <p>
-                  How wearable designers apply Charles Duhigg's habit loop model
-                  to keep users engaged past the first two weeks.
+                  How sensors embedded along the length of a smart-fabric shirt
+                  track the curvature of the thoracic spine to prevent permanent
+                  structural shifts.
                 </p>
               </div>
               <div class="alc-footer">
-                <span>Kim Datuin &nbsp;&middot;&nbsp; 7 min read</span>
+                <span>Mark España &nbsp;&middot;&nbsp; 8 min read</span>
+                <span class="read-more-s"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up">
+            <a href="wristAndForearm/anatomy.html" class="art-list-card">
+              <div class="alc-img c3">
+                <span class="alc-chip">Wrist & Forearm</span>
+                <img
+                  class="alc-card-img"
+                  src="https://cdn-shop.adafruit.com/970x728/182-00.jpg"
+                  alt="Article Image"
+                />
+              </div>
+              <div class="alc-body">
+                <h5>
+                  The Anatomy of a Flex Sensor: Measuring the Micro-Angles of
+                  RSI
+                </h5>
+                <p>
+                  A technical breakdown of resistive flex sensors and how
+                  bending a thin substrate translates physical strain into a
+                  data-driven "Pre-Injury Score."
+                </p>
+              </div>
+              <div class="alc-footer">
+                <span>Mark España &nbsp;&middot;&nbsp; 7 min read</span>
+                <span class="read-more-s"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up">
+            <a
+              href="wristAndForearm/emgVsAccelerometry.html"
+              class="art-list-card"
+            >
+              <div class="alc-img c3">
+                <span class="alc-chip">Wrist & Forearm</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&fit=crop"
+                  alt="Article Image"
+                />
+              </div>
+              <div class="alc-body">
+                <h5>EMG vs. Accelerometry: Which Wins for Wrist Health?</h5>
+                <p>
+                  Comparing the tracking of physical motion against the
+                  detection of neural intent to find the perfect balance for RSI
+                  prevention.
+                </p>
+              </div>
+              <div class="alc-footer">
+                <span>Mark España &nbsp;&middot;&nbsp; 8 min read</span>
+                <span class="read-more-s"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4 fade-up">
+            <a href="wristAndForearm/tenosynovitis.html" class="art-list-card">
+              <div class="alc-img c3">
+                <span class="alc-chip">Wrist & Forearm</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000"
+                  alt="Article Image"
+                />
+              </div>
+              <div class="alc-body">
+                <h5>
+                  Tenosynovitis: Tracking the Friction of Repetitive Motion
+                </h5>
+                <p>
+                  A look at the synovial "sheath" around tendons and how
+                  sensoria tracks the frequency of micro-strokes to predict
+                  inflammation before the heat is even felt.
+                </p>
+              </div>
+              <div class="alc-footer">
+                <span>Mark España &nbsp;&middot;&nbsp; 6 min read</span>
+                <span class="read-more-s"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></span>
+              </div>
+            </a>
+          </div>
+        
+
+        <div class="col-md-6 col-lg-4 fade-up">
+            <a href="wristAndForearm/anatomy.html" class="art-list-card">
+              <div class="alc-img c3">
+                <span class="alc-chip">Wrist & Forearm</span>
+                <img
+                  class="alc-card-img"
+                  src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=1200"
+                  alt="Article Image"
+                />
+              </div>
+              <div class="alc-body">
+                <h5>
+                  The Anatomy of a Keystroke: Tracking Micro-Movements to Prevent RSI
+                </h5>
+                <p>
+                  Moving past static wrist rests by utilizing continuous tendon tracking and myoelectric sensors to intercept Repetitive Strain Injuries before they manifest.
+                </p>
+              </div>
+              <div class="alc-footer">
+                <span>Mark España &nbsp;&middot;&nbsp; 6 min read</span>
                 <span class="read-more-s"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></span>
