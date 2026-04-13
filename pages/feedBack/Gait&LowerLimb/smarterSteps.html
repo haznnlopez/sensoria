@@ -16,18 +16,17 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link href="..\..\..\css\article_template.css" rel="stylesheet" />
-
-    <style id="shared-nav-override">
-      
-    </style>
+    <link rel="icon" href="../../../media/logo.png" />
+    <link href="../../../css/article_template.css" rel="stylesheet" />
+    <link href="../../../css/shared.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png" />
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -41,22 +40,26 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link active" href="../cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../feedBack/feedback.html"
+                >Feedback</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../casestudy/casestudies.html"
+                >Case Studies</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link" href="../../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link" href="../../ethics.html">Ethics</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -71,176 +74,120 @@
       </div>
     </nav>
 
-    <!-- ══ BREADCRUMB ══ -->
     <div class="breadcrumb-bar">
       <div class="container">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Feedback &amp; Behavior</a>
+            <a href="../../../index.html">Home</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
+          <li class="breadcrumb-item">
+            <a href="../feedback.html">Feedback & Behavior</a>
+          </li>
           <li class="breadcrumb-item active">Smarter Steps</li>
         </ol>
       </div>
     </div>
 
-    <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
       <div class="container">
-        <!-- ★ EDIT: change category tag to match topic -->
         <div class="category-tag">Feedback &amp; Behavior</div>
 
-        <!-- ★ EDIT: article title -->
         <h1>
           Smarter Steps: How Gait Feedback Enhances Movement
         </h1>
 
-        <!-- ★ EDIT: article subtitle / deck -->
         <p class="subtitle">
-          The way we move every day—whether walking to class or running during exercise—plays a major role in our overall health. Gait feedback technology is changing how people understand and improve their movement. By using wearable devices, individuals can now receive real-time insights that help correct posture and walking patterns before they lead to injury.
+         The way we move every day—whether walking to class or running during exercise—plays a major role in our overall health. Gait feedback technology is changing how people understand and improve their movement. By using wearable devices, individuals can now receive real-time insights that help correct posture and walking patterns before they lead to injury.
+        
         </p>
 
         <div class="article-meta">
           <div class="meta-author">
-            <!-- ★ EDIT: author initials, name, role -->
-            <div class="ava">QA</div>
+            <div class="ava">
+              <img class="ava-img" src="../../../media/noel.jpg" />
+            </div>
             <div>
               <div class="ava-name">Noel Bandoy</div>
               <div class="ava-role">Quality Assurance</div>
             </div>
           </div>
           <div class="meta-divider d-none d-md-block"></div>
-          <!-- ★ EDIT: update date, read time, views -->
           <div class="meta-stat">
-            <i class="bi bi-calendar3"></i> April 12, 2026
+            <i class="bi bi-calendar3"></i> April 11, 2026
           </div>
-          <div class="meta-stat"><i class="bi bi-clock"></i> 6 min read</div>
-          <div class="meta-stat"><i class="bi bi-eye"></i> 5 views</div>
+          <div class="meta-stat"><i class="bi bi-clock"></i> 8 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 2,408 views</div>
         </div>
+        
 
-        <!-- ★ EDIT: swap src for real article hero image -->
+<!-- ══ ARTICLE IMAGE ══ -->
         <div class="hero-img-wrap">
           <div class="hero-img-ph">
-            <img
-              src="https://www.azosensors.com/images/news/ImageForNews_16402_17453292943685505.jpg"
-              alt="Runner using wearable gait sensors with real-time stride and impact data displayed."
+             <img
+              src="https://www.mychiro.com.au/wp-content/uploads/2026/02/image_d5b5f94df589ffbebea16ffef5ec0e9d-1024x683.jpeg"
+              alt="Wearable device providing real-time gait correction feedback during walking."
             />
           </div>
         </div>
       </div>
     </header>
 
-    <!-- ══ ARTICLE BODY ══ -->
+
+<!-- ══ ARTICLE BODY ══ -->
     <section id="article-body">
       <div class="container">
         <div class="row g-5">
-          <!-- ── MAIN CONTENT ── -->
           <div class="col-lg-8">
             <article class="article-content">
-              <!-- ★ EDIT: replace all content below with actual article body -->
-
               <p>
-                Gait feedback focuses on analyzing how a person moves, especially the lower limbs such as the legs, 
-                knees, and feet. <b> wearable devices are equipped with motion sensors </b> accelerometers and gyroscopes, 
-                which track detailed aspects of movement. These include stride length, balance between left and right steps, 
-                and the force of each foot strike.
+                At its core, <b>gait feedback is about awareness.</b> Wearable devices track movement using sensors that detect motion, orientation, and pressure. These tools capture details like how evenly weight is distributed, how long each step lasts, and how the body shifts during movement. What used to require a laboratory can now be monitored in real-world environments.
               </p>
 
-              <h2 class="section" id="section-1">Understanding Gait Feedback</h2>
+              <h2 class="section" id="section-1">The Power of Real-Time Feedback  </h2>
               <p>
-                Gait feedback focuses on <b> how a person moves</b>, 
-                especially the lower limbs such as the legs, knees, 
-                and feet. Modern wearable devices are equipped with 
-                motion sensors <b> accelerometers and gyroscopes</b>, 
-                which track detailed aspects of movement. These 
-                include stride length, 
-                balance between left and right steps, 
-                and the force of each foot strike.
+                What makes this technology powerful is its ability to respond instantly. <b>Instead of analyzing movement after the fact, gait feedback systems provide real-time</b> signals when something is off. A slight vibration or notification can alert a user that their stride is uneven or their posture needs adjustment. This immediate response allows corrections to happen in the moment, not after damage has been done.
               </p>
               <p>
-                Once this data is collected, advanced algorithms 
-                process it to<b> identify irregular or inefficient 
-                patterns</b>. For example, if one leg is doing more work 
-                than the other, or if the impact on the ground 
-                is too strong, the system detects it immediately. 
-                Instead of<b> waiting for discomfort or injury </b>, the 
-                device provides instant feedback—often through 
-                vibrations or alerts—prompting the user to adjust 
-                their movement.
+                Over time, these repeated <b>corrections begin to reshape movement habits</b>. The body adapts by developing more efficient patterns, improving balance and coordination naturally. This process is similar to learning a new skill—except instead of conscious effort, the body gradually “learns” better movement through consistent feedback.
               </p>
 
               <div class="pull-quote">
                 <p>
-                  "Efficient movement isn’t just about speed—it’s about balance,
-    control, and awareness. Gait feedback turns every step into a
-    learning opportunity.</p>
+                  "You don’t improve movement by guessing—you improve it by measuring and responding to it."</p>
                 <cite
-                  >— Dr. Miguel Santos, Biomechanics Specialist</cite
+                  >— Dr. Rafael Mendoza, Human Movement Analyst</cite
                 >
               </div>
 
-              <h2 class="section" id="section-2">Application in Running</h2>
+              <h2 class="section" id="section-2">Supporting Rehabilitation and Recovery</h2>
               <p>
-               In a running scenario, this can be especially helpful.
-                A runner may not notice uneven strides or poor 
-                posture, but <b>a wearable device can detect these 
-                issues </b> signal the user to correct them in real 
-                time. This leads to better form and reduced 
-                stress on the joints.
+               As wearable technology continues to evolve, gait feedback is becoming more accessible and more precise. It represents a shift toward proactive health—where small adjustments today can prevent bigger problems tomorrow. By turning each step into a source of information, <b>this technology empowers people to move smarter, safer, and more efficiently.</b>
               </p>
 
-     
-
-              <p>
-                The benefits of gait feedback are significant. 
-                It helps lower the risk of injuries, <b >improves 
-                movement efficiency</b>, and promotes proper body 
-                alignment. Research has also shown that real-time 
-                feedback can improve walking symmetry and reduce 
-                unnecessary strain on joints, making it useful not 
-                only for athletes <b>but also for rehabilitation and 
-                everyday health</b>.</p>
-
-              <!-- ★ EDIT: replace src with a relevant inline image -->
-              <figure class="inline-img">
-                <div class="inline-img-ph">
-                  <img
-                    src="https://i.natgeofe.com/n/b854fe59-accb-4bed-9fd3-a0ae2bbd7cc7/GettyImages-1414833395.jpg"
-                    alt="Fitness wearable alerting user to adjust running posture based on gait feedback."
-                  />
-                </div>
-                <figcaption>
-                  Fitness wearable alerting user to adjust running posture based on gait feedback.
-                </figcaption>
-              </figure>
 
               <h2>References: </h2>
-              <p>Ginis, P., Nackaerts, E., Nieuwboer, A., and Heremans, E. (2017). Cueing for people with Parkinson’s disease with freezing of gait: A narrative review of the state-of-the-art and novel perspectives. Annals of Physical and Rehabilitation Medicine, 61(6), 407–413. <a style="text-decoration: underline;" href="https://doi.org/10.1016/j.rehab.2017.08.002" title="Cueing for people with Parkinson’s disease with freezing of gait" >https://doi.org/10.1016/j.rehab.2017.08.002</a>
+              <p>Ginis, P., Nackaerts, E., Nieuwboer, A., & Heremans, E. (2017). Cueing for people with Parkinson’s disease with freezing of gait: A narrative review of the state-of-the-art and novel perspectives. Annals of Physical and Rehabilitation Medicine, 61(6), 407–413. https://doi.org/10.1016/j.rehab.2017.08.002<a style="text-decoration: underline;" href="https://doi.org/10.1016/j.rehab.2017.08.002" title="Cueing for people with Parkinson’s disease with freezing of gait" >https://doi.org/10.1016/j.rehab.2017.08.002</a>
               </p>
               <p>
               Tao, W., Liu, T., Zheng, R., and Feng, H. (2012). Gait analysis using wearable sensors. Sensors, 12(2), 2255–2283.<a style="text-decoration: underline;" href="https://doi.org/10.3390/s120202255" title="Gait analysis using wearable sensors." >https://doi.org/10.3390/s120202255</a> 
               </p>
               <p>
-              NURVV. (n.d.). NURVV Run: Smart running insoles. Retrieved from <a style="text-decoration: underline;" href="https://www.nurvv.com" title="NURVV Run: Smart running insoles. Retrieved from" >https://www.nurvv.com</a> 
+             World Health Organization. (2010). Global recommendations on physical activity for health. <a style="text-decoration: underline;" href="https://www.who.int" title="Global recommendations on physical activity for health." >https://www.who.int</a> 
                 .</p>
 
-      
 
-              <!-- ★ EDIT: update tags to match the article topic -->
-              <h2 class="art-tag-title">= Article Tags =</h2>
+<!--ARTICLE TAGS-->
+               <h2 class="art-tag-title">= Article Tags =</h2>
               <div class="article-tags">
-                <span class="art-tag">wearable devices</span>
-                <span class="art-tag"> detect issues</span>
-                <span class="art-tag">rehabilitation and everyday health</span>
+                <span class="art-tag">Respond instantly</span>
+                <span class="art-tag">Detect issues</span>
+                <span class="art-tag">Alert a user</span>
               </div>
             </article>
           </div>
 
-          <!-- ── SIDEBAR ── -->
           <div class="col-lg-4">
             <div class="sidebar">
-              <!-- Reading Progress -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">Reading Progress</div>
                 <div class="read-progress-wrap">
@@ -252,26 +199,24 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Table of Contents -->
-              <div class="sidebar-card">
+                
+                <div class="sidebar-card">
                 <div class="sidebar-heading">In This Article</div>
                 <!-- ★ EDIT: update TOC links to match your h2 IDs and titles -->
                 <ul class="toc-list">
                   <li>
                     <a href="#section-1" class="toc-link"
-                      >Understanding Gait Feedback</a
+                      >The Power of Real-Time Feedback</a
                     >
                   </li>
                   <li>
                     <a href="#section-2" class="toc-link"
-                      >Application in Running</a
+                      >Supporting Rehabilitation and Recovery</a
                     >
                   </l>
                 </ul>
               </div>
 
-              <!-- Share -->
               <div class="sidebar-card">
                 <div class="sidebar-heading">Share This Article</div>
                 <div class="share-btns">
@@ -286,38 +231,12 @@
                   </button>
                 </div>
               </div>
-
-              <!-- Related in sidebar -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Related Reads</div>
-                <!-- ★ EDIT: swap with actual related article titles/links -->
-                 <div class="related-mini">
-                  <div class="related-mini-thumb">Img</div>
-                  <div>
-                    <div class="related-mini-title">
-                      Walking Right: The Role of Gait Feedback in Lower Limb Health
-                    </div>
-                    <div class="related-mini-meta">Feedback & Behavior · 8 min</div>
-                  </div>
-                </div>
-                <div class="related-mini">
-                  <div class="related-mini-thumb">Img</div>
-                  <div>
-                    <div class="related-mini-title">
-                      Relearning Every Step: The Science Behind Gait Feedback
-                    </div>
-                    <div class="related-mini-meta">Feedback & Behavior · 7 min</div>
-                  </div>
-                </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ══ RELATED ARTICLES (bottom) ══ -->
     <section id="related">
       <div class="container">
         <div class="mb-4">
@@ -325,45 +244,49 @@
           <h2 class="sec-title">More from Feedback &amp; Behavior</h2>
         </div>
         <div class="row g-4">
-          <!-- ★ EDIT: replace with real related articles -->
           <div class="col-md-4">
             <div class="rel-card">
-              <div
-                class="rel-img-ph"
-                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
-              >
-                <span class="rel-chip">Feedback & Behavior</span>
+              <div class="rel-img-ph">
+                 <img
+              src="https://www.azosensors.com/images/news/ImageForNews_16402_17453292943685505.jpg"
+              alt="Runner using wearable gait sensors with real-time stride and impact data displayed."
+            />
+
+                <span class="rel-chip">Head &amp; Neck</span>
               </div>
               <div class="rel-body">
                 <h5>
-                  Walking Right: The Role of Gait Feedback in Lower Limb Health
+                  Smarter Steps: How Gait Feedback Enhances Movement
                 </h5>
                 <p>
-                  Healthy movement starts from the ground up. The lower limbs carry the body’s weight and are responsible for balance, mobility, and posture. Gait feedback technology provides a modern solution to improving how we use these essential parts of the body, helping people move more safely and efficiently.
+                   The way we move every day—whether walking to class or running during exercise—plays a major role in our overall health. Gait feedback technology is changing how people understand and improve their movement. By using wearable devices, individuals can now receive real-time insights that help correct posture and walking patterns before they lead to injury.
+
                 </p>
               </div>
               <div class="rel-footer">
-                <span>Noel Bandoy · 8 min</span>
-                <a href="walkingRight.html" class="read-more"
+                <span>Noel Bandoy · 6 mins</span>
+                <a href="smarterSteps.html" class="read-more"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></a>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="rel-card">
-              <div
-                class="rel-img-ph"
-                style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
-              >
-                <span class="rel-chip">Feedback & Behavior</span>
+              <div class="rel-img-ph">
+                 <img
+                    src="https://ecdn6.globalso.com/public/img/2025-09-03/5240223973_0.png"
+                    alt="Foot pressure map showing balanced weight distribution during walking."
+                  />
+                <span class="rel-chip">Head &amp; Neck</span>
               </div>
               <div class="rel-body">
                 <h5>
-                  Relearning Every Step: The Science Behind Gait Feedback 
+                   Walking Right: The Role of Gait Feedback in Lower Limb Health
                 </h5>
                 <p>
-                  Gait is something most people never think about—until something goes wrong. Every step we take is the result of complex coordination between muscles, joints, and the nervous system. When even a small imbalance occurs, it can slowly lead to discomfort, poor posture, or injury. Gait feedback technology brings attention to these hidden patterns, helping individuals understand how their bodies truly move.
+                  Healthy movement starts from the ground up. The lower limbs carry the body’s weight and are responsible for balance, mobility, and posture. Gait feedback technology provides a modern solution to improving how we use these essential parts of the body, helping people move more safely and efficiently.
                 </p>
               </div>
               <div class="rel-footer">
@@ -378,11 +301,9 @@
       </div>
     </section>
 
-    <!-- ══ FOOTER ══ -->
     <footer>
       <div class="container">
         <div class="row g-5">
-          <!-- Brand -->
           <div class="col-lg-3">
             <div class="footer-logo">sensoria.</div>
             <p class="footer-tagline">
@@ -411,58 +332,106 @@
             </div>
           </div>
 
-          <!-- The Cluster + Feedback -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">The Cluster</div>
             <ul class="footer-links">
-              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="cluster.html">Head &amp; Neck</a></li>
-              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+              <li>
+                <a href="../cluster.html#articles-list">Wrist &amp; Forearm</a>
+              </li>
+              <li>
+                <a href="../cluster.html#articles-list">Head &amp; Neck</a>
+              </li>
+              <li>
+                <a href="../cluster.html#articles-list"
+                  >Torso &amp; Smart Fabrics</a
+                >
+              </li>
             </ul>
             <div class="footer-heading mt-4">Feedback</div>
             <ul class="footer-links">
-              <li><a href="feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
-              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Haptic Reconditioning</a
+                >
+              </li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Gait &amp; Lower Limb</a
+                >
+              </li>
+              <li>
+                <a href="../../feedBack/feedback.html#articles-list"
+                  >Psychology of Ergonomics</a
+                >
+              </li>
             </ul>
           </div>
 
-          <!-- Engineering + Case Studies -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Engineering</div>
             <ul class="footer-links">
-              <li><a href="engineering.html">Material Science</a></li>
               <li>
-                <a href="engineering.html">Power &amp; Heat Management</a>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Material Science</a
+                >
               </li>
-              <li><a href="engineering.html">Anthropometrics</a></li>
+              <li>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Power &amp; Heat Management</a
+                >
+              </li>
+              <li>
+                <a href="../../engineering/engineering.html#articles-list"
+                  >Anthropometrics</a
+                >
+              </li>
             </ul>
             <div class="footer-heading mt-4">Case Studies</div>
             <ul class="footer-links">
-              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
-              <li><a href="casestudies.html">Athletic Performance</a></li>
-              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Industrial / Exoskeletons</a
+                >
+              </li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Athletic Performance</a
+                >
+              </li>
+              <li>
+                <a href="../../casestudy/casestudies.html#sectors"
+                  >Medical / Rehabilitative</a
+                >
+              </li>
             </ul>
           </div>
 
-          <!-- Ethics + General -->
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Ethics</div>
             <ul class="footer-links">
-              <li><a href="ethics.html">Neural Interfaces</a></li>
-              <li><a href="ethics.html">Regulatory Landscape</a></li>
-              <li><a href="ethics.html">Evolutionary Impact</a></li>
-              <li><a href="ethics.html">Cookies</a></li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list">Neural Interfaces</a>
+              </li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list"
+                  >Regulatory Landscape</a
+                >
+              </li>
+              <li>
+                <a href="../../ethics/ethics.html#articles-list"
+                  >Evolutionary Impact</a
+                >
+              </li>
+              <li><a href="../../ethics/ethics.html#articles-list">Cookies</a></li>
             </ul>
             <div class="footer-heading mt-4">General</div>
             <ul class="footer-links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About / Contact</a></li>
+              <li><a href="../../../index.html">Home</a></li>
+              <li><a href="../../about/about.html">About / Contact</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
 
-          <!-- Meet the Team -->
           <div class="col-lg-3">
             <div class="footer-heading">Meet the Team</div>
             <p
@@ -524,15 +493,15 @@
         >
           <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
           <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="ethics.html">Cookies</a>
-            <a href="#">Terms</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/article_template.js"></script>
+    <script src="../../../js/article_template.js"></script>
   </body>
 </html>
