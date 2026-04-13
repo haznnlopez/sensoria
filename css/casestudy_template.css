@@ -501,11 +501,6 @@ a {
     background 0.2s,
     border-color 0.2s;
 }
-.cs-tag:hover {
-  background: var(--grape);
-  color: #fff;
-  border-color: var(--grape);
-}
 
 .section {
   scroll-margin-top: 100px;
