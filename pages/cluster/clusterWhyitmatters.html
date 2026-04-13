@@ -1,13 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clusterWhyitmatters</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Why The Cluster Matters — sensoria</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+
+<link rel="icon" href="../../media/logo.png" />
+<link rel="stylesheet" href="../../css/shared.css" />
+
+<!-- keep your template styles here (UNCHANGED) -->
+<!-- paste your whole <style> block here -->
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <script src="script.js"></script>
+
+<!-- ✅ SAME NAVBAR AS cluster.html -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="../../index.html">
+      <div class="logo-mark">
+        <img class="logo-img" src="../../media/logo.png" />
+      </div>
+      <span class="logo-text">sensoria</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link active" href="cluster.html">The Cluster</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../feedBack/feedback.html">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../casestudy/casestudies.html">Case Studies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../engineering/engineering.html">Engineering</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../ethics/ethics.html">Ethics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about/about.html">About</a>
+        </li>
+      </ul>
+
+      <div class="nav-search-wrap mt-3 mt-lg-0">
+        <i class="bi bi-search srch-icon"></i>
+        <input class="nav-search" type="text" placeholder="Search topics…" />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="cluster.html">The Cluster</a></li>
+      <li class="breadcrumb-item active">Why It Matters</li>
+    </ol>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="wim-hero">
+  <div class="container">
+    <div class="wim-hero-icon"><i class="bi bi-person-arms-up"></i></div>
+    <div class="wim-category-label">The Cluster · Why It Matters</div>
+
+    <h1>Why Biomechanical Sensing Matters</h1>
+
+    <p class="hero-desc">
+      The Cluster transforms how we understand the human body—turning silent
+      strain into visible data, and reactive care into proactive prevention.
+    </p>
+
+    <a href="cluster.html" class="wim-hero-cta">
+      Read the Articles <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+
+      <div class="stat-item">
+        <div class="stat-num">70%</div>
+        <div class="stat-label">Work injuries are repetitive strain</div>
+      </div>
+
+      <div class="stat-divider d-none d-md-block"></div>
+
+      <div class="stat-item">
+        <div class="stat-num">1 in 3</div>
+        <div class="stat-label">Adults experience chronic pain</div>
+      </div>
+
+      <div class="stat-divider d-none d-md-block"></div>
+
+      <div class="stat-item">
+        <div class="stat-num">85%</div>
+        <div class="stat-label">Preventable with early detection</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- THE CASE -->
+<section id="the-case">
+  <div class="container">
+    <div class="row g-5">
+
+      <div class="col-lg-5 fade-up">
+        <div class="sec-eyebrow">The argument</div>
+        <h2 class="sec-title">Your body shows damage before you feel it.</h2>
+
+        <div class="callout">
+          <i class="bi bi-quote callout-icon"></i>
+          <p>
+            Most injuries are not sudden—they are the result of thousands of unnoticed micro-movements.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 offset-lg-1 fade-up">
+        <p class="case-lead">
+          The modern lifestyle places unnatural stress on the body through repetition,
+          poor posture, and prolonged inactivity.
+        </p>
+
+        <p class="body-text">
+          The Cluster changes this by placing sensors at key points—wrist, head,
+          and torso—where movement and load are most critical.
+        </p>
+
+        <p class="body-text">
+          These sensors track motion continuously, detecting inefficiencies and
+          risks long before pain appears.
+        </p>
+
+        <p class="body-text">
+          This allows users to correct behavior early, making prevention part of
+          daily life—not something that happens after injury.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section id="reasons">
+  <div class="container text-center mb-5">
+    <div class="sec-eyebrow">Why it matters</div>
+    <h2 class="sec-title">5 Reasons The Cluster Matters</h2>
+  </div>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="reason-card">
+          <div class="reason-num">01</div>
+          <h5>Prevention Over Treatment</h5>
+          <p>Stops injuries before they develop.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="reason-card">
+          <div class="reason-num">02</div>
+          <h5>Real-Time Feedback</h5>
+          <p>Immediate correction of posture and movement.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="reason-card">
+          <div class="reason-num">03</div>
+          <h5>Personalized Data</h5>
+          <p>Insights tailored to your body—not averages.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="reason-card">
+          <div class="reason-num">04</div>
+          <h5>Performance Boost</h5>
+          <p>Improves efficiency in movement and energy use.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="reason-card">
+          <div class="reason-num">05</div>
+          <h5>Continuous Learning</h5>
+          <p>Data builds over time for deeper insights.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="read-cta">
+  <div class="container text-center">
+    <h2>Ready to explore deeper?</h2>
+    <p>Dive into the full articles and understand how each component works.</p>
+
+    <a href="cluster.html" class="cta-btn-primary">
+      Browse The Cluster <i class="bi bi-arrow-right"></i>
+    </a>
+  </div>
+</section>
+
+<!-- ✅ KEEP YOUR ORIGINAL FOOTER HERE (copy from cluster.html exactly) -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) e.target.classList.add("visible");
+  });
+});
+document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
+</script>
+
 </body>
 </html>
