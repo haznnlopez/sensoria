@@ -275,6 +275,16 @@ a {
   object-fit: cover;
 }
 
+.ava-name {
+  font-weight: 600;
+  color: var(--silver);
+  font-size: 0.85rem;
+}
+.ava-role {
+  font-size: 0.72rem;
+  color: var(--grape);
+}
+
 /* ── STATS STRIP ── */
 .stats-strip {
   background: var(--dark-bg);
