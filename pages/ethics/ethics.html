@@ -332,6 +332,128 @@
       .navbar-toggler-icon {
         filter: invert(1);
       }
+      .breadcrumb-bar {
+        background: #fff;
+        border-bottom: 1px solid var(--silver);
+        padding: 0.55rem 0;
+      }
+      .breadcrumb {
+        margin: 0;
+        font-size: 0.78rem;
+      }
+      .breadcrumb-item a {
+        color: var(--grape);
+      }
+      .breadcrumb-item.active {
+        color: var(--haunted);
+        font-weight: 600;
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: var(--grape);
+      }
+
+      /* ── HERO ── */
+      .wim-hero {
+        background: linear-gradient(
+          135deg,
+          var(--haunted) 0%,
+          var(--dark-bg) 100%
+        );
+        padding: 80px 0 68px;
+        position: relative;
+        overflow: hidden;
+      }
+      .wim-hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(191, 141, 242, 0.13) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        left: -60px;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(158, 153, 191, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero-icon {
+        width: 78px;
+        height: 78px;
+        border-radius: 22px;
+        background: rgba(191, 141, 242, 0.16);
+        border: 1.5px solid var(--vodka);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: var(--vodka);
+        margin-bottom: 1.5rem;
+      }
+      .wim-category-label {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.18);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.9rem;
+        margin-bottom: 0.8rem;
+      }
+      .wim-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(2rem, 5vw, 3.8rem);
+        color: var(--silver);
+        line-height: 1.1;
+        max-width: 700px;
+      }
+      .wim-hero .hero-desc {
+        color: rgba(221, 220, 242, 0.65);
+        font-size: 0.97rem;
+        line-height: 1.8;
+        max-width: 580px;
+        margin-top: 1rem;
+      }
+      .wim-hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--vodka);
+        color: var(--haunted);
+        font-weight: 700;
+        font-size: 0.85rem;
+        border-radius: 10px;
+        padding: 0.7rem 1.6rem;
+        margin-top: 1.8rem;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .wim-hero-cta:hover {
+        background: var(--silver);
+        transform: translateY(-2px);
+      }
+
       /* ── FAT FOOTER ── */
       footer {
         background: var(--dark-bg) !important;
@@ -434,7 +556,6 @@
       .footer-bottom a:hover {
         color: var(--silver);
       }
-      /* ── breadcrumb ── */
       .breadcrumb-bar {
         background: #fff;
         border-bottom: 1px solid var(--silver);
@@ -454,6 +575,109 @@
       .breadcrumb-item + .breadcrumb-item::before {
         color: var(--grape);
       }
+
+      /* ── HERO ── */
+      .wim-hero {
+        background: linear-gradient(
+          135deg,
+          var(--haunted) 0%,
+          var(--dark-bg) 100%
+        );
+        padding: 80px 0 68px;
+        position: relative;
+        overflow: hidden;
+      }
+      .wim-hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(191, 141, 242, 0.13) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        left: -60px;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(158, 153, 191, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero-icon {
+        width: 78px;
+        height: 78px;
+        border-radius: 22px;
+        background: rgba(191, 141, 242, 0.16);
+        border: 1.5px solid var(--vodka);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: var(--vodka);
+        margin-bottom: 1.5rem;
+      }
+      .wim-category-label {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.18);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.9rem;
+        margin-bottom: 0.8rem;
+      }
+      .wim-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(2rem, 5vw, 3.8rem);
+        color: var(--silver);
+        line-height: 1.1;
+        max-width: 700px;
+      }
+      .wim-hero .hero-desc {
+        color: rgba(221, 220, 242, 0.65);
+        font-size: 0.97rem;
+        line-height: 1.8;
+        max-width: 580px;
+        margin-top: 1rem;
+      }
+      .wim-hero-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: var(--vodka);
+        color: var(--haunted);
+        font-weight: 700;
+        font-size: 0.85rem;
+        border-radius: 10px;
+        padding: 0.7rem 1.6rem;
+        margin-top: 1.8rem;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .wim-hero-cta:hover {
+        background: var(--silver);
+        transform: translateY(-2px);
+      }
+
     </style>
   </head>
   <body>
