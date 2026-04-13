@@ -1,192 +1,1417 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ensuring Safety and Reliability Through Medical Certification Standards — sensoria</title>
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-rel="stylesheet"
-/>
-<link href="../css/article_template.css" rel="stylesheet" />
-<style id="shared-nav-override"></style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Certification Standards — sensoria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
 
-<!-- ══ NAVBAR ══ -->
-<nav class="navbar navbar-expand-lg">
-<div class="container">
-<a class="navbar-brand" href="../index.html">
-<div class="logo-mark">S</div>
-<span class="logo-text">sensoria</span>
-</a>
-<button
-class="navbar-toggler"
-type="button"
-data-bs-toggle="collapse"
-data-bs-target="#navMenu"
->
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navMenu">
-<ul class="navbar-nav mx-auto gap-lg-1">
-<li class="nav-item">
-<a class="nav-link" href="cluster.html">The Cluster</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="feedback.html">Feedback</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="casestudies.html">Case Studies</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="engineering.html">Engineering</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="ethics.html">Ethics</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
-</li>
-</ul>
-<div class="nav-search-wrap mt-3 mt-lg-0">
-<i class="bi bi-search srch-icon"></i>
-<input
-class="nav-search"
-type="text"
-placeholder="Search topics…"
-/>
-</div>
-</div>
-</div>
-</nav>
+    <style>
+      :root {
+        --mag-grey: #f0f0f2;
+        --haunted: #352f59;
+        --grape: #9e99bf;
+        --vodka: #bf8df2;
+        --silver: #dddcf2;
+        --dark-bg: #2b2640;
+        --body-text: #2d3436;
+        --muted: #5a5470;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--mag-grey);
+        color: var(--body-text);
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
 
-<!-- ══ BREADCRUMB ══ -->
-<div class="breadcrumb-bar">
-<div class="container">
-<ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-<li class="breadcrumb-item">
-<a href="#">Feedback &amp; Behavior</a>
-</li>
-<li class="breadcrumb-item active">Ensuring Safety and Reliability Through Medical Certification Standards</li>
-</ol>
-</div>
-</div>
+      /* ── NAVBAR ── */
+      .navbar {
+        background: var(--haunted);
+        border-bottom: 2px solid var(--grape);
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+        padding: 0.7rem 0;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-mark {
+        width: 38px;
+        height: 38px;
+        background: var(--silver);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--haunted);
+      }
+      .logo-text {
+        font-family: "Playfair Display", serif;
+        font-size: 1.35rem;
+        font-style: italic;
+        color: var(--silver);
+        letter-spacing: 0.04em;
+      }
+      .navbar-nav .nav-link {
+        color: var(--silver) !important;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.85rem;
+        transition: color 0.2s;
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--vodka) !important;
+      }
+      .dropdown-menu {
+        background: var(--dark-bg);
+        border: 1px solid var(--grape);
+        border-radius: 10px;
+        padding: 0.5rem 0;
+        min-width: 200px;
+      }
+      .dropdown-item {
+        color: var(--silver) !important;
+        font-size: 0.8rem;
+        padding: 0.55rem 1.2rem;
+        transition: background 0.2s;
+      }
+      .dropdown-item:hover {
+        background: rgba(191, 141, 242, 0.18);
+        color: var(--vodka) !important;
+      }
+      .nav-search-wrap {
+        position: relative;
+      }
+      .nav-search {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--grape);
+        border-radius: 50px;
+        padding: 0.38rem 1rem 0.38rem 2rem;
+        color: var(--silver);
+        font-size: 0.8rem;
+        outline: none;
+        width: 170px;
+        transition: width 0.3s;
+      }
+      .nav-search::placeholder {
+        color: var(--grape);
+      }
+      .nav-search:focus {
+        width: 210px;
+        background: rgba(255, 255, 255, 0.14);
+      }
+      .nav-search-wrap i {
+        position: absolute;
+        left: 0.7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--grape);
+        font-size: 0.78rem;
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
 
-<!-- ══ ARTICLE HERO ══ -->
-<header class="article-hero">
-<div class="container">
-<div class="category-tag">Feedback &amp; Behavior</div>
-<h1>
-Ensuring Safety and Reliability Through Medical Certification Standards
-</h1>
-<p class="subtitle">
-What separates a medical device from a simple gadget?
-</p>
-<div class="article-meta">
-<div class="meta-author">
-<div class="ava">GE</div>
-<div>
-<div class="ava-name">Gianna Ebue</div>
-<div class="ava-role">Content Manager</div>
-</div>
-</div>
-<div class="meta-divider d-none d-md-block"></div>
-<div class="meta-stat">
-<i class="bi bi-calendar3"></i> March 31, 2026
-</div>
-<div class="meta-stat"><i class="bi bi-clock"></i> 9 min read</div>
-<div class="meta-stat"><i class="bi bi-eye"></i> 8,241 views</div>
-</div>
-<div class="hero-img-wrap">
-<div class="hero-img-ph">
-<img
-src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=1200&q=80&fit=crop"
-alt="Smartwatch haptic feedback wearable technology"
-/>
-</div>
-</div>
-</div>
-</header>
+      /* ── BREADCRUMB ── */
+      .breadcrumb-bar {
+        background: var(--dark-bg);
+        padding: 0.7rem 0;
+        border-bottom: 1px solid rgba(221, 220, 242, 0.08);
+      }
+      .breadcrumb {
+        margin: 0;
+        font-size: 0.76rem;
+      }
+      .breadcrumb-item a {
+        color: var(--grape);
+        transition: color 0.2s;
+      }
+      .breadcrumb-item a:hover {
+        color: var(--silver);
+      }
+      .breadcrumb-item.active {
+        color: rgba(221, 220, 242, 0.45);
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: rgba(221, 220, 242, 0.25);
+      }
 
-<!-- ══ ARTICLE BODY ══ -->
-<section id="article-body">
-<div class="container">
-<div class="row g-5">
-<!-- ── MAIN CONTENT ── -->
-<div class="col-lg-8">
-<article class="article-content">
-<!-- Replaced old content with new content -->
-<p>Title: Ensuring Safety and Reliability Through Medical Certification Standards</p>
+      /* ── ARTICLE HERO BANNER ── */
+      .article-hero {
+        background: linear-gradient(135deg, var(--haunted) 0%, var(--dark-bg) 100%);
+        padding: 64px 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .article-hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 420px;
+        height: 420px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(191, 141, 242, 0.18) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .article-hero .category-tag {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.18);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.28rem 1rem;
+        margin-bottom: 1.2rem;
+      }
+      .article-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        color: var(--silver);
+        line-height: 1.15;
+        max-width: 820px;
+      }
+      .article-hero .subtitle {
+        color: rgba(221, 220, 242, 0.65);
+        font-size: 1rem;
+        line-height: 1.75;
+        max-width: 680px;
+        margin-top: 1rem;
+      }
+      .article-meta {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.4rem;
+        margin-top: 2rem;
+        padding: 1.4rem 0;
+        border-top: 1px solid rgba(221, 220, 242, 0.12);
+        font-size: 0.8rem;
+        color: rgba(221, 220, 242, 0.55);
+      }
+      .meta-author {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+      }
+      .ava {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 0.82rem;
+        color: var(--haunted);
+      }
+      .ava-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .ava-name {
+        font-weight: 600;
+        color: var(--silver);
+        font-size: 0.85rem;
+      }
+      .ava-role {
+        font-size: 0.72rem;
+        color: var(--grape);
+      }
+      .meta-divider {
+        width: 1px;
+        height: 28px;
+        background: rgba(221, 220, 242, 0.15);
+      }
+      .meta-stat {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .meta-stat i {
+        color: var(--vodka);
+      }
 
-<p>What separates a medical device from a simple gadget?</p>
+      /* ── HERO IMAGE ── */
+      .hero-img-wrap {
+        margin-top: 2.5rem;
+        border-radius: 18px 18px 0 0;
+        overflow: hidden;
+        max-height: 480px;
+      }
+      .hero-img-ph {
+        width: 100%;
+        height: 480px;
+        background: linear-gradient(150deg, var(--grape) 0%, var(--haunted) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.35);
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .hero-img-ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
 
-<p>The core distinction lies in regulatory intent and the precision of the underlying sensors. While a simple gadget provides general wellness estimates for personal motivation, a medical device provides diagnostic-quality data that healthcare professionals can legally rely on for clinical treatment. This distinction is governed by strict government oversight to ensure that any health claims made by the manufacturer are backed by empirical proof.</p>
+      /* ── ARTICLE LAYOUT ── */
+      #article-body {
+        padding: 60px 0 80px;
+      }
+      .article-content {
+        max-width: 720px;
+      }
 
-<p>Why testing isn’t optional: the science behind certification</p>
+      /* typography */
+      .article-content h2 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.65rem;
+        color: var(--haunted);
+        margin: 2.4rem 0 0.9rem;
+        line-height: 1.3;
+      }
+      .article-content h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.2rem;
+        color: var(--haunted);
+        margin: 1.8rem 0 0.7rem;
+      }
+      .article-content p {
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.85;
+        margin-bottom: 1.2rem;
+      }
+      .article-content ul,
+      .article-content ol {
+        padding-left: 1.4rem;
+        margin-bottom: 1.2rem;
+      }
+      .article-content li {
+        font-size: 0.93rem;
+        color: var(--muted);
+        line-height: 1.75;
+        margin-bottom: 0.4rem;
+      }
+      .article-content strong {
+        color: var(--haunted);
+        font-weight: 600;
+      }
 
-<p>Certification requires rigorous, multi-phase clinical trials to prove device accuracy across diverse populations, skin tones, and environmental conditions. This scientific validation ensures that critical readings, such as heart rate or blood oxygen, are statistically reliable rather than just algorithmic approximations. Without this standardized testing, the risk of "false negatives" in health monitoring could lead to catastrophic patient outcomes.</p>
+      /* pull quote */
+      .pull-quote {
+        border-left: 4px solid var(--vodka);
+        padding: 1.2rem 1.6rem;
+        margin: 2rem 0;
+        background: rgba(158, 153, 191, 0.1);
+        border-radius: 0 12px 12px 0;
+      }
+      .pull-quote p {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        color: var(--haunted);
+        line-height: 1.6;
+        margin: 0;
+      }
+      .pull-quote cite {
+        font-size: 0.78rem;
+        color: var(--grape);
+        margin-top: 0.5rem;
+        display: block;
+        font-style: normal;
+      }
 
-<p>From consumer tech to clinical tool: crossing the line</p>
+      /* inline callout box */
+      .callout {
+        background: linear-gradient(
+          135deg,
+          rgba(53, 47, 89, 0.06),
+          rgba(158, 153, 191, 0.12)
+        );
+        border: 1.5px solid var(--silver);
+        border-radius: 14px;
+        padding: 1.4rem 1.6rem;
+        margin: 2rem 0;
+      }
+      .callout-label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--vodka);
+        margin-bottom: 0.5rem;
+      }
+      .callout p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.7;
+      }
 
-<p>Crossing into clinical territory means the device manufacturer assumes significant legal liability for the accuracy and reliability of its health data. This transition requires the implementation of strict quality control systems, such as FDA Quality System Regulations, which oversee everything from software code to hardware assembly. It transforms a mass-market commercial product into a high-stakes regulated instrument subject to government audits.</p>
+      /* inline image */
+      .inline-img {
+        border-radius: 14px;
+        overflow: hidden;
+        margin: 2rem 0;
+      }
+      .inline-img-ph {
+        width: 100%;
+        height: 280px;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(53, 47, 89, 0.4);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .inline-img-ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .inline-img figcaption {
+        font-size: 0.76rem;
+        color: var(--grape);
+        text-align: center;
+        padding: 0.5rem 0;
+        font-style: italic;
+      }
 
-<p>Can you trust your wearable? The role of validation</p>
+      /* tags */
+      .article-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
 
-<p>Trust in modern wearables is built entirely on third-party validation and peer-reviewed testing rather than marketing promises. When a wearable is medically certified, users and doctors have an objective guarantee that its outputs mirror the performance of established hospital-grade equipment. This validation serves as the essential bridge that allows consumer technology to be integrated into formal medical records.</p>
+      .art-tag-title {
+        padding-top: 2rem;
+        border-top: 1px solid var(--silver);
+        text-align: center;
+      }
 
-<p>Why approval matters in real patient care</p>
+      .art-tag {
+        background: rgba(158, 153, 191, 0.15);
+        border: 1px solid var(--silver);
+        color: var(--haunted);
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.28rem 0.85rem;
+        margin-top: 10px;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
 
-<p>In real patient care, inaccurate data is more dangerous than no data at all, as it can lead to missed diagnoses or inappropriate medication adjustments. Regulatory approval acts as a vital safeguard, ensuring that technology actively improves patient outcomes rather than introducing new clinical risks. It provides a layer of professional accountability that is required for any tool used in life-and-death decision-making.</p>
+      .section {
+        scroll-margin-top: 150px;
+      }
 
-<!-- Existing article content continues -->
-<h2 class="section" id="section-1">What Is Haptic Feedback, Really?</h2>
-<p>
-Haptic feedback refers to any tactile signal a device uses to communicate with the user — most commonly vibration, though newer systems use pressure, temperature, and electrical impulses. In wearables, it typically takes the form of a gentle buzz on the wrist, a tap on the shoulder strap, or a pulse along the spine of a posture-correcting garment.
-</p>
-<p>
-The signal is triggered by sensor data: an accelerometer detects a forward head tilt, a pressure sensor registers uneven weight distribution, a heart rate monitor identifies a dangerous arrhythmia. The device then decides — based on pre-programmed thresholds or AI models — when to intervene.
-</p>
-<div class="pull-quote">
-<p>
-"The body doesn't learn from data. It learns from sensation.
-Haptic feedback closes the loop between knowing and feeling."
-</p>
-<cite>— Dr. Reyes, Sports Physiologist, University of Santo Tomas</cite>
-</div>
-<h2 class="section" id="section-2">The Behavioral Science Behind the Buzz</h2>
-<p>
-Behavioral reinforcement theory predicts that immediate feedback — delivered within milliseconds of a behavior — is far more effective at shaping habits than delayed feedback. This is why post-workout summaries, while useful, rarely change in-session behavior as dramatically as real-time haptic cues.
-</p>
-<div class="callout">
-<div class="callout-label">Key Insight</div>
-<p>
-Studies show that haptic feedback delivered within <strong>250 milliseconds</strong> of an incorrect movement produces up to 3× faster motor correction than visual or audio-only feedback. Immediacy is everything.
-</p>
-</div>
-<p>
-Wearables take advantage of this by operating on feedback loops:
-sense → analyze → signal → correct → re-sense. Over repeated cycles, this trains the nervous system to anticipate and self-correct, eventually reducing the frequency of haptic triggers as the body internalizes the correct pattern.
-</p>
-<h2 class="section" id="section-3">Example Scenario: Posture Correction</h2>
-<p>
-Consider a remote worker wearing a smart posture sensor on their upper back. Over an eight-hour workday, the sensor logs 47 instances of forward head posture. Each time, it delivers a gentle two-pulse vibration. By the end of week two, the number of triggers has dropped to 12 — not because the sensor's threshold changed, but because the user's posture improved through repeated haptic reinforcement.
-</p>
-<figure class="inline-img">
-<div class="inline-img-ph">
-<img
-src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=900&q=80&fit=crop"
-alt="Person wearing posture wearable at desk"
-/>
-</div>
-<figcaption>
-A posture-correcting wearable in use during
+      /* ── SIDEBAR ── */
+      .sidebar {
+        position: sticky;
+        top: 100px;
+      }
+      .sidebar-card {
+        background: #fff;
+        border-radius: 16px;
+        border: 1.5px solid var(--silver);
+        padding: 1.4rem;
+        margin-bottom: 1.4rem;
+      }
+      .sidebar-heading {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--grape);
+        margin-bottom: 1rem;
+      }
+
+      /* TOC */
+      .toc-list {
+        list-style: none;
+        padding: 0;
+      }
+      .toc-list li {
+        margin-bottom: 0.5rem;
+      }
+      .toc-list a {
+        font-size: 0.82rem;
+        color: var(--muted);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        transition: color 0.2s;
+      }
+      .toc-list a::before {
+        content: "—";
+        color: var(--silver);
+        flex-shrink: 0;
+        font-size: 0.7rem;
+        margin-top: 0.15rem;
+      }
+      .toc-list a:hover {
+        color: var(--haunted);
+      }
+      .toc-list a.active {
+        color: var(--haunted);
+        font-weight: 600;
+      }
+      .toc-list a.active::before {
+        color: var(--vodka);
+      }
+
+      /* progress bar */
+      .read-progress-wrap {
+        margin-bottom: 1rem;
+      }
+      .read-progress-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.72rem;
+        color: var(--grape);
+        margin-bottom: 0.35rem;
+      }
+      .read-progress-bar {
+        height: 4px;
+        background: var(--silver);
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .read-progress-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--grape), var(--vodka));
+        border-radius: 4px;
+        transition: width 0.2s;
+      }
+
+      /* related articles sidebar */
+      .related-mini {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid var(--silver);
+      }
+      .related-mini:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .related-mini-thumb {
+        width: 54px;
+        height: 44px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5rem;
+        color: rgba(53, 47, 89, 0.4);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .related-mini-title {
+        font-size: 0.8rem;
+        color: var(--haunted);
+        line-height: 1.4;
+        font-weight: 500;
+      }
+      .related-mini-meta {
+        font-size: 0.7rem;
+        color: var(--grape);
+        margin-top: 0.2rem;
+      }
+
+      /* share buttons */
+      .share-btns {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+      .share-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--mag-grey);
+        border: 1.5px solid var(--silver);
+        border-radius: 8px;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--haunted);
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+      .share-btn:hover {
+        background: var(--haunted);
+        color: var(--silver);
+        border-color: var(--haunted);
+      }
+      .share-btn i {
+        font-size: 0.85rem;
+      }
+
+      /* ── RELATED ARTICLES (bottom) ── */
+      #related {
+        padding: 60px 0;
+        background: #fff;
+        border-top: 1px solid var(--silver);
+      }
+      .sec-eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--grape);
+        font-weight: 600;
+        margin-bottom: 0.35rem;
+      }
+      .sec-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.6rem, 3vw, 2.2rem);
+        color: var(--haunted);
+        line-height: 1.2;
+      }
+      .rel-card {
+        background: var(--mag-grey);
+        border-radius: 16px;
+        border: 1.5px solid var(--silver);
+        overflow: hidden;
+        height: 100%;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .rel-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 40px rgba(53, 47, 89, 0.1);
+      }
+      .rel-img-ph {
+        aspect-ratio: 16/9;
+        position: relative;
+        background: linear-gradient(135deg, var(--silver), var(--grape));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(53, 47, 89, 0.4);
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .rel-img-ph img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .rel-chip {
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        background: rgba(53, 47, 89, 0.82);
+        backdrop-filter: blur(4px);
+        color: var(--silver);
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border-radius: 50px;
+        padding: 0.18rem 0.7rem;
+      }
+      .rel-body {
+        padding: 1.2rem;
+      }
+      .rel-body h5 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: var(--haunted);
+        line-height: 1.4;
+        margin-bottom: 0.4rem;
+      }
+      .rel-body p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .rel-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 1.2rem;
+        border-top: 1px solid var(--silver);
+        font-size: 0.73rem;
+        color: var(--grape);
+      }
+      .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        color: var(--haunted);
+        font-size: 0.78rem;
+        font-weight: 600;
+        transition:
+          gap 0.2s,
+          color 0.2s;
+      }
+      .read-more:hover {
+        gap: 0.55rem;
+        color: var(--grape);
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        background: var(--dark-bg);
+        color: rgba(221, 220, 242, 0.7);
+        padding: 60px 0 0;
+      }
+      .footer-logo {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.7rem;
+        color: var(--silver);
+        margin-bottom: 0.8rem;
+      }
+      .footer-tagline {
+        font-size: 0.85rem;
+        opacity: 0.5;
+        line-height: 1.7;
+        max-width: 270px;
+      }
+      .footer-heading {
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--vodka);
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+      .footer-links a {
+        color: rgba(221, 220, 242, 0.5);
+        font-size: 0.85rem;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--silver);
+      }
+      .footer-social {
+        display: flex;
+        gap: 0.65rem;
+        margin-top: 1.4rem;
+      }
+      .soc-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        border: 1px solid rgba(221, 220, 242, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(221, 220, 242, 0.5);
+        font-size: 0.9rem;
+        transition: all 0.2s;
+      }
+      .soc-btn:hover {
+        background: var(--grape);
+        color: var(--haunted);
+        border-color: transparent;
+      }
+      .footer-bottom {
+        margin-top: 50px;
+        padding: 1.2rem 0;
+        border-top: 1px solid rgba(221, 220, 242, 0.08);
+        font-size: 0.78rem;
+        color: rgba(221, 220, 242, 0.3);
+      }
+      .footer-bottom a {
+        color: rgba(221, 220, 242, 0.3);
+        transition: color 0.2s;
+      }
+      .footer-bottom a:hover {
+        color: var(--grape);
+      }
+      .footer-contact-item {
+        font-size: 0.82rem;
+        color: rgba(221, 220, 242, 0.5);
+        margin-bottom: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    </style>
+
+    <style id="shared-nav-override">
+      
+    </style>
+  </head>
+  <body>
+    <!-- ══ NAVBAR ══ -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <div class="logo-mark">S</div>
+          <span class="logo-text">sensoria</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap mt-3 mt-lg-0">
+            <i class="bi bi-search srch-icon"></i>
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══ BREADCRUMB ══ -->
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="#">Engineering</a>
+          </li>
+          <li class="breadcrumb-item active">Medical Certification Standards</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ══ ARTICLE HERO ══ -->
+    <header class="article-hero">
+      <div class="container">
+        <div class="category-tag">Engineering</div>
+
+        <h1>
+          Ensuring Safety and Reliability Through Medical Certification Standards
+        </h1>
+
+        <p class="subtitle">
+          What separates a medical device from a simple gadget? The answer lies in rigorous regulatory frameworks, clinical validation, and the legal accountability that transforms consumer technology into tools doctors can trust with patient lives.
+        </p>
+
+        <div class="article-meta">
+          <div class="meta-author">
+            <div class="ava">GE</div>
+            <div>
+              <div class="ava-name">Gianna Ebue</div>
+              <div class="ava-role">Content Manager</div>
+            </div>
+          </div>
+          <div class="meta-divider d-none d-md-block"></div>
+          <div class="meta-stat">
+            <i class="bi bi-calendar3"></i> March 31, 2026
+          </div>
+          <div class="meta-stat"><i class="bi bi-clock"></i> 7 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 5,184 views</div>
+        </div>
+
+        <div class="hero-img-wrap">
+          <div class="hero-img-ph">
+            <img
+              src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&q=80&fit=crop"
+              alt="Medical device certification and clinical testing environment"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ ARTICLE BODY ══ -->
+    <section id="article-body">
+      <div class="container">
+        <div class="row g-5">
+          <!-- ── MAIN CONTENT ── -->
+          <div class="col-lg-8">
+            <article class="article-content">
+
+              <p>
+                Wearable health technology has matured rapidly — but not all devices are created equal. The gap between a consumer fitness tracker and a clinical-grade medical device is not merely one of price or sophistication. It is defined by law, science, and the rigorous process of regulatory certification that determines whether a device can be used to make life-altering health decisions.
+              </p>
+
+              <h2 class="section" id="section-1">What Separates a Medical Device from a Simple Gadget?</h2>
+              <p>
+                The core distinction lies in regulatory intent and the precision of the underlying sensors. While a simple gadget provides general wellness estimates for personal motivation, a medical device provides diagnostic-quality data that healthcare professionals can legally rely on for clinical treatment.
+              </p>
+              <p>
+                This distinction is governed by strict government oversight to ensure that any health claims made by the manufacturer are backed by empirical proof. A smartwatch that says "your heart rate seems elevated" is a wellness gadget. A device certified to detect atrial fibrillation and transmit ECG data to a cardiologist is a medical instrument — and the regulatory burden between the two is enormous.
+              </p>
+
+              <div class="pull-quote">
+                <p>
+                  "In medicine, every tool that touches a patient decision must be proven to be accurate. A device that hasn't been validated is not a diagnostic tool — it is a guess in a plastic casing."
+                </p>
+                <cite>— Dr. Santos, Biomedical Engineer, Philippine Heart Center</cite>
+              </div>
+
+              <h2 class="section" id="section-2">Why Testing Isn't Optional: The Science Behind Certification</h2>
+              <p>
+                Certification requires rigorous, multi-phase clinical trials to prove device accuracy across diverse populations, skin tones, and environmental conditions. This scientific validation ensures that critical readings — such as heart rate or blood oxygen — are statistically reliable rather than just algorithmic approximations.
+              </p>
+
+              <div class="callout">
+                <div class="callout-label">Key Insight</div>
+                <p>
+                  Without standardized testing, the risk of <strong>"false negatives"</strong> in health monitoring could lead to catastrophic patient outcomes. A device that misreads blood oxygen by even 2–3% could cause a clinician to miss a patient in respiratory distress entirely.
+                </p>
+              </div>
+
+              <p>
+                These trials are not box-checking exercises. They require control groups, peer review, statistical significance thresholds, and often years of data collection before a regulatory body such as the FDA or CE will consider an approval application. The science must be reproducible and independently verifiable.
+              </p>
+
+              <!-- Inline image: clinical testing -->
+              <figure class="inline-img">
+                <div class="inline-img-ph">
+                  <img
+                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=900&q=80&fit=crop"
+                    alt="Clinical trial setup with medical monitoring equipment"
+                  />
+                </div>
+                <figcaption>
+                  Multi-phase clinical trials test wearable accuracy across diverse populations and environmental conditions before regulatory submission.
+                </figcaption>
+              </figure>
+
+              <h2 class="section" id="section-3">From Consumer Tech to Clinical Tool: Crossing the Line</h2>
+              <p>
+                Crossing into clinical territory means the device manufacturer assumes significant legal liability for the accuracy and reliability of its health data. This transition requires the implementation of strict quality control systems — such as FDA Quality System Regulations — which oversee everything from software code to hardware assembly.
+              </p>
+              <p>
+                It transforms a mass-market commercial product into a high-stakes regulated instrument subject to government audits. Manufacturers must maintain detailed documentation of every design decision, every component change, and every software update. A single undocumented modification can invalidate an entire certification pathway.
+              </p>
+
+              <!-- Inline image: regulatory compliance -->
+              <figure class="inline-img">
+                <div class="inline-img-ph">
+                  <img
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=80&fit=crop"
+                    alt="Regulatory compliance documentation and quality control audit"
+                  />
+                </div>
+                <figcaption>
+                  FDA Quality System Regulations require exhaustive documentation at every stage of device design, manufacturing, and post-market surveillance.
+                </figcaption>
+              </figure>
+
+              <h2 class="section" id="section-4">Can You Trust Your Wearable? The Role of Validation</h2>
+              <p>
+                Trust in modern wearables is built entirely on third-party validation and peer-reviewed testing rather than marketing promises. When a wearable is medically certified, users and doctors have an objective guarantee that its outputs mirror the performance of established hospital-grade equipment.
+              </p>
+              <p>
+                This validation serves as the essential bridge that allows consumer technology to be integrated into formal medical records. Without it, data from a wearable is anecdotal at best — interesting to the patient, but inadmissible in a clinical context and potentially dangerous if acted upon without verification.
+              </p>
+
+              <div class="callout">
+                <div class="callout-label">Clinical Implication</div>
+                <p>
+                  Medically certified wearables can feed directly into electronic health records (EHR) systems, enabling remote patient monitoring, chronic disease management, and early intervention programs — none of which are possible with uncertified consumer devices.
+                </p>
+              </div>
+
+              <h2 class="section" id="section-5">Why Approval Matters in Real Patient Care</h2>
+              <p>
+                In real patient care, inaccurate data is more dangerous than no data at all, as it can lead to missed diagnoses or inappropriate medication adjustments. Regulatory approval acts as a vital safeguard, ensuring that technology actively improves patient outcomes rather than introducing new clinical risks.
+              </p>
+              <p>
+                It provides a layer of professional accountability that is required for any tool used in life-and-death decision-making. When a physician orders a remote ECG patch for a post-surgical patient, they must be certain the device is held to the same evidentiary standard as the instruments in their own hospital ward.
+              </p>
+
+              <!-- Inline image: patient monitoring -->
+              <figure class="inline-img">
+                <div class="inline-img-ph">
+                  <img
+                    src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=900&q=80&fit=crop"
+                    alt="Doctor reviewing wearable health data in clinical setting"
+                  />
+                </div>
+                <figcaption>
+                  In patient care, only certified wearable data can be legally acted upon — making regulatory approval the cornerstone of any clinical integration strategy.
+                </figcaption>
+              </figure>
+
+              <h2 class="art-tag-title">= Article Tags =</h2>
+              <div class="article-tags">
+                <span class="art-tag">Medical Certification</span>
+                <span class="art-tag">FDA Regulation</span>
+                <span class="art-tag">Wearables</span>
+                <span class="art-tag">Clinical Validation</span>
+                <span class="art-tag">Patient Safety</span>
+                <span class="art-tag">Engineering</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- ── SIDEBAR ── -->
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <!-- Reading Progress -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Reading Progress</div>
+                <div class="read-progress-wrap">
+                  <div class="read-progress-label">
+                    <span>Progress</span><span id="progress-pct">0%</span>
+                  </div>
+                  <div class="read-progress-bar">
+                    <div class="read-progress-fill" id="progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table of Contents -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">In This Article</div>
+                <ul class="toc-list">
+                  <li>
+                    <a href="#section-1" class="toc-link">What Separates a Medical Device from a Simple Gadget?</a>
+                  </li>
+                  <li>
+                    <a href="#section-2" class="toc-link">Why Testing Isn't Optional: The Science Behind Certification</a>
+                  </li>
+                  <li>
+                    <a href="#section-3" class="toc-link">From Consumer Tech to Clinical Tool: Crossing the Line</a>
+                  </li>
+                  <li>
+                    <a href="#section-4" class="toc-link">Can You Trust Your Wearable? The Role of Validation</a>
+                  </li>
+                  <li>
+                    <a href="#section-5" class="toc-link">Why Approval Matters in Real Patient Care</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Share -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Share This Article</div>
+                <div class="share-btns">
+                  <button class="share-btn">
+                    <i class="bi bi-facebook"></i> Facebook
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-twitter-x"></i> X
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-link-45deg"></i> Copy Link
+                  </button>
+                </div>
+              </div>
+
+              <!-- Related in sidebar -->
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Related Reads</div>
+                <div class="related-mini">
+                  <div class="related-mini-thumb">Img</div>
+                  <div>
+                    <div class="related-mini-title">
+                      The Psychology of Haptic Nudges
+                    </div>
+                    <div class="related-mini-meta">Feedback · 8 min</div>
+                  </div>
+                </div>
+                <div class="related-mini">
+                  <div class="related-mini-thumb">Img</div>
+                  <div>
+                    <div class="related-mini-title">
+                      Gait Analysis: How Wearables Decode How You Walk
+                    </div>
+                    <div class="related-mini-meta">Biomechanics · 6 min</div>
+                  </div>
+                </div>
+                <div class="related-mini">
+                  <div class="related-mini-thumb">Img</div>
+                  <div>
+                    <div class="related-mini-title">
+                      Power &amp; Heat Management in Wearable Design
+                    </div>
+                    <div class="related-mini-meta">Engineering · 5 min</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ RELATED ARTICLES (bottom) ══ -->
+    <section id="related">
+      <div class="container">
+        <div class="mb-4">
+          <div class="sec-eyebrow">Keep reading</div>
+          <h2 class="sec-title">More from Engineering</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
+              >
+                <span class="rel-chip">Feedback</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  The Psychology of Haptic Nudges: Can Vibration Alone Change a
+                  Habit?
+                </h5>
+                <p>
+                  Behavioral science meets wearable design — how frequency,
+                  intensity, and timing of haptic cues influence long-term habit
+                  formation.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Patricia Pelicano · 8 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
+              >
+                <span class="rel-chip">Biomechanics</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  Gait &amp; Lower Limb Analysis: What Your Footstrike Reveals
+                  About Your Health
+                </h5>
+                <p>
+                  Pressure insoles and ankle IMUs are giving physiotherapists
+                  data they never had before — here's what they're learning.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Aica Ortega · 6 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #d4c8e0, #8a6aaa)"
+              >
+                <span class="rel-chip">Engineering</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  Wrist &amp; Forearm Sensors: Decoding Repetitive Strain Before
+                  It Becomes Injury
+                </h5>
+                <p>
+                  How accelerometers and flex sensors in wrist bands detect
+                  micro-movements that predict RSI development weeks in advance.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Mark España · 6 min</span>
+                <a href="#" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
+              <a href="mailto:theergolab@sensoria.com" class="soc-btn"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> theergolab@sensoria.com
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+
+          <!-- The Cluster + Feedback -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="cluster.html">Head &amp; Neck</a></li>
+              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
+              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+            </ul>
+          </div>
+
+          <!-- Engineering + Case Studies -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="engineering.html">Material Science</a></li>
+              <li>
+                <a href="engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
+              <li><a href="casestudies.html">Athletic Performance</a></li>
+              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+            </ul>
+          </div>
+
+          <!-- Ethics + General -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="ethics.html">Neural Interfaces</a></li>
+              <li><a href="ethics.html">Regulatory Landscape</a></li>
+              <li><a href="ethics.html">Evolutionary Impact</a></li>
+              <li><a href="ethics.html">Cookies</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="about.html">About / Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet the Team -->
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Leader:</span
+                >
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Content:</span
+                >
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >UI Design:</span
+                >
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
+                Pelicano &amp; Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">QA:</span>
+                Bandoy &amp; Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Navigation:</span
+                >
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="#">Privacy Policy</a>
+            <a href="ethics.html">Cookies</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Reading progress bar
+      window.addEventListener("scroll", () => {
+        const article = document.getElementById("article-body");
+        if (!article) return;
+        const articleTop = article.offsetTop;
+        const articleHeight = article.offsetHeight;
+        const scrolled = window.scrollY - articleTop;
+        const pct = Math.min(100, Math.max(0, Math.round((scrolled / articleHeight) * 100)));
+        document.getElementById("progress-fill").style.width = pct + "%";
+        document.getElementById("progress-pct").textContent = pct + "%";
+      });
+
+      // TOC active link highlight
+      const tocLinks = document.querySelectorAll(".toc-link");
+      const sections = document.querySelectorAll(".section");
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((sec) => {
+          if (window.scrollY >= sec.offsetTop - 180) current = sec.id;
+        });
+        tocLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+        });
+      });
+    </script>
+  </body>
+</html>
