@@ -17,9 +17,239 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="shared.css">
-
     <style id="shared-nav-override">
+      :root {
+        --mag-grey: #f0f0f2;
+        --haunted: #352f59;
+        --grape: #9e99bf;
+        --vodka: #bf8df2;
+        --silver: #dddcf2;
+        --dark-bg: #2b2640;
+        --body-text: #2d3436;
+        --muted: #5a5470;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background: var(--mag-grey);
+        color: var(--body-text);
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ── NAVBAR ── */
+      .navbar {
+        background: var(--haunted);
+        border-bottom: 2px solid var(--grape);
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+        padding: 0.65rem 0;
+      }
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+        background: var(--silver);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        font-style: italic;
+        color: var(--haunted);
+        flex-shrink: 0;
+      }
+      .logo-text {
+        font-family: "Playfair Display", serif;
+        font-size: 1.3rem;
+        font-style: italic;
+        color: var(--silver);
+        letter-spacing: 0.04em;
+      }
+      .navbar-nav .nav-link {
+        color: var(--silver) !important;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.9rem;
+        border-radius: 6px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .navbar-nav .nav-link:hover {
+        color: var(--vodka) !important;
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .navbar-nav .nav-link.active {
+        color: var(--vodka) !important;
+        background: rgba(191, 141, 242, 0.12);
+      }
+      .nav-search-wrap {
+        position: relative;
+      }
+      .nav-search {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid var(--grape);
+        border-radius: 50px;
+        padding: 0.35rem 1rem 0.35rem 2rem;
+        color: var(--silver);
+        font-size: 0.78rem;
+        outline: none;
+        width: 160px;
+        transition:
+          width 0.3s,
+          background 0.2s;
+      }
+      .nav-search::placeholder {
+        color: var(--grape);
+      }
+      .nav-search:focus {
+        width: 200px;
+        background: rgba(255, 255, 255, 0.13);
+      }
+      .nav-search-wrap .srch-icon {
+        position: absolute;
+        left: 0.7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--grape);
+        font-size: 0.76rem;
+        pointer-events: none;
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler:focus {
+        box-shadow: none;
+      }
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      /* ── BREADCRUMB ── */
+      .breadcrumb-bar {
+        background: #fff;
+        border-bottom: 1px solid var(--silver);
+        padding: 0.55rem 0;
+      }
+      .breadcrumb {
+        margin: 0;
+        font-size: 0.78rem;
+      }
+      .breadcrumb-item a {
+        color: var(--grape);
+      }
+      .breadcrumb-item.active {
+        color: var(--haunted);
+        font-weight: 600;
+      }
+      .breadcrumb-item + .breadcrumb-item::before {
+        color: var(--grape);
+      }
+
+      /* ── HERO ── */
+      .wim-hero {
+        background: linear-gradient(
+          135deg,
+          var(--haunted) 0%,
+          var(--dark-bg) 100%
+        );
+        padding: 80px 0 68px;
+        position: relative;
+        overflow: hidden;
+      }
+      .wim-hero::before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        right: -80px;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(191, 141, 242, 0.13) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero::after {
+        content: "";
+        position: absolute;
+        bottom: -100px;
+        left: -60px;
+        width: 340px;
+        height: 340px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(158, 153, 191, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .wim-hero-icon {
+        width: 78px;
+        height: 78px;
+        border-radius: 22px;
+        background: rgba(191, 141, 242, 0.16);
+        border: 1.5px solid var(--vodka);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        color: var(--vodka);
+        margin-bottom: 1.5rem;
+      }
+      .wim-category-label {
+        display: inline-block;
+        background: rgba(191, 141, 242, 0.18);
+        border: 1px solid var(--vodka);
+        color: var(--vodka);
+        border-radius: 50px;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.9rem;
+        margin-bottom: 0.8rem;
+      }
+      .wim-hero h1 {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(2rem, 5vw, 3.8rem);
+        color: var(--silver);
+        line-height: 1.1;
+        max-width: 700px;
+      }
+      .wim-hero .hero-desc {
+        color: rgba(221, 220, 242, 0.65);
+        font-size: 0.97rem;
+        line-height: 1.8;
+        max-width: 580px;
+        margin-top: 1rem;
+      }
       .wim-hero-cta {
         display: inline-flex;
         align-items: center;
