@@ -16,19 +16,18 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
+    <link href="../../../media/logo.png" rel="icon">
     <link href="../../../css/shared.css" rel="stylesheet">
     <link href="../../../css/article_template.css" rel="stylesheet" />
-
-    <style id="shared-nav-override">
-      
-    </style>
   </head>
   <body>
     <!-- ══ NAVBAR ══ -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">
-          <div class="logo-mark">S</div>
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
           <span class="logo-text">sensoria</span>
         </a>
         <button
@@ -42,22 +41,25 @@
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav mx-auto gap-lg-1">
             <li class="nav-item">
-              <a class="nav-link" href="cluster.html">The Cluster</a>
+              <a class="nav-link" href="../../articles.html">Articles</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="feedback.html">Feedback</a>
+              <a class="nav-link" href="../../cluster/cluster.html">The Cluster</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="casestudies.html">Case Studies</a>
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="engineering.html">Engineering</a>
+              <a class="nav-link " href="../../casestudy/casestudies.html">Case Studies</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="ethics.html">Ethics</a>
+              <a class="nav-link active" href="../engineering.html">Engineering</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
             </li>
           </ul>
           <div class="nav-search-wrap mt-3 mt-lg-0">
@@ -78,10 +80,9 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">
-            <a href="#">Engineering</a>
+            <a href="../engineering.html">Engineering & Design</a>
           </li>
-          <!-- ★ EDIT: update to match current article section -->
-          <li class="breadcrumb-item active">Anthropometrics</li>
+          <li class="breadcrumb-item active">Human Motion Metrics: Translating Body Movement into Engineering Data</li>
         </ol>
       </div>
     </div>
@@ -89,7 +90,7 @@
     <!-- ══ ARTICLE HERO ══ -->
     <header class="article-hero">
         <div class="container">
-            <div class="category-tag">Engineering · Anthropometrics</div>
+            <div class="category-tag">Anthropometrics</div>
 
             <h1>
               Human Motion Metrics: Translating Body Movement into Engineering Data
@@ -102,7 +103,9 @@
 
             <div class="article-meta">
               <div class="meta-author">
-                <div class="ava">AO</div>
+                <div class="ava">
+                  <img class="ava-img" src="../../../media/aica.JPG">
+                </div>
               <div>
                 <div class="ava-name">Aica Ortega</div>
                 <div class="ava-role">Developer</div>
@@ -119,7 +122,7 @@
             <div class="hero-img-wrap">
               <div class="hero-img-ph">
                   <img
-                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1525426250015-4e6473cdbf17?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Advanced wearable material science and smart fabric engineering"
                   />
               </div>
@@ -146,7 +149,7 @@
                   anthropometric engineering.
                 </p>
 
-                <h2 id="section-1">Understanding Human Range of Motion</h2>
+                <h2 class="section" id="section-1">Understanding Human Range of Motion</h2>
                 <p>
                   Range of motion refers to the extent a joint can move in different directions.
                 </p>
@@ -161,7 +164,7 @@
                   restricting mobility.
                 </p>
 
-                <h2 id="section-2">Joint Placement and Sensor Positioning</h2>
+                <h2 class="section" id="section-2">Joint Placement and Sensor Positioning</h2>
                 <p>
                   Sensor placement directly affects data accuracy.
                 </p>
@@ -184,7 +187,7 @@
                 </p>
                 </div>
 
-                <h2 id="section-3">Avoiding Restriction During Movement</h2>
+                <h2 class="section" id="section-3">Avoiding Restriction During Movement</h2>
                 <p>
                   A major challenge is ensuring that straps, bands, and sensor modules do not
                   interfere with natural movement.
@@ -199,7 +202,7 @@
                   This is especially important in sports wearables and rehabilitation systems.
                 </p>
 
-                <h2 id="section-4">Applications in Sports and Rehabilitation</h2>
+                <h2 class="section" id="section-4">Applications in Sports and Rehabilitation</h2>
                 <p>
                   Joint-focused anthropometric design is widely used in sports analytics,
                   posture correction, and physical therapy devices.
@@ -209,6 +212,7 @@
                   These systems provide real-time movement feedback while maintaining comfort.
                 </p>
 
+                <h2>Article Tags</h2>
                 <div class="article-tags">
                 <span class="art-tag">Range of Motion</span>
                 <span class="art-tag">Joint Design</span>
@@ -261,31 +265,6 @@
                   </button>
                 </div>
               </div>
-
-              <!-- Related in sidebar -->
-              <div class="sidebar-card">
-                <div class="sidebar-heading">Related Reads</div>
-                <!-- ★ EDIT: swap with actual related article titles/links -->
-                <div class="related-mini">
-                    <div class="related-mini-title">
-                    Ergonomic Fit in Wearable Design
-                    </div>
-                    <div class="related-mini-meta">Anthropometrics · 6 min</div>
-                </div>
-
-                <div class="related-mini">
-                    <div class="related-mini-title">
-                    Body Proportions in Smart Wearables
-                    </div>
-                    <div class="related-mini-meta">Anthropometrics · 7 min</div>
-                </div>
-
-                <div class="related-mini">
-                    <div class="related-mini-title">
-                    Gait and Lower Limb Analysis
-                    </div>
-                    <div class="related-mini-meta">Case Studies · 6 min</div>
-                </div>
             </div>
     </section>
 
@@ -304,43 +283,41 @@
                 class="rel-img-ph"
                 style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
               >
-                <span class="rel-chip">Feedback</span>
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=1200&q=80&fit=crop">
+                <span class="rel-chip">Anthropometrics</span>
               </div>
               <div class="rel-body">
                 <h5>
-                  The Psychology of Haptic Nudges: Can Vibration Alone Change a
-                  Habit?
+                  Anthropometrics in Engineering: Designing Wearables for the Human Body
                 </h5>
                 <p>
-                  Behavioral science meets wearable design — how frequency,
-                  intensity, and timing of haptic cues influence long-term habit
-                  formation.
+                  Because no two bodies are the same, adaptive sizing in wearable design uses anthropometric data to create inclusive, flexible systems that adjust to every user’s unique proportions.
                 </p>
               </div>
               <div class="rel-footer">
-                <span>Patricia Pelicano · 8 min</span>
-                <a href="#" class="read-more"
+                <span>Aica Ortega · 7 min</span>
+                <a href="body-measurements.html" class="read-more"
                   >Read More <i class="bi bi-arrow-right"></i
                 ></a>
               </div>
             </div>
           </div>
+
           <div class="col-md-4">
             <div class="rel-card">
               <div
                 class="rel-img-ph"
                 style="background: linear-gradient(135deg, #b8d4c8, #5a8a72)"
-              >
-                <span class="rel-chip">Biomechanics</span>
+              > 
+                <img src="https://images.unsplash.com/photo-1615387000482-2f3d4b2c50d4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <span class="rel-chip">Anthropometrics</span>
               </div>
               <div class="rel-body">
                 <h5>
-                  Gait &amp; Lower Limb Analysis: What Your Footstrike Reveals
-                  About Your Health
+                  Ergonomic Fit Systems: Why Size and Form Matter in Wearable Design
                 </h5>
                 <p>
-                  Pressure insoles and ankle IMUs are giving physiotherapists
-                  data they never had before — here's what they're learning.
+                  Understanding the human body is the first step in wearable engineering—anthropometrics ensures that every device is designed for comfort, accuracy, and real-world usability across different body types
                 </p>
               </div>
               <div class="rel-footer">
@@ -395,9 +372,7 @@
             <div class="footer-social mt-3">
               <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
               <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="soc-btn"><i class="bi bi-twitter-x"></i></a>
-              <a href="mailto:theergolab@sensoria.com" class="soc-btn"
-                ><i class="bi bi-envelope-fill"></i
+              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
               ></a>
             </div>
             <div class="mt-4">
@@ -406,7 +381,7 @@
                 <i class="bi bi-instagram"></i> @_theergolab
               </div>
               <div class="footer-contact-item">
-                <i class="bi bi-envelope-fill"></i> theergolab@sensoria.com
+                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
               </div>
               <div class="footer-contact-item">
                 <i class="bi bi-facebook"></i> The Ergo Lab
@@ -418,15 +393,19 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">The Cluster</div>
             <ul class="footer-links">
-              <li><a href="cluster.html">Wrist &amp; Forearm</a></li>
-              <li><a href="cluster.html">Head &amp; Neck</a></li>
-              <li><a href="cluster.html">Torso &amp; Smart Fabrics</a></li>
+              <li><a href="../../cluster/cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="../../cluster/cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="../../cluster/cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
             </ul>
             <div class="footer-heading mt-4">Feedback</div>
             <ul class="footer-links">
-              <li><a href="feedback.html">Haptic Reconditioning</a></li>
-              <li><a href="feedback.html">Gait &amp; Lower Limb</a></li>
-              <li><a href="feedback.html">Psychology of Ergonomics</a></li>
+              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+              </li>
             </ul>
           </div>
 
@@ -434,17 +413,21 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Engineering</div>
             <ul class="footer-links">
-              <li><a href="engineering.html">Material Science</a></li>
+              <li><a href="../engineering.html">Material Science</a></li>
               <li>
-                <a href="engineering.html">Power &amp; Heat Management</a>
+                <a href="../engineering.html">Power &amp; Heat Management</a>
               </li>
-              <li><a href="engineering.html">Anthropometrics</a></li>
+              <li><a href="../engineering.html">Anthropometrics</a></li>
             </ul>
             <div class="footer-heading mt-4">Case Studies</div>
             <ul class="footer-links">
-              <li><a href="casestudies.html">Industrial / Exoskeletons</a></li>
-              <li><a href="casestudies.html">Athletic Performance</a></li>
-              <li><a href="casestudies.html">Medical / Rehabilitative</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
+              </li>
+              <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
+              </li>
             </ul>
           </div>
 
@@ -452,16 +435,17 @@
           <div class="col-6 col-lg-2">
             <div class="footer-heading">Ethics</div>
             <ul class="footer-links">
-              <li><a href="ethics.html">Neural Interfaces</a></li>
-              <li><a href="ethics.html">Regulatory Landscape</a></li>
-              <li><a href="ethics.html">Evolutionary Impact</a></li>
-              <li><a href="ethics.html">Cookies</a></li>
+              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
             </ul>
             <div class="footer-heading mt-4">General</div>
             <ul class="footer-links">
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="about.html">About / Contact</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="../../about/about.html">About / Contact</a></li>
+              <li><a href="../../privacy.html">Privacy Policy</a></li>
+              <li><a href="../../cookies.html">Cookies</a></li>
+              <li><a href="../../terms.html">Terms</a></li>
             </ul>
           </div>
 
@@ -483,33 +467,33 @@
             <div style="display: flex; flex-direction: column; gap: 0.45rem">
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Leader:</span
+                  >Team Leader:</span
                 >
                 Amir Lopez
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Content:</span
+                  >Content Manager:</span
                 >
                 Gianna Ebue
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >UI Design:</span
+                  >UI Designer:</span
                 >
                 Mico Parungao
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">Dev:</span>
-                Pelicano &amp; Ortega
+                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                Patricia Pelicano &amp; Aica Ortega
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
-                <span style="color: var(--vodka); font-weight: 600">QA:</span>
-                Bandoy &amp; Datuin
+                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                Noel Bandoy &amp; Kim Datuin
               </div>
               <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
                 <span style="color: var(--vodka); font-weight: 600"
-                  >Navigation:</span
+                  >Navigation Expert:</span
                 >
                 Mark España
               </div>
@@ -527,15 +511,16 @@
         >
           <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
           <div class="d-flex gap-3">
-            <a href="#">Privacy Policy</a>
-            <a href="ethics.html">Cookies</a>
-            <a href="#">Terms</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
           </div>
         </div>
       </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/article_template.js"></script>
+    <script src="../../../js/article_template.js"></script>
+    <script src="../../../js/shared.js"></script>
   </body>
 </html>
