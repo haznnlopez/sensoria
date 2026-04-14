@@ -1,10 +1,10 @@
-.about-hero {
+.about-hero  {
   background: linear-gradient(135deg, var(--haunted) 0%, var(--dark-bg) 100%);
   padding: 90px 0 70px;
   position: relative;
   overflow: hidden;
 }
-.about-hero::before {
+.about-hero::before  {
   content: "";
   position: absolute;
   top: -60px;
@@ -18,26 +18,25 @@
     transparent 70%
   );
 }
-.about-hero h1 {
+.about-hero h1  {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: clamp(2.4rem, 5vw, 4rem);
   color: var(--silver);
   line-height: 1.1;
 }
-.about-hero .hero-desc {
+.about-hero .hero-desc  {
   color: rgba(221, 220, 242, 0.68);
   font-size: 0.97rem;
   line-height: 1.8;
   max-width: 640px;
   margin-top: 1rem;
 }
-/* Mission section */
-#mission {
+#mission  {
   padding: 90px 0;
   background: var(--mag-grey);
 }
-.mission-img-ph {
+.mission-img-ph  {
   aspect-ratio: 4/3;
   border-radius: 20px;
   background: linear-gradient(
@@ -56,30 +55,30 @@
   font-weight: 600;
   overflow: hidden;
 }
-.mission-img-ph img {
+.mission-img-ph img  {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
-#mission h2 {
+#mission h2  {
   font-family: "Playfair Display", serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   color: var(--haunted);
   line-height: 1.2;
 }
-#mission p {
+#mission p  {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.85;
 }
-.mission-value {
+.mission-value  {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
   margin-bottom: 1.2rem;
 }
-.value-icon {
+.value-icon  {
   width: 42px;
   height: 42px;
   border-radius: 12px;
@@ -91,24 +90,23 @@
   font-size: 1.1rem;
   color: var(--haunted);
 }
-.value-text h6 {
+.value-text h6  {
   font-weight: 700;
   color: var(--haunted);
   margin-bottom: 0.2rem;
   font-size: 0.9rem;
 }
-.value-text p {
+.value-text p  {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.65;
   margin: 0;
 }
-/* Target audience */
-#audience {
+#audience  {
   padding: 80px 0;
   background: #fff;
 }
-.audience-card {
+.audience-card  {
   border-radius: 18px;
   overflow: hidden;
   border: 1.5px solid var(--silver);
@@ -117,11 +115,11 @@
     transform 0.3s,
     box-shadow 0.3s;
 }
-.audience-card:hover {
+.audience-card:hover  {
   transform: translateY(-5px);
   box-shadow: 0 16px 44px rgba(53, 47, 89, 0.1);
 }
-.aud-img {
+.aud-img  {
   height: 180px;
   display: flex;
   align-items: center;
@@ -133,12 +131,12 @@
   color: rgba(255, 255, 255, 0.5);
   position: relative;
 }
-.art-image {
+.art-image  {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.aud-label {
+.aud-label  {
   position: absolute;
   bottom: 14px;
   left: 16px;
@@ -151,40 +149,39 @@
   border-radius: 50px;
   padding: 0.2rem 0.75rem;
 }
-.aud-body {
+.aud-body  {
   padding: 1.4rem;
   background: var(--mag-grey);
   height: 250px;
 }
-.aud-body h5 {
+.aud-body h5  {
   font-family: "Playfair Display", serif;
   font-style: italic;
   color: var(--haunted);
   margin-bottom: 0.5rem;
 }
-.aud-body p {
+.aud-body p  {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.65;
 }
-/* Team section */
-#team {
+#team  {
   padding: 90px 0;
   background: var(--haunted);
 }
-#team .sec-eyebrow {
+#team .sec-eyebrow  {
   color: var(--grape);
 }
-#team .sec-title {
+#team .sec-title  {
   color: var(--silver);
 }
-.team-photo-band {
+.team-photo-band  {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 3rem;
 }
-.team-photo-ph {
+.team-photo-ph  {
   width: 100%;
   height: 500px;
   background: linear-gradient(135deg, var(--grape), var(--dark-bg));
@@ -197,13 +194,13 @@
   text-transform: uppercase;
   font-weight: 600;
 }
-.team-photo-ph img {
+.team-photo-ph img  {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.member-card {
+.member-card  {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(221, 220, 242, 0.15);
   border-radius: 16px;
@@ -214,11 +211,11 @@
     background 0.3s,
     border-color 0.3s;
 }
-.member-card:hover {
+.member-card:hover  {
   background: rgba(191, 141, 242, 0.12);
   border-color: var(--vodka);
 }
-.member-ava {
+.member-ava  {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -233,63 +230,62 @@
   font-weight: 700;
   color: var(--haunted);
 }
-.member-ava-img {
+.member-ava-img  {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
 }
-.member-name {
+.member-name  {
   font-size: 1rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 0.5rem;
 }
-.member-role {
+.member-role  {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
 }
-.member-name {
+.member-name  {
   font-weight: 700;
   color: var(--silver);
   font-size: 0.95rem;
   margin-bottom: 0.2rem;
 }
-.member-role {
+.member-role  {
   font-size: 0.75rem;
   color: var(--vodka);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
 }
-.member-desc {
+.member-desc  {
   font-size: 0.8rem;
   color: rgba(221, 220, 242, 0.55);
   line-height: 1.65;
 }
-/* Contact section */
-#contact {
+#contact  {
   padding: 90px 0;
   background: var(--mag-grey);
 }
-.contact-card {
+.contact-card  {
   background: #fff;
   border-radius: 20px;
   border: 1.5px solid var(--silver);
   padding: 2.5rem 2rem;
 }
-.contact-item {
+.contact-item  {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--silver);
 }
-.contact-item:last-child {
+.contact-item:last-child  {
   border-bottom: none;
 }
-.contact-icon {
+.contact-icon  {
   width: 48px;
   height: 48px;
   border-radius: 14px;
@@ -301,7 +297,7 @@
   font-size: 1.2rem;
   color: var(--haunted);
 }
-.contact-label {
+.contact-label  {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -309,13 +305,12 @@
   color: var(--grape);
   margin-bottom: 0.2rem;
 }
-.contact-value {
+.contact-value  {
   font-size: 0.95rem;
   color: var(--haunted);
   font-weight: 500;
 }
-/* Contact form */
-.contact-form .form-control {
+.contact-form .form-control  {
   background: var(--mag-grey);
   border: 1.5px solid var(--silver);
   border-radius: 10px;
@@ -325,23 +320,23 @@
   outline: none;
   transition: border-color 0.2s;
 }
-.contact-form .form-control:focus {
+.contact-form .form-control:focus  {
   border-color: var(--grape);
   box-shadow: none;
   background: #fff;
 }
-.contact-form label {
+.contact-form label  {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--haunted);
   margin-bottom: 0.4rem;
   letter-spacing: 0.05em;
 }
-.contact-form textarea {
+.contact-form textarea  {
   resize: vertical;
   min-height: 130px;
 }
-.btn-submit {
+.btn-submit  {
   background: var(--haunted);
   color: var(--silver);
   font-family: "Playfair Display", serif;
@@ -356,11 +351,11 @@
     background 0.25s,
     color 0.25s;
 }
-.btn-submit:hover {
+.btn-submit:hover  {
   background: var(--grape);
   color: var(--haunted);
 }
-.form-success {
+.form-success  {
   display: none;
   background: rgba(90, 138, 114, 0.12);
   border: 1.5px solid #5a8a72;
@@ -371,16 +366,15 @@
   margin-top: 1rem;
   text-align: center;
 }
-/* Timeline */
-#story {
+#story  {
   padding: 80px 0;
   background: #fff;
 }
-.timeline {
+.timeline  {
   position: relative;
   padding-left: 2rem;
 }
-.timeline::before {
+.timeline::before  {
   content: "";
   position: absolute;
   left: 0;
@@ -389,11 +383,11 @@
   width: 2px;
   background: var(--silver);
 }
-.tl-item {
+.tl-item  {
   position: relative;
   margin-bottom: 2rem;
 }
-.tl-dot {
+.tl-dot  {
   position: absolute;
   left: -2.45rem;
   top: 0.2rem;
@@ -403,7 +397,7 @@
   background: var(--vodka);
   border: 2px solid var(--haunted);
 }
-.tl-date {
+.tl-date  {
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -411,26 +405,26 @@
   color: var(--grape);
   margin-bottom: 0.3rem;
 }
-.tl-title {
+.tl-title  {
   font-family: "Playfair Display", serif;
   font-size: 1.05rem;
   color: var(--haunted);
   margin-bottom: 0.3rem;
 }
-.tl-desc {
+.tl-desc  {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.65;
 }
-.readmore {
+.readmore  {
   color: var(--mag-grey);
   font-size: 0.78rem;
   font-weight: 600;
   transition:
-    color 0.2s,
-    border 0.5s ease-in;
+  color 0.2s,
+  border 0.5s ease-in;
 }
-.readmore:hover {
+.readmore:hover  {
   color: var(--grape);
   border-bottom: 1px var(--grape) solid;
 }
