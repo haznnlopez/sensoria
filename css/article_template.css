@@ -28,7 +28,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 /* ── NAVBAR ── */
 .navbar {
   background: var(--haunted);
@@ -132,7 +131,6 @@ a {
 .navbar-toggler-icon {
   filter: invert(1);
 }
-
 /* ── BREADCRUMB ── */
 .breadcrumb-bar {
   background: var(--dark-bg);
@@ -156,7 +154,6 @@ a {
 .breadcrumb-item + .breadcrumb-item::before {
   color: rgba(221, 220, 242, 0.25);
 }
-
 /* ── ARTICLE HERO BANNER ── */
 .article-hero {
   background: linear-gradient(135deg, var(--haunted) 0%, var(--dark-bg) 100%);
@@ -242,7 +239,6 @@ a {
   border-radius: 50%;
   object-fit: cover;
 }
-
 .ava-name {
   font-weight: 600;
   color: var(--silver);
@@ -265,7 +261,6 @@ a {
 .meta-stat i {
   color: var(--vodka);
 }
-
 /* ── HERO IMAGE ── */
 .hero-img-wrap {
   margin-top: 2.5rem;
@@ -293,7 +288,6 @@ a {
   object-position: center;
   display: block;
 }
-
 /* ── ARTICLE LAYOUT ── */
 #article-body {
   padding: 60px 0 80px;
@@ -301,7 +295,6 @@ a {
 .article-content {
   max-width: 720px;
 }
-
 /* typography */
 .article-content h2 {
   font-family: "Playfair Display", serif;
@@ -338,7 +331,6 @@ a {
   color: var(--haunted);
   font-weight: 600;
 }
-
 /* pull quote */
 .pull-quote {
   border-left: 4px solid var(--vodka);
@@ -362,7 +354,6 @@ a {
   display: block;
   font-style: normal;
 }
-
 /* inline callout box */
 .callout {
   background: linear-gradient(
@@ -389,7 +380,6 @@ a {
   margin: 0;
   line-height: 1.7;
 }
-
 /* inline image */
 .inline-img {
   border-radius: 14px;
@@ -422,20 +412,17 @@ a {
   padding: 0.5rem 0;
   font-style: italic;
 }
-
 /* tags */
 .article-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-
 .art-tag-title {
   padding-top: 2rem;
   border-top: 1px solid var(--silver);
   text-align: center;
 }
-
 .art-tag {
   background: rgba(158, 153, 191, 0.15);
   border: 1px solid var(--silver);
@@ -451,11 +438,9 @@ a {
     background 0.2s,
     border-color 0.2s;
 }
-
 .section {
   scroll-margin-top: 150px;
 }
-
 /* ── SIDEBAR ── */
 .sidebar {
   position: sticky;
@@ -476,7 +461,6 @@ a {
   color: var(--grape);
   margin-bottom: 1rem;
 }
-
 /* TOC */
 .toc-list {
   list-style: none;
@@ -510,7 +494,6 @@ a {
 .toc-list a.active::before {
   color: var(--vodka);
 }
-
 /* progress bar */
 .read-progress-wrap {
   margin-bottom: 1rem;
@@ -535,7 +518,6 @@ a {
   border-radius: 4px;
   transition: width 0.2s;
 }
-
 /* related articles sidebar */
 .related-mini {
   display: flex;
@@ -573,7 +555,6 @@ a {
   color: var(--grape);
   margin-top: 0.2rem;
 }
-
 /* share buttons */
 .share-btns {
   display: flex;
@@ -602,7 +583,6 @@ a {
 .share-btn i {
   font-size: 0.85rem;
 }
-
 /* ── RELATED ARTICLES (bottom) ── */
 #related {
   padding: 60px 0;
@@ -709,7 +689,6 @@ a {
   gap: 0.55rem;
   color: var(--grape);
 }
-
 /* ── FOOTER ── */
 footer {
   background: var(--dark-bg);

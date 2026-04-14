@@ -32,7 +32,6 @@
   max-width: 640px;
   margin-top: 1rem;
 }
-
 /* Mission section */
 #mission {
   padding: 90px 0;
@@ -104,7 +103,6 @@
   line-height: 1.65;
   margin: 0;
 }
-
 /* Target audience */
 #audience {
   padding: 80px 0;
@@ -169,7 +167,6 @@
   color: var(--muted);
   line-height: 1.65;
 }
-
 /* Team section */
 #team {
   padding: 90px 0;
@@ -271,7 +268,6 @@
   color: rgba(221, 220, 242, 0.55);
   line-height: 1.65;
 }
-
 /* Contact section */
 #contact {
   padding: 90px 0;
@@ -318,7 +314,6 @@
   color: var(--haunted);
   font-weight: 500;
 }
-
 /* Contact form */
 .contact-form .form-control {
   background: var(--mag-grey);
@@ -376,7 +371,6 @@
   margin-top: 1rem;
   text-align: center;
 }
-
 /* Timeline */
 #story {
   padding: 80px 0;
@@ -428,7 +422,6 @@
   color: var(--muted);
   line-height: 1.65;
 }
-
 .readmore {
   color: var(--mag-grey);
   font-size: 0.78rem;
