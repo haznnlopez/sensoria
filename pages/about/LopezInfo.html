@@ -198,46 +198,6 @@
     <section id="articles-section">
       <div class="container">
         <div class="section-label">Articles by this author</div>
-
-        <div class="row g-4" id="articles-grid">
-          <!-- ══════════════════════════════
-           ★ EDIT: duplicate this card block for each article.
-             - Set data-pillar to: cluster | feedback | engineering | casestudies | ethics
-             - Set .art-card-img class to: p-cluster | p-feedback | p-engineering | p-casestudies | p-ethics
-             - Update .art-pillar-chip text to match the pillar name
-             - Update title, excerpt, read time, and href
-      ══════════════════════════════ -->
-
-          <!-- CARD 1 — The Cluster -->
-          <div class="col-md-6 col-lg-4 fade-up" data-pillar="cluster">
-            <a class="art-card" href="pages/article_template.html">
-              <div class="art-card-img p-cluster">
-                <!-- ★ EDIT: <img src="..." alt="..."> for real image -->
-                <div class="art-pillar-chip">The Cluster</div>
-              </div>
-              <div class="art-card-body">
-                <!-- ★ EDIT: article title -->
-                <h5>
-                  How Wrist Sensors Detect Repetitive Strain Before Pain Begins
-                </h5>
-                <!-- ★ EDIT: short excerpt -->
-                <p>
-                  Accelerometers and gyroscopes embedded in wrist wearables can
-                  flag micro-movement patterns that precede injury — often weeks
-                  in advance.
-                </p>
-              </div>
-              <div class="art-card-footer">
-                <!-- ★ EDIT: read time -->
-                <span><i class="bi bi-clock me-1"></i> 7 min read</span>
-                <span class="read-link"
-                  >Read <i class="bi bi-arrow-right"></i
-                ></span>
-              </div>
-            </a>
-          </div>
-        <!-- /articles-grid -->
-
         <!-- Empty state (shown by JS when filter matches nothing) -->
         <div class="empty-state" id="empty-state">
           <i class="bi bi-journal-x"></i>
