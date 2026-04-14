@@ -13,9 +13,9 @@ function filterCards(chip) {
       if (isVisible) {
         visibleCount++;
       }
-    });
-    const emptyState = document.getElementById("no-results");
-    if (emptyState) {
-      emptyState.style.display = visibleCount === 0 ? "block" : "none";
-    }
+  });
+  const emptyState = document.getElementById("no-results");
+  if (emptyState) {
+    emptyState.style.display = visibleCount === 0 ? "block" : "none";
   }
+}
