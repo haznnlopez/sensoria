@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Anatomy of a Flex Sensor — sensoria</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../../../media/logo.png" />
+    <link href="../../../css/article_template.css" rel="stylesheet" />
+    <link href="../../../css/shared.css" rel="stylesheet" />
+
+    <style id="shared-nav-override">
+      /* Custom overrides for this specific technical deep-dive */
+      .category-tag {
+        background: var(--vodka, #dbdcf2);
+        color: #4a4a8a;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../../../index.html">
+          <div class="logo-mark">
+            <img class="logo-img" src="../../../media/logo.png">
+          </div>
+          <span class="logo-text">sensoria</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto gap-lg-1">
+            <li class="nav-item">
+              <a class="nav-link" href="../../articles.html">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../cluster.html">The Cluster</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../feedBack/feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../casestudies.html">Case Studies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../engineering/engineering.html">Engineering</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../ethics/ethics.html">Ethics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../about/about.html">About</a>
+            </li>
+          </ul>
+          <div class="nav-search-wrap mt-3 mt-lg-0">
+            <i class="bi bi-search srch-icon"></i>
+            <input
+              class="nav-search"
+              type="text"
+              placeholder="Search topics…"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="../../../index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../cluster.html">The Cluster</a>
+          </li>
+          <li class="breadcrumb-item active">The Anatomy of a Flex Sensor: Measuring the Micro-Angles of RSI</li>
+        </ol>
+      </div>
+    </div>
+
+    <header class="article-hero">
+      <div class="container">
+        <div class="category-tag">Wrist &amp; Forearm</div>
+
+        <h1>The Anatomy of a Flex Sensor: Measuring the Micro-Angles of RSI</h1>
+
+        <p class="subtitle">
+          A technical breakdown of resistive flex sensors and how bending a thin
+          substrate translates physical strain into a data-driven "Pre-Injury
+          Score."
+        </p>
+
+        <div class="article-meta">
+          <div class="meta-author">
+            <div class="ava">
+              <img class="ava-img" src="../../../media/mark.jpg" />
+            </div>
+            <div>
+              <div class="ava-name">Mark España</div>
+              <div class="ava-role">Navigation</div>
+            </div>
+          </div>
+          <div class="meta-divider d-none d-md-block"></div>
+          <div class="meta-stat">
+            <i class="bi bi-calendar3"></i> April 11, 2026
+          </div>
+          <div class="meta-stat"><i class="bi bi-clock"></i> 7 min read</div>
+          <div class="meta-stat"><i class="bi bi-eye"></i> 1,204 views</div>
+        </div>
+
+        <div class="hero-img-wrap">
+          <div class="hero-img-ph">
+            <img
+              src="https://cdn-shop.adafruit.com/970x728/182-00.jpg"
+              alt="Close up of flexible circuitry and sensors"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="article-body">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-8">
+            <article class="article-content">
+              <p>
+                At the intersection of material science and ergonomics lies the
+                flex sensor—a low-profile component that acts as the "nervous
+                system" for the sensoria wrist cluster. While traditional
+                wearables rely on accelerometers to track movement, flex sensors
+                allow us to measure the <strong>postural state</strong>
+                of a joint with millimetric precision.
+              </p>
+
+              <h2 class="section" id="section-1">The Physics of Resistance</h2>
+              <p>
+                A resistive flex sensor operates on the principle of variable
+                resistance. The sensor is composed of a flexible substrate
+                coated with a thin layer of conductive carbon particles. When
+                the sensor is in its neutral, flat position, the carbon
+                particles are packed tightly together, allowing electrical
+                current to pass through with minimal resistance.
+              </p>
+              <p>
+                As the user bends their wrist, the substrate elongates on the
+                outer edge. This stretching forces the carbon particles further
+                apart, creating "gaps" in the conductive path. This physical
+                deformation results in a measurable increase in electrical
+                resistance.
+              </p>
+
+              <div class="pull-quote">
+                <p>
+                  "The body doesn't move in binary code; it moves in curves.
+                  Flex sensors allow us to digitize those curves into actionable
+                  health data."
+                </p>
+              </div>
+
+              <h2 class="section" id="section-2">
+                The Voltage Divider Circuit
+              </h2>
+              <p>
+                To translate this change in resistance into something a computer
+                can understand, the sensor is integrated into a
+                <strong>voltage divider circuit</strong>. By pairing the flex
+                sensor with a static resistor of a known value, we can measure
+                the output voltage as it fluctuates with the sensor's bend.
+              </p>
+              <p>
+                The onboard sensoria microcontroller converts this analog
+                voltage into a digital value (usually 0–1023). Our algorithms
+                then map these values to specific angles—identifying whether a
+                wrist is at a neutral 0° or a danger-zone 45° extension.
+              </p>
+
+              <div class="callout">
+                <div class="callout-label">Technical Insight</div>
+                <p>
+                  By sampling this data at <strong>500Hz</strong>, the system
+                  can detect micro-tremors and muscle instability—early warning
+                  signs of fatigue that occur long before a person feels
+                  physical pain.
+                </p>
+              </div>
+
+              <h2 class="section" id="section-3">
+                Defining the "Pre-Injury Score"
+              </h2>
+              <p>
+                The ultimate goal of this hardware is the
+                <strong>Pre-Injury Score</strong>. By monitoring the duration
+                and frequency of awkward joint angles, sensoria calculates the
+                cumulative mechanical load on the tendons.
+              </p>
+              <p>
+                If the angle exceeds ergonomic safety thresholds for an extended
+                period, the software flags a high-risk score. This allows for
+                intervention—such as a haptic nudge or a mandatory break—before
+                Repetitive Strain Injury (RSI) becomes a clinical reality.
+              </p>
+            <h2 class="section" id="section-6">References</h2>
+                     <p>
+                       Saggio, G. (2014). A novel back-projection algorithm for measuring joint movements using resistive flex sensors. Sensors and Actuators A: Physical, 205, 127-135. https://doi.org/10.1016/j.sna.2013.10.030<br><br>
+
+                       Orengo, G., & Saggio, G. (2021). Modeling of resistive flex sensors for human motion capture. IEEE Sensors Journal, 21(13), 14352-14360. https://doi.org/10.1109/JSEN.2021.3071375<br><br>
+
+                        Taji, B., Al-Sayegh, R., & Gholamhosseini, H. (2018). Hybrid sensing systems for human activity recognition and fatigue detection. Journal of Medical and Biological Engineering, 38(2), 214-228. https://doi.org/10.1007/s40846-017-0314-z<br><br>
+
+                        Keir, P. J., & Wells, R. P. (1999). The effect of wrist posture on extrinsic finger muscle activity. Ergonomics, 42(6), 838-854. https://doi.org/10.1080/001401399185315<br><br>
+
+                        Gentil, P., et al. (2018). Monitoring muscle fatigue using wearable sensors: A review. Sensors, 18(7), 2054. https://doi.org/10.3390/s18072054<br><br>
+                     </p>
+              <h2>Article Tags</h2>
+              <div class="article-tags">
+                <span class="art-tag">Material Science</span>
+                <span class="art-tag">Flex Sensors</span>
+                <span class="art-tag">Wrist & Forearm</span>
+                <span class="art-tag">RSI Prevention</span>
+                <span class="art-tag">Engineering</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Reading Progress</div>
+                <div class="read-progress-wrap">
+                  <div class="read-progress-label">
+                    <span>Progress</span><span id="progress-pct">0%</span>
+                  </div>
+                  <div class="read-progress-bar">
+                    <div class="read-progress-fill" id="progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-card">
+                <div class="sidebar-heading">In This Article</div>
+                <ul class="toc-list">
+                  <li>
+                    <a href="#section-1" class="toc-link"
+                      >The Physics of Resistance</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-2" class="toc-link"
+                      >The Voltage Divider Circuit</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#section-3" class="toc-link"
+                      >Defining the "Pre-Injury Score"</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sidebar-card">
+                <div class="sidebar-heading">Share This Article</div>
+                <div class="share-btns">
+                  <button class="share-btn">
+                    <i class="bi bi-facebook"></i> Facebook
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-twitter-x"></i> X
+                  </button>
+                  <button class="share-btn">
+                    <i class="bi bi-link-45deg"></i> Copy Link
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ RELATED ARTICLES (bottom) ══ -->
+    <section id="related">
+      <div class="container">
+        <div class="mb-4">
+          <div class="sec-eyebrow">Keep reading</div>
+          <h2 class="sec-title">More from <i>Wrist &amp; Forearm</i></h2>
+        </div>
+        <div class="row g-4">
+          <!-- ★ EDIT: replace with real related articles -->
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
+              >
+                <span class="rel-chip">Wrist &amp; Forearm</span>
+                <img
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&fit=crop"
+                />
+              </div>
+              <div class="rel-body">
+                <h5>EMG vs. Accelerometry: Which Wins for Wrist Health?</h5>
+                <p>
+                  A comparison of tracking methods. Accelerometers measure the
+                  result (motion), while Electromyography (EMG) tracks the
+                  intent (muscle electrical signals). We’ll discuss why high-end
+                  clusters use both to detect muscle fatigue before a hand even
+                  moves.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Mark España · 8 mins</span>
+                <a href="EMGvsAccelerometry.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div
+                class="rel-img-ph"
+                style="background: linear-gradient(135deg, #c5c0e0, #6b629a)"
+              >
+                <span class="rel-chip">Wrist &amp; Forearm</span>
+                <img
+                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000"
+                />
+              </div>
+              <div class="rel-body">
+                <h5>
+                  Tenosynovitis: Tracking the Friction of Repetitive Motion
+                </h5>
+                <p>
+                  A look at the "sheath" around tendons. Explain how
+                  high-velocity, low-load movements (gaming/coding) cause
+                  friction. sensoria tracks the frequency of these micro-strokes
+                  to predict inflammation before the heat is even felt.
+                </p>
+              </div>
+
+              <div class="rel-footer">
+                <span>Mark España · 6 min</span>
+                <a href="Tenosynovitis.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="rel-card">
+              <div class="rel-img-ph">
+                <img
+                  src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=1200"
+                />
+                <span class="rel-chip">Wrist &amp; Forearm</span>
+              </div>
+              <div class="rel-body">
+                <h5>
+                  The Anatomy of a Keystroke: Tracking Micro-Movements to Prevent RSI
+                </h5>
+                <p>
+                  Moving past static wrist rests by utilizing continuous tendon tracking 
+          and myoelectric sensors to intercept Repetitive Strain Injuries before they manifest.
+                </p>
+              </div>
+              <div class="rel-footer">
+                <span>Mark España · 5 mins</span>
+                <a href="keystroke.html" class="read-more"
+                  >Read More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+      <div class="container">
+        <div class="row g-5">
+          <!-- Brand -->
+          <div class="col-lg-3">
+            <div class="footer-logo">sensoria.</div>
+            <p class="footer-tagline">
+              Bridging wearable technology and human physiology. Educating
+              bodies, one article at a time.
+            </p>
+            <div class="footer-social mt-3">
+              <a href="#" class="soc-btn"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="soc-btn"><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+            <div class="mt-4">
+              <div class="footer-heading">Contact</div>
+              <div class="footer-contact-item">
+                <i class="bi bi-instagram"></i> @_theergolab
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-envelope-fill"></i> <a href="/cdn-cgi/l/email-protection">theergolab@gmail.com</a>
+              </div>
+              <div class="footer-contact-item">
+                <i class="bi bi-facebook"></i> The Ergo Lab
+              </div>
+            </div>
+          </div>
+
+          <!-- The Cluster + Feedback -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">The Cluster</div>
+            <ul class="footer-links">
+              <li><a href="../cluster.html">Wrist &amp; Forearm</a></li>
+              <li><a href="../cluster.html">Head &amp; Neck</a></li>
+              <li>
+                <a href="../cluster.html">Torso &amp; Smart Fabrics</a>
+              </li>
+            </ul>
+            <div class="footer-heading mt-4">Feedback</div>
+            <ul class="footer-links">
+              <li><a href="../../feedBack/feedback.html">Haptic Reconditioning</a></li>
+              <li><a href="../../feedBack/feedback.html">Gait &amp; Lower Limb</a></li>
+              <li>
+                <a href="../../feedBack/feedback.html">Psychology of Ergonomics</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Engineering + Case Studies -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Engineering</div>
+            <ul class="footer-links">
+              <li><a href="../../engineering/engineering.html">Material Science</a></li>
+              <li>
+                <a href="../../engineering/engineering.html">Power &amp; Heat Management</a>
+              </li>
+              <li><a href="../../engineering/engineering.html">Anthropometrics</a></li>
+            </ul>
+            <div class="footer-heading mt-4">Case Studies</div>
+            <ul class="footer-links">
+              <li>
+                <a href="../../casestudy/casestudies.html">Industrial / Exoskeletons</a>
+              </li>
+              <li><a href="../../casestudy/casestudies.html">Athletic Performance</a></li>
+              <li>
+                <a href="../../casestudy/casestudies.html">Medical / Rehabilitative</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ethics + General -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-heading">Ethics</div>
+            <ul class="footer-links">
+              <li><a href="../../ethics/ethics.html">Neural Interfaces</a></li>
+              <li><a href="../../ethics/ethics.html">Regulatory Landscape</a></li>
+              <li><a href="../../ethics/ethics.html">Evolutionary Impact</a></li>
+            </ul>
+            <div class="footer-heading mt-4">General</div>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="../../about/about.html">About / Contact</a></li>
+              <li><a href="../../privacy.html">Privacy Policy</a></li>
+              <li><a href="../../cookies.html">Cookies</a></li>
+              <li><a href="../../terms.html">Terms</a></li>
+            </ul>
+          </div>
+
+          <!-- Meet the Team -->
+          <div class="col-lg-3">
+            <div class="footer-heading">Meet the Team</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                opacity: 0.5;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+              "
+            >
+              sensoria is a student project by
+              <strong style="color: var(--silver)">The Ergo Lab.</strong> —
+              Group 4, CIP 1101-CSAD.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.45rem">
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Team Leader:</span
+                >
+                Amir Lopez
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Content Manager:</span
+                >
+                Gianna Ebue
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >UI Designer:</span
+                >
+                Mico Parungao
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Developers:</span>
+                Patricia Pelicano &amp; Aica Ortega
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600">Quality Assurance:</span>
+                Noel Bandoy &amp; Kim Datuin
+              </div>
+              <div style="font-size: 0.8rem; color: rgba(221, 220, 242, 0.6)">
+                <span style="color: var(--vodka); font-weight: 600"
+                  >Navigation Expert:</span
+                >
+                Mark España
+              </div>
+            </div>
+            <p style="font-size: 0.72rem; opacity: 0.3; margin-top: 1rem">
+              Media sources: Unsplash, Freepik, Pexels
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div
+          class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+        >
+          <span>© 2026 sensoria by The Ergo Lab. CIP 1101-CSAD · Group 4.</span>
+          <div class="d-flex gap-3">
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../cookies.html">Cookies</a>
+            <a href="../../terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/article_template.js"></script>
+  </body>
+</html>
